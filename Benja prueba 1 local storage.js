@@ -15,6 +15,6 @@ window.location.href = 'mostrar.html';
 window.addEventListener('load', function() {
     let nombre = localStorage.getItem("nombre");
     if (nombre) {
-        document.getElementById("mostrarNombre").textContent = "Nombre: " + nombre;
+        document.getElementById("mostrarNombre").textContent = "Manu es: " + nombre;
     }
 });
