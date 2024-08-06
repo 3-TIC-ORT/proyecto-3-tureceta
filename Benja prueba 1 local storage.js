@@ -1,11 +1,20 @@
-let username = "UsuarioEjemplo";
-let password = "ContraseñaEjemplo";
 
-localStorage.setItem("username", username);
-localStorage.setItem("password", password);
-
-let storedUsername = localStorage.getItem("username");
-let storedPassword = localStorage.getItem("password");
-
-console.log(storedUsername);
-console.log(storedPassword); 
+document.getElementById("botonguardar").addEventListener("click", function() {
+let nombre = document.getElementById("nombre").value;
+let contraseña = document.getElementById("contraseña").value
+// Guardar el nombre en localStorage
+localStorage.setItem("nombre", nombre);
+localStorage.setItem("contraseña", contraseña);
+// Limpiar los campos de entrada
+document.getElementById("nombre").value = '';
+document.getElementById("contraseña").value = '';
+console.log (nombre)
+});
+window.location.href = 'mostrar.html';
+//porgramacion seguundo html
+window.addEventListener('load', function() {
+    let nombre = localStorage.getItem("nombre");
+    if (nombre) {
+        document.getElementById("mostrarNombre").textContent = "Nombre: " + nombre;
+    }
+});
