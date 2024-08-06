@@ -9,12 +9,14 @@ localStorage.setItem("contraseña", contraseña);
 document.getElementById("nombre").value = '';
 document.getElementById("contraseña").value = '';
 console.log (nombre)
+window.location.href = "Segundo html benja.html";
 });
-window.location.href = 'mostrar.html';
 //porgramacion seguundo html
 window.addEventListener('load', function() {
     let nombre = localStorage.getItem("nombre");
     if (nombre) {
-        document.getElementById("mostrarNombre").textContent = "Manu es: " + nombre;
+        document.getElementById("mostrarNombre").textContent = "Manu es:"  + nombre;
+    } else {
+        document.getElementById("mostrarNombre").textContent = "No se encontró el nombre.";
     }
 });
