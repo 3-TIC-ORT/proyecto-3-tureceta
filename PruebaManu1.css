@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    text-align: center;
+    
+}
+h1{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    top: 229px;
+    left: 610px;
+    margin-top: 20px;
+}
+.arriba{
+width: 100vw;
+height: 13vh;
+background-color: rgb(204, 199, 199);
+}
+
+.inicio{
+ display: flex;   
+ justify-content: flex-end;
+ margin: 15px;
+ margin-top: -22px;
+}
