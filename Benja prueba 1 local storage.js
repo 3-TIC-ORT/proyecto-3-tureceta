@@ -15,6 +15,6 @@ localStorage.setItem(correo, JSON.stringify(usuario));
 // Limpiar los campos de entrada
 document.getElementById("nombre").value = '';
 document.getElementById("contraseña").value = '';
-window.location.href = "PruebaManu1.html";
+window.location.href = "Paginascroll1.html";
 });
 
