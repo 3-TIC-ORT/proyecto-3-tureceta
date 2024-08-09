@@ -50,5 +50,5 @@ img{
     height: 40px;
     margin-top: -300px;
     margin-left: 178px;
-
+    justify-content: space-between;
 }
