@@ -23,9 +23,10 @@ h1{
 width: 100vw;
 height: 13vh;
 background-color: rgb(204, 199, 199);
+display: flex;
 }
 
-.inicio{
+.nombre{
  display: flex;   
  justify-content: flex-end;
  margin: 50px;
@@ -47,7 +48,7 @@ img{
     display: flex;
     width: 40px;
     height: 40px;
-    margin-top: -220px;
+    margin-top: -300px;
     margin-left: 178px;
 
 }
