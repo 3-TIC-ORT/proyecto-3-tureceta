@@ -48,7 +48,7 @@ img{
     display: flex;
     width: 40px;
     height: 40px;
-    margin-top: -300px;
+    margin-top: -358px;
     margin-left: 178px;
 
 }
@@ -57,4 +57,7 @@ margin-top: 10px;
 }
 .tercerfila{
     margin-top: 20px;
+}
+.macros{
+    margin-top: 65px;
 }
