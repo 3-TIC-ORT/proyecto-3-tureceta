@@ -1,3 +1,4 @@
+//Esto muestra el nombre del usuario en la pagina
 window.addEventListener('load', function() {
     let nombre = localStorage.getItem("nombre");
     if (nombre) {
