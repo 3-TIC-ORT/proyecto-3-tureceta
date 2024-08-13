@@ -4,8 +4,8 @@ let nombre = document.getElementById("nombre").value;
 let contraseña = document.getElementById("contraseña").value
 let correo = document.getElementById("correo").value
 let correcto= false
-//lo siguiente hara que el nombre y la contraseña tengan un minimo de caracteres
-if (nombre.length < 1){
+//lo siguiente hara que el nombre, la contraseña y el correo tengan un minimo de caracteres
+if (nombre.length < 1){onoffline,
     alert ("El Nombre debe tener mas de un caracter")
     return
     
@@ -21,6 +21,7 @@ if (correo.length < 1){
     return
     
 }
+//esto detecta si el correo contiene @
 if (correo.includes("@")){
     correcto = true;
 } else {
