@@ -3,8 +3,9 @@ document.getElementById("BotonRegistro").addEventListener("click", function() {
 let nombre = document.getElementById("nombre").value;
 let contraseña = document.getElementById("contraseña").value
 let correo = document.getElementById("correo").value
-//lo siguiente hara que el nombre y la contraseña tengan un minimo de caracteres
-if (nombre.length < 1){
+let correcto= false
+//lo siguiente hara que el nombre, la contraseña y el correo tengan un minimo de caracteres
+if (nombre.length < 1){onoffline,
     alert ("El Nombre debe tener mas de un caracter")
     return
     
@@ -14,6 +15,20 @@ if (contraseña.length < 1){
     return
     
 }
+
+if (correo.length < 1){
+    alert ("El correo debe tener mas de un caracter")
+    return
+    
+}
+//esto detecta si el correo contiene @
+if (correo.includes("@")){
+    correcto = true;
+} else {
+    alert("Por favor ingrese un correo válido");
+    return;
+}
+
 
 // Crear objeto para cada usuario con usuario y contraseña
 let usuario = {
@@ -27,6 +42,7 @@ localStorage.setItem(correo, JSON.stringify(usuario));
 // Limpiar los campos de entrada
 document.getElementById("nombre").value = '';
 document.getElementById("contraseña").value = '';
-window.location.href = "Paginascroll1.html";
-});
-
+if(correcto){  
+    window.location.href = "Paginascroll1.html";
+}
+})
