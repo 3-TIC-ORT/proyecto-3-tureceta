@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 350px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #ececec;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000;
+    border-radius: 10px 10px 0 0;
+}
+
+.tab.active {
+    background-color: #6c27e0;
+    color: #fff;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    padding-right: 50px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.unit {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #888;
+}
+
+.unit-buttons, .gender-buttons {
+    display: flex;
+}
+
+.unit-button, .gender-button {
+    flex: 1;
+    padding: 10px 0;
+    margin-right: 10px;
+    border: 1px solid #6c27e0;
+    border-radius: 5px;
+    background-color: #ececec;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.unit-button:last-child, .gender-button:last-child {
+    margin-right: 0;
+}
+
+.unit-button.active, .gender-button.active {
+    background-color: #6c27e0;
+    color: #fff;
+}
