@@ -1,0 +1,28 @@
+body{
+    
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+
+#correo{
+width: 180px;
+height: 30px;
+top: 265px;
+left: 343px;
+gap: 0px;
+border: 1px 0px 0px 0px;
+opacity: 0px;
+}
+.Iniciarse{
+width: 520px;
+height: 584px;
+top: 319px;
+left: 645px;
+gap: 0px;
+border-radius: 5px 0px 0px 0px;
+opacity: 0px;
+
+}
