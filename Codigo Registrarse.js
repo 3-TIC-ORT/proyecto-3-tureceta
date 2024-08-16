@@ -21,9 +21,11 @@ if (correo.length < 1){
     return
     
 }
-//esto detecta si el correo contiene @
-if (correo.includes("@")){
-    correcto = true;
+//esto detecta si el correo contiene un dominio valido
+if (correo.includes("@gmail.com") || correo.includes("@hotmail.com") || correo.includes("@est.ort.edu.ar")) {
+    if (correo[0] != "@"){
+        correcto=true
+    }
 } else {
     alert("Por favor ingrese un correo válido");
     return;
