@@ -84,5 +84,11 @@ input[type="email"], input[type="password"] {
     background-color: #0056b3;
 }
 .logo{
-    width: 100px;
-}
+    width: 38px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: -195px;
+    margin-left: 143px;
+    
+   }
