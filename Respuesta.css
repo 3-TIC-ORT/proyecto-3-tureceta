@@ -1,0 +1,44 @@
+body{
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+.arriba{
+    width: 100vw;
+    height: 13vh;
+    background-color: rgb(204, 199, 199);
+    margin-top: -10px;
+    }
+
+.nombre{
+    display: flex;
+    justify-content: left;
+    margin: 45px;
+    margin-top: -50px;
+    margin-left:-1130px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+}
+
+
+.macros{
+    width: 500px;
+    height: 200px;
+    background-color: rgb(99, 99, 99);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 75px;
+}
+.crear{
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+    margin-top: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    }

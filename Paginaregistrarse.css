@@ -18,6 +18,7 @@ body, html {
     background-color: #f0f0f0; /* Fondo de la página */
 }
 
+
 h1 {
     position: absolute;
     bottom: 520px;
@@ -61,19 +62,42 @@ input[type="email"], input[type="password"], input[type="text"] {
     box-sizing: border-box;
     font-size: 16px;
 }
+
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
 #BotonRegistro{
     background-color: #007BFF;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
+    cursor: pointer; 
+    left: 20px;  
 }
 #BotonRegistro:hover{
     background-color: #0056b3;
 }
-.Inicio{
+.actions a{
     color: #007BFF;
     text-decoration: none;
     font-size: 14px;
+}
+    
+.actions a:hover {
+    text-decoration: underline;
+}
+
+.Logo{
+    width: 38px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: -289px;
+    margin-left: 151px;
 }
