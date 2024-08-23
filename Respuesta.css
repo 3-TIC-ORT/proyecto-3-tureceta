@@ -32,13 +32,18 @@ flex-direction: column;
     justify-content: center;
     margin-top: 75px;
 }
-.crear{
+.crear {
     width: 100px;
     height: 100px;
-    background-color: cornflowerblue;
+    background-color: rgb(206, 206, 206);
     margin-top: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    }
+
+    .crear button:hover{
+    background-color: rgb(143, 89, 23);
     }

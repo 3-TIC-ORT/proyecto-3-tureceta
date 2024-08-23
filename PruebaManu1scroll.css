@@ -26,12 +26,12 @@ background-color: rgb(204, 199, 199);
 display: flex;
 }
 
-.nombre{
- display: flex;   
- justify-content: flex-end;
- margin: 50px;
- margin-top: -50px;
- font-size: 25px;
+#nombre{
+    justify-content: flex-end;
+    display: flex;   
+    margin: 50px;
+    margin-top: -50px;
+    font-size: 25px;
 }
 .tureceta{
     display: flex;
