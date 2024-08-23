@@ -36,6 +36,7 @@ h1{
     cursor: pointer;
     width: 45%;
     text-align: center;
+    
 }
 
 input, select {
@@ -67,5 +68,6 @@ button {
 .boton button:hover{
     background-color: #555;
     font-size: 30px;
+    transition: 1000ms;
 }
 
