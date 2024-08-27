@@ -40,4 +40,5 @@ function registrarse(nombre, correo, contraseña){
     }
 }
 
-registrarse("leoo","hola@gmail.com","1234");
+registrarse("","","");
+
