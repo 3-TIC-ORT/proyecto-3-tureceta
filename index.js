@@ -40,5 +40,5 @@ function registrarse(nombre, correo, contraseña){
     }
 }
 
-registrarse("","","");
+//registrarse("","","");
 
