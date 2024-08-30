@@ -17,7 +17,7 @@ function login(correo, contraseña){
     console.log("La contraseña o el correo es incorrecto")
     return false;
 }
-login( "hola@gmail.com", "1233");
+login( "benja@gmail.com", "1234");
 
 onEvent("login",login)
 
