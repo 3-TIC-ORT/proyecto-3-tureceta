@@ -1,8 +1,8 @@
 {
-  "name": "proyecto-3-tureceta",
+  "name": "cd",
   "version": "1.0.0",
-  "description": "",
   "main": "Codigo Iniciar sesion.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/3-TIC-ORT/proyecto-3-tureceta/issues"
   },
-  "homepage": "https://github.com/3-TIC-ORT/proyecto-3-tureceta#readme"
+  "homepage": "https://github.com/3-TIC-ORT/proyecto-3-tureceta#readme",
+  "description": ""
 }

@@ -22,7 +22,7 @@ if (correo.length < 1){
 }
 //esto detecta si el correo contiene un dominio valido
 if (
-    (correo.includes("@gmail.com") || correo.includes("@hotmail.com") || correo.includes("@est.ort.edu.ar")) &&correo.indexOf("@") > 0) {
+    (correo.includes("@gmail.com") || correo.includes("@hotmail.com") || correo.includes("@est.ort.edu.ar")) &&correo.indexOf("@") > 0 && correo.endsWith(".com")) {
     // Crear objeto para cada usuario con nombre y contraseña
     let usuario = {
         nombre: nombre,
