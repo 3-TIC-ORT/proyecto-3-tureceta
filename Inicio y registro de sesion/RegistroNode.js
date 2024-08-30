@@ -39,7 +39,7 @@ function registrarse(nombre, correo, contraseña){
         // Mostrar un mensaje de error si el correo no es válido
         console.log("Por favor ingrese un correo válido");
     }}
-
+registrarse ("benja", "benja@gmail.com", "1234")
 
 onEvent("registrarse",registrarse);
 startServer();
