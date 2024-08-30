@@ -16,5 +16,8 @@
     "url": "https://github.com/3-TIC-ORT/proyecto-3-tureceta/issues"
   },
   "homepage": "https://github.com/3-TIC-ORT/proyecto-3-tureceta#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "soquetic": "^1.0.3"
+  }
 }

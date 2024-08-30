@@ -1,21 +1,22 @@
-import fs from "fs"
+import fs from "fs";
+import {onEvent,startServer} from "soquetic"
 
 function registrarse(nombre, correo, contraseña){
     let usuarios = fs.readFileSync("usuarios.json","utf-8");
     usuarios = JSON.parse(usuarios);
     if (nombre.length < 1){
-        alert ("El Nombre debe tener mas de un caracter")
+        console.log ("El Nombre debe tener mas de un caracter")
         return
         
     }
     if (contraseña.length < 1){
-        alert ("La contraseña debe tener mas de un caracter")
+        console.log ("La contraseña debe tener mas de un caracter")
         return
         
     }
     
     if (correo.length < 1){
-        alert ("El correo debe tener mas de un caracter")
+        console.log ("El correo debe tener mas de un caracter")
         return
         
     }
@@ -36,7 +37,9 @@ function registrarse(nombre, correo, contraseña){
     
     } else {
         // Mostrar un mensaje de error si el correo no es válido
-        alert("Por favor ingrese un correo válido");
+        console.log("Por favor ingrese un correo válido");
     }}
-    registrarse("leo","123","123@gmail.com");
 
+
+onEvent("registrarse",registrarse);
+startServer();
