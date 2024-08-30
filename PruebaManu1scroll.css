@@ -61,3 +61,10 @@ margin-top: 10px;
 .macros{
     margin-top: 65px;
 }
+
+
+#perfil{
+    position: absolute;
+    display: flex;
+    
+}
