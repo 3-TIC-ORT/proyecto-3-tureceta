@@ -1,7 +1,7 @@
 import fs from "fs"
 
 function registrarse(nombre, correo, contraseña){
-    let usuarios = fs.readFileSync("usuario.json","utf-8");
+    let usuarios = fs.readFileSync("usuarios.json","utf-8");
     usuarios = JSON.parse(usuarios);
     if (nombre.length < 1){
         alert ("El Nombre debe tener mas de un caracter")
@@ -32,13 +32,11 @@ function registrarse(nombre, correo, contraseña){
 
         usuarios.push(usuario);
         // Guardar la lista de usuarios en usuario.json
-        fs.writeFileSync("usuario.json",JSON.stringify(usuarios));
+        fs.writeFileSync("usuarios.json",JSON.stringify(usuarios));
     
     } else {
         // Mostrar un mensaje de error si el correo no es válido
         alert("Por favor ingrese un correo válido");
-    }
-}
-
-//registrarse("","","");
+    }}
+    registrarse("leo","123","123@gmail.com");
 
