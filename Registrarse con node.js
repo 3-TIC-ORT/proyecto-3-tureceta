@@ -1,4 +1,5 @@
-import fs from "fs"
+import fs from "fs";
+import {onEvent,startServer} from "soquetic"
 
 function registrarse(nombre, correo, contraseña){
     let usuarios = fs.readFileSync("usuarios.json","utf-8");
@@ -38,5 +39,7 @@ function registrarse(nombre, correo, contraseña){
         // Mostrar un mensaje de error si el correo no es válido
         console.log("Por favor ingrese un correo válido");
     }}
-    registrarse("benja","benja@gmail.com","");
 
+
+onEvent("registrarse",registrarse);
+startServer();
