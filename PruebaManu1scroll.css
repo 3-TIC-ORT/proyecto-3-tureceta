@@ -44,7 +44,7 @@ display: flex;
     font-optical-sizing: auto;
 
 }
-img{
+.img{
     display: flex;
     width: 40px;
     height: 40px;
