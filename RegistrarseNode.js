@@ -28,12 +28,13 @@ function registrarse(nombre, correo, contraseña){
             nombre: nombre,
             contraseña: contraseña,
             correo: correo,
-        };
+        }
+        ;
         
 
         usuarios.push(usuario);
         // Guardar la lista de usuarios en usuario.json
-        fs.writeFileSync("usuarios.json",JSON.stringify(usuarios));
+        fs.writeFileSync("usuarios.json",JSON.stringify(usuarios),null,2);
     
     } else {
         // Mostrar un mensaje de error si el correo no es válido
