@@ -70,6 +70,7 @@ margin-top: 10px;
     margin-top: 20px;
 }
 
+/* Esto es por si metes un video de fondo*/
 .video-background {
     position: fixed; /* Fija el video en la pantalla */
     top: 0;          /* Alinea el video al borde superior */
