@@ -63,8 +63,9 @@ margin-top: 10px;
 }
 
 
-#perfil{
+.menu{
     position: absolute;
     display: flex;
-    
+    border: 0;
+    margin-top: 20px;
 }
