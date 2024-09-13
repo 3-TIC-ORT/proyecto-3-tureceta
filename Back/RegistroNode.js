@@ -1,7 +1,11 @@
 import fs from "fs";
 import {onEvent,startServer} from "soquetic"
 
-function registrarse(nombre, correo, contraseña){
+function registrarseBack(info){
+    let nombre = info.nombre;
+    let correo = info.correo;
+    let contraseña = info.contraseña;
+
     let usuarios = fs.readFileSync("usuarios.json","utf-8");
     usuarios = JSON.parse(usuarios);
     if (nombre.length < 1){
@@ -38,8 +42,8 @@ function registrarse(nombre, correo, contraseña){
     } else {
         // Mostrar un mensaje de error si el correo no es válido
         console.log("Por favor ingrese un correo válido");
-    }}
-registrarse ("benja", "benja@gmail.com", "1234")
+}}
 
-onEvent("registrarse",registrarse);
+
+onEvent("registrarse",registrarseBack);
 startServer();

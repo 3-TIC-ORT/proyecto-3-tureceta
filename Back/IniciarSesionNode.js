@@ -1,7 +1,7 @@
 import fs from "fs"
 import {onEvent,startServer} from "soquetic";
 
-function login(correo, contraseña){
+function loginBack(correo, contraseña){
     let usuarios = fs.readFileSync("usuarios.json","utf-8");
     usuarios = JSON.parse(usuarios);
      
@@ -17,9 +17,7 @@ function login(correo, contraseña){
     console.log("La contraseña o el correo es incorrecto")
     return false;
 }
-login( "benja@gmail.com", "1234");
-
-onEvent("login",login)
+onEvent("login",loginBack)
 
 startServer()
 
