@@ -10,18 +10,18 @@ function registrarseBack(info){
     usuarios = JSON.parse(usuarios);
     if (nombre.length < 1){
         console.log ("El Nombre debe tener mas de un caracter")
-        return
+        return false 
         
     }
     if (contraseña.length < 1){
         console.log ("La contraseña debe tener mas de un caracter")
-        return
+        return false
         
     }
     
     if (correo.length < 1){
         console.log ("El correo debe tener mas de un caracter")
-        return
+        return false
         
     }
     //esto detecta si el correo contiene un dominio valido
@@ -38,10 +38,12 @@ function registrarseBack(info){
         usuarios.push(usuario);
         // Guardar la lista de usuarios en usuario.json
         fs.writeFileSync("usuarios.json",JSON.stringify(usuarios));
+        return true;
     
     } else {
         // Mostrar un mensaje de error si el correo no es válido
         console.log("Por favor ingrese un correo válido");
+        return false;
 }}
 
 
