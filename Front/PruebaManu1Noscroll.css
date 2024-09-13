@@ -6,6 +6,7 @@
 body{
 
     text-align: center;
+    background-color: rgba(223, 214, 167, 1);
     
 }
 h1{
@@ -21,18 +22,10 @@ h1{
 }
 .arriba{
 width: 100vw;
-height: 13vh;
-background-color: rgb(204, 199, 199);
+height: 20vh;
+background-color: rgba(47, 75, 38, 1);
 }
-
-.inicio{
- display: flex;   
- justify-content: flex-end;
- margin: 50px;
- margin-top: -50px;
- font-size: 22px;
-}
-.tureceta{
+.arriba.nutriplan{
     display: flex;
     justify-content: left;
     margin: 45px;
@@ -41,6 +34,27 @@ background-color: rgb(204, 199, 199);
     font-size: 30px;
     font-family: "Merienda", cursive;
     font-optical-sizing: auto;
+    color: bisque;
+}
+
+.inicio{
+ display: flex;   
+ justify-content: flex-end;
+ margin: 50px;
+ margin-top: -50px;
+ font-size: 22px;
+ color: bisque;
+}
+.nutriplan{
+    display: flex;
+    justify-content: left;
+    margin: 45px;
+    margin-top: -75px;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    color: bisque;
 
 }
 
@@ -50,6 +64,9 @@ img{
     height: 40px;
     margin-top: -356px;
     margin-left: 178px;
+
+}
+.bienvenida{
 
 }
 .segundafila{
