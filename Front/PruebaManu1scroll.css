@@ -16,14 +16,19 @@ h1{
     left: 610px;
     margin-top: 120px;
     width: 100vw;
-    
+    color: bisque;
 
 }
+h2{
+    color: bisque;
+}
 .arriba{
+position: relative;
 width: 100vw;
-height: 13vh;
+height: 15vh;
 background-color: rgb(204, 199, 199);
 display: flex;
+filter: opacity(90%);
 }
 
 #nombre{
@@ -32,6 +37,7 @@ display: flex;
     margin: 50px;
     margin-top: -50px;
     font-size: 25px;
+    position: relative
 }
 .nutriplan{
     display: flex;
@@ -42,6 +48,7 @@ display: flex;
     font-size: 30px;
     font-family: "Merienda", cursive;
     font-optical-sizing: auto;
+    position: absolute;
 
 }
 .img{
@@ -54,12 +61,15 @@ display: flex;
 }
 .segundafila{
 margin-top: 10px;
+color: bisque;
 }
 .tercerfila{
     margin-top: 20px;
+    color: bisque;
 }
 .macros{
     margin-top: 65px;
+    color: bisque;
 }
 
 
@@ -80,3 +90,4 @@ margin-top: 10px;
     object-fit: cover; /* Escala el video para cubrir todo sin distorsión */
     z-index: -1;     /* Envía el video al fondo */
 }
+
