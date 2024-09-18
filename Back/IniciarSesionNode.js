@@ -6,7 +6,6 @@ function loginBack(correo, contraseña){
     usuarios = JSON.parse(usuarios);
      
     
-    //esto detecta si el correo contiene un dominio valido
      
     for (let i = 0; i<usuarios.length;i++){
         if (usuarios[i].correo === correo && usuarios[i].contraseña === contraseña){

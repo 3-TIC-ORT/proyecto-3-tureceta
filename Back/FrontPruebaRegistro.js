@@ -5,7 +5,7 @@ let correo = document.getElementById("correo");
 
 
 function registrado(registroExistoso){
-    alert("Registrado Exitosamente")
+    alert("Registrado Exitosamente") 
     
 }
 
