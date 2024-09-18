@@ -1,11 +1,8 @@
-let contraseña = document.getElementById("contraseña");
-let correo = document.getElementById("correo");
-document.getElementById("botonLogin").addEventListener("click", logIn)
-function logIn(){
+function enviar(){
     let usuario = {
-        constraseña: contraseña.value,
-        correo: correo.value,
+        correo : document.getElementById("correo").value,
+        contraseña : document.getElementById("contraseña").value
     }
-    console.log(usuario)
+
+    postData("login", usuario)
 }
-postData("login",info, registrado);
