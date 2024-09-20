@@ -10,25 +10,60 @@
 <body>
     <h1>Comenzemos con algunas preguntas</h1>
     <div class="container">
+        <h2>Sexualidad</h2>
         <div class="gender">
-           <button>Hombre</button>
-           <button>Mujer</button>
+           <button class="Hombre">Hombre</button>
+           <button class="mujer">Mujer</button>
         </div>
+        <H2>Altura</H2>
         <input type="number" placeholder="Escribe tu altura en CM" min="1">
+        <h2>Edad</h2>
         <input type="number" placeholder="Escribe tu edad" min="1">
+        <h2>Peso</h2>
         <input type="number" placeholder="Escribe tu peso en KG" min="1">
-        <select>
-            <option>¿Cual es tu objetivo?</option>
-            <option>Bajar de peso</option>
-            <option>Mantenerse</option>
-            <option>Subir de peso</option>
-        </select>
         <select>
             <option>Cuantos días a la semana haces ejercicio</option>
             <option>1-2 días</option>
             <option>3-4 días</option>
             <option>5-7 días</option>
             <option>No hago ejercicio</option>
+        </select>
+        <h2>Objetivo</h2>
+        <div class="niveles-de-actividad">
+            <label class="opcion">
+                <input type="radio" name="actividad" value="sedentario">
+                <span>Sedentario</span>
+                <p>Básicamente poco o casi nada de ejercicio</p>
+            </label>
+            <label class="opcion">
+                <input type="radio" name="actividad" value="ligeramente activo">
+                <span>Ligeramente activo</span>
+                <p>Poca actividad 1-3 días a la semana</p>
+            </label>
+            
+            <label class="opcion">
+                <input type="radio" name="actividad" value="activo">
+                <span>Activo</span>
+                <p>Ejercicio 4-5 días a la semana</p>
+            </label>
+            <label class="opcion">
+                <input type="radio" name="actividad" value="muy activo">
+                <span>Muy activo</span>
+                <p>Ejercicio diario o entrenamiento duro 3-4 días a la semana</p>
+            </label>
+    
+            <label class="opcion">
+                <input type="radio" name="actividad" value="super activo">
+                <span>Super activo</span>
+                <p>Ejercicio duro 6-7 días a la semana</p>
+            </label>
+            
+        </div>
+        <select>
+            <option>¿Cual es tu objetivo?</option>
+            <option>Bajar de peso</option>
+            <option>Mantenerse</option>
+            <option>Subir de peso</option>
         </select>
        <div class="boton"><button>CALCULAR</button></div> 
     </div>
