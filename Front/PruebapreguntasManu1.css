@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #e0e0e0;
@@ -22,13 +24,9 @@ h1{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.gender {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 10px;
-}
 
-.gender div {
+
+.hombre .mujer{
     background-color: #333;
     color: white;
     padding: 10px;
@@ -36,12 +34,13 @@ h1{
     cursor: pointer;
     width: 45%;
     text-align: center;
-    
+    justify-content: space-around;
+    margin-bottom: 10px;
 }
 
 input, select {
-    width: calc(100% - 20px);
-    padding: 5px;
+    width: calc(100% - 10px);
+    padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -71,7 +70,7 @@ button {
     background-repeat: no-repeat;
     background-size: 50%;
 }
-.Hombre{
+.hombre{
     width: 100px;
     height: 100px;
     background-color: #d3d3d3;
@@ -96,18 +95,19 @@ button {
 }
 
 .niveles-de-actividad{
-    background-color: #fff;
-    padding: 20px;
+    
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     width: 300px;
+    text-align: left;
 }
 .opcion {
-    display: block;
+    display: flex;
     border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -119,13 +119,16 @@ button {
 .opcion span {
     font-size: 16px;
     font-weight: normal;
-    display: block;
+    display: flex;
+    
 }
 
 .opcion p {
     font-size: 12px;
     color: #666;
-    margin: 5px 0 0;
+    margin: 5px;
+    display: flex;
+    text-align: center;
 }
 
 .opcion:hover {

@@ -1,0 +1,74 @@
+body {
+    font-family: sans-serif;
+}
+.container {
+    background-color: #c0c0c0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.mujer{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #727272;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+.hombre{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #727272;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+.genero button:hover {
+    background-color: #555;
+    width: 100px;
+    transition-duration:600ms;
+}
+
+
+
+
+
+.actividad-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.actividad-button {
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.actividad-button.active {
+    background-color: rgb(55, 55, 65);
+    color: white;
+}
+
+.objetivo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.objetivo-button {
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.objetivo-button.active {
+    background-color: rgb(55, 55, 65);
+    color: white;
+}
