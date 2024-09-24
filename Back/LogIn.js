@@ -11,6 +11,7 @@ function loginBack(data){
         if (usuarios[i].correo === data.correo && usuarios[i].contraseña === data.contraseña){
             console.log("Bienvenido, " + usuarios[i].nombre);
             ok = true; // Credenciales correctas
+            return ok;
             break; // Detener el bucle si encuentra coincidencia
         }
         if (!ok) {
