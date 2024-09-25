@@ -6,7 +6,11 @@
 body{
 
     text-align: center;
-    background-color: rgba(223, 214, 167, 1);
+    background-image: url('https://s3-alpha-sig.figma.com/img/80f3/7654/2eb4df668dd24eebdd1062b7e7805f75?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=A5nPevezgk2IpFwyeL2Kd6L1TfEPkeARtCB2jubozFeg5LxdbmoW5H92Zb7nEqPbNqQc1t1pJa-Wt-frprmD1pkkb-9LpP2Q~na4QRhvjQ8a3i2ZRvRz2DK3zaUYun8v0zjjjyea8cGLklFC~0yqNYDbmr-WnZ-WYVtIUs1pMh1cB7j9Am80RqIOKXCkdb2wSM1CADq4aJ3zBYnJVOgPqDVsSClMzlz6iaf-eBTEAtTnluP5kPKEdxNE8pBWDByjfgD4v7~1Hc0bEVgQjWLcrE6Olkb7Ax3lHTZo9jUDbhxBNl6uN-xp-FqToSAlwZkiuE-fMY2Bbf6Ok34Cx~5Xeg__');
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen en la pantalla */
+    height: 90vh; 
+    margin: 0; 
     
 }
 h1{
@@ -22,19 +26,15 @@ h1{
 }
 .arriba{
 width: 100vw;
-height: 20vh;
-background-color: rgba(47, 75, 38, 1);
+height: 150px;
+background-color:rgba(255, 255, 255, 0.9);
 }
-.arriba.nutriplan{
+.nutriplan{
     display: flex;
     justify-content: left;
-    margin: 45px;
-    margin-top: -75px;
-    font-weight: bold;
-    font-size: 30px;
-    font-family: "Merienda", cursive;
-    font-optical-sizing: auto;
-    color: bisque;
+    font-size: 35px;
+    font-family: Merienda;
+
 }
 
 .inicio{
@@ -45,18 +45,7 @@ background-color: rgba(47, 75, 38, 1);
  font-size: 22px;
  color: bisque;
 }
-.nutriplan{
-    display: flex;
-    justify-content: left;
-    margin: 45px;
-    margin-top: -75px;
-    font-weight: bold;
-    font-size: 30px;
-    font-family: "Merienda", cursive;
-    font-optical-sizing: auto;
-    color: bisque;
 
-}
 
 img{
     display: flex;
@@ -66,12 +55,15 @@ img{
     margin-left: 178px;
 
 }
-.bienvenida{
 
+
+.bienvenida{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    color: bisque;
+    
+    
+
+    
 }
-.segundafila{
-    margin-top: 10px;
-    }
-    .tercerfila{
-        margin-top: 20px;
-    }
