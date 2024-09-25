@@ -4,7 +4,7 @@ import {onEvent,sendEvent,startServer, } from "soquetic";
 let usuarios = fs.readFileSync("usuarios.json","utf-8");
 usuarios = JSON.parse(usuarios);
 
-function loginBack(data){
+export function loginBack(data){
     let ok = false;
 
     for (let i = 0; i<usuarios.length; i++){
@@ -12,13 +12,10 @@ function loginBack(data){
             console.log("Bienvenido, " + usuarios[i].nombre);
             ok = true; // Credenciales correctas
             return ok;
-            break; // Detener el bucle si encuentra coincidencia
         }
         if (!ok) {
             console.log("Correo o contraseña incorrectos");
         }
-
-        sendEvent("loginOK",ok);
 }
 
 }
