@@ -1,7 +1,7 @@
 import fs from "fs";
 import {onEvent,startServer} from "soquetic"
 
-function registrarseBack(info){
+export function registrarseBack(info){
     let nombre = info.nombre;
     let correo = info.correo;
     let contraseña = info.contraseña;
