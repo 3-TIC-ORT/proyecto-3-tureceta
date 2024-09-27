@@ -1,5 +1,5 @@
 import fs from "fs"
-import {onEvent,sendEvent,startServer, } from "soquetic";
+import {onEvent,startServer, } from "soquetic";
 // Leer la lista de usuarios del archivo JSON    
 let usuarios = fs.readFileSync("usuarios.json","utf-8");
 usuarios = JSON.parse(usuarios);
@@ -13,11 +13,10 @@ export function loginBack(data){
             ok = true; // Credenciales correctas
             return ok;
         }
-        if (!ok) {
-            console.log("Correo o contraseña incorrectos");
-        }
-}
 
+        
+}
+console.log("Correo o contraseña incorrectos");
 }
 
 

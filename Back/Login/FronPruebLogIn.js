@@ -15,7 +15,6 @@ let botonLogin = document.getElementById("botonLogin")
             window.location.href = "http://127.0.0.1:5500/Front/Paginascroll1.html";
         } else 
             console.log("Login fallido");
-            alert("Correo o contraseña incorrectos");
         }
     );
 }
