@@ -28,6 +28,7 @@ height: 150px;
 background-color:rgba(255, 255, 255, 0.9);
 }
 .nutriplan{
+    position: relative;
     display: flex;
     justify-content: left;
     font-size: 35px;

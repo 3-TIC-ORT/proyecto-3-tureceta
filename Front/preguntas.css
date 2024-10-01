@@ -11,8 +11,10 @@ body {
     padding: 20px;
     border-radius: 10px;
     width: 300px;
-    text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    text-align: center;
+    
 }
 .mujer{
     border-radius: 50%;

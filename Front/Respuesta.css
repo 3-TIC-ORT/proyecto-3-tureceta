@@ -2,6 +2,10 @@ body{
 display: flex;
 align-items: center;
 flex-direction: column;
+background-image: url(https://s3-alpha-sig.figma.com/img/f3cc/ab5f/c91faaf1b2aea12071775821d991aecc?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nrItUNQoQBbx~Hqtpd3JuX6YUp74ZOts4vS76UqWu79E~PHuDhaRaKAjUZhdLMLE3LqOid9TmJeL9AVpNd40kRzXB8yX-vnPsgTmaz7P9LzJgZLxTy~b7SoKUKv1zAVIKi1J25SStPb~FBUljQIBUPOo9Jw6KBqDiQmojezdPl3fcCeiNjgK6Fd1-eE9UwvaHmCktchBTO-4MbNsoGkp4d5pLzghwbPZcgw780XHIZq15x0R7l5jIMDXBuo5K-RBEJZt2Uk6Wd9XKm~OkgOKfymH0-9LCuvHFDcnbWrTtuVk3gkNS4c5L0oyeuJhQp0VC~~IiUC5Xh8~bxlNod0shQ__);
+background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+background-position: center; /* Centra la imagen en la pantalla */
+background-repeat: no-repeat;
 }
 .arriba{
     width: 100vw;
@@ -9,41 +13,33 @@ flex-direction: column;
     background-color: rgb(204, 199, 199);
     margin-top: -10px;
     }
-
-.nombre{
-    display: flex;
-    justify-content: left;
-    margin: 45px;
-    margin-top: -50px;
-    margin-left:-1130px;
-    font-weight: bold;
-    font-size: 25px;
-    font-family: "Merienda", cursive;
-    font-optical-sizing: auto;
-}
-
-
-.macros{
-    width: 500px;
-    height: 200px;
-    background-color: rgb(99, 99, 99);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 75px;
-}
-.crear {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(206, 206, 206);
-    margin-top: 160px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    cursor: pointer;
+    .totalmacros{
+        background-color: rgb(166, 166, 175);
+        width: 610px;
+        height: 130px;
+        border-radius: 20px;
     }
-
-    .crear button:hover{
-    background-color: rgb(143, 89, 23);
+    .Total{
+        font-size: 28px;
+        text-align: center;
+    }
+    .datos{
+        display: flex;
+        justify-content: space-around;
+        margin-top: -20px;
+        color: rgb(66, 49, 49);
+        font-size: 18px;
+    }
+    
+    .valores{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: -20px;
+        color: rgb(66, 49, 49);
+        gap: 100px;
+        
+    }
+    
+    .calo, .prote, .carbo{
+        font-weight: 900;
     }
