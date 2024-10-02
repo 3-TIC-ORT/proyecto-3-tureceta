@@ -17,23 +17,20 @@ let activityButtons = document.querySelectorAll('.actividad-button');
         });
 
 
-        let objetivoButtons = document.querySelectorAll('.objetivo-button');
+        let ObjetivoButtons = document.querySelectorAll('.objetivo-button');
         let objetivoButton = null;
-        
-        objetivoButtons.forEach(button => {
+
+        ObjetivoButtons.forEach(button => {
             button.addEventListener('click', () => {
                 // Remove active class from previous button
                 if (objetivoButton) {
-                    objetivoButton.classList.remove('active');
+                   objetivoButton.classList.remove('active');
                 }
-        
+
                 // Add active class to the clicked button
                 button.classList.add('active');
-        
+
                 // Update the active button
-                objetivo = button;
+               objetivoButton = button;
             });
         });
-
-
-               

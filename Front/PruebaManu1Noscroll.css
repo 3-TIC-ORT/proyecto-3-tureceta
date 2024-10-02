@@ -6,36 +6,46 @@
 body{
 
     text-align: center;
+    height: 290vh; 
+    margin: 0; 
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(244, 240, 240, 1);
+    
+}
+.grandote{
+    height: 40%;
+    width: 100%;
     background-image: url('https://s3-alpha-sig.figma.com/img/80f3/7654/2eb4df668dd24eebdd1062b7e7805f75?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=A5nPevezgk2IpFwyeL2Kd6L1TfEPkeARtCB2jubozFeg5LxdbmoW5H92Zb7nEqPbNqQc1t1pJa-Wt-frprmD1pkkb-9LpP2Q~na4QRhvjQ8a3i2ZRvRz2DK3zaUYun8v0zjjjyea8cGLklFC~0yqNYDbmr-WnZ-WYVtIUs1pMh1cB7j9Am80RqIOKXCkdb2wSM1CADq4aJ3zBYnJVOgPqDVsSClMzlz6iaf-eBTEAtTnluP5kPKEdxNE8pBWDByjfgD4v7~1Hc0bEVgQjWLcrE6Olkb7Ax3lHTZo9jUDbhxBNl6uN-xp-FqToSAlwZkiuE-fMY2Bbf6Ok34Cx~5Xeg__');
     background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
     background-position: center; /* Centra la imagen en la pantalla */
-    height: 90vh; 
-    margin: 0; 
-    
+    background-repeat: no-repeat;
 }
-h1{
-    display: flex;
-    justify-content: center;
-    height: 60px;
-    top: 229px;
-    left: 610px;
-    margin-top: 120px;
-    width: 100vw;
-    
 
-}
 .arriba{
 width: 100vw;
 height: 150px;
 background-color:rgba(255, 255, 255, 0.9);
 }
 .nutriplan{
+    position: relative;
     display: flex;
     justify-content: left;
     font-size: 35px;
     font-family: Merienda;
+}
+
+.arriba .logo{
+    position: absolute;
+display: flex;
+justify-content: flex-start;
+margin-top: -100px;
+left: 20px;
 
 }
+
+
+
 
 .inicio{
  display: flex;   
@@ -47,23 +57,90 @@ background-color:rgba(255, 255, 255, 0.9);
 }
 
 
-img{
-    display: flex;
-    width: 40px;
-    height: 40px;
-    margin-top: -356px;
-    margin-left: 178px;
-
+.bienvenida {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    width: 80vw;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: brown;
 }
 
+h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-family: Merienda;
+}
 
-.bienvenida{
-    position: absolute;
-    width: 110px;
-    height: 110px;
-    color: bisque;
-    
-    
+  .container {
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            padding: 20px;
+            text-align: center;
+            width: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            left: 25%;
+            top: 80%;
+            z-index: 1;
+            border-radius: 6px;
+         
+
+
+            
+
+        }
+.container h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2.5em;
+    margin: 0;
+        }
+.container h2 {
+            font-family: 'Merienda', cursive;
+            font-size: 3em;
+            margin: 10px 0;
+        }
+        .container p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .container p strong {
+            font-weight: 700;
+        }
+        .icon {
+            display: inline-block;
+            margin: 10px;
+        }
+
+
+
+.parteDabajo{
+    margin-top: 20%;
+    text-align: center;  
 
     
+}
+.parteDabajo h1{
+    
+    font-family: 'Indie Flower', cursive;
+    font-size: 2.5em;
+    margin: 0;    
+}
+.botones{
+    text-align: center;  
+}
+.botones button{
+    width: 20%;
+    
+    padding: 20px;
+    
+    margin: 20px; /* Space between buttons */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
