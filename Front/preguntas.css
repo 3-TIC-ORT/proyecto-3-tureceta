@@ -16,7 +16,7 @@ body {
     text-align: center;
     
 }
-.mujer{
+#mujer{
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -25,7 +25,7 @@ body {
     border: none;
     cursor: pointer;
 }
-.hombre{
+#hombre{
     border-radius: 50%;
     width: 80px;
     height: 80px;

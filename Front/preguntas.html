@@ -12,11 +12,20 @@
     </div>
     <div class="container">
         <div class="genero">
-            <div> <h2>Cual es tu genero?</h2></div>
-            <button class="hombre">Hombre</button>
-            <button class="mujer">Mujer</button>
+            <div><h2>¿Cuál es tu género?</h2></div>
+            
+            <!-- Opción Hombre -->
+            <input type="radio" name="Gen" id="hombre">
+            <label for="hombre">
+                Hombre
+            </label>
+            
+            <!-- Opción Mujer -->
+            <input type="radio" name="Gen" id="mujer">
+            <label for="mujer">
+                Mujer
+            </label>
         </div>
-
         <H2>Altura</H2>
 
        <div> <input type="number" placeholder="Escribe tu altura en CM" min="1"></div>
@@ -74,9 +83,7 @@
                 Subir de peso
         </div>
         <div>
-            <button onclick="window.location.href='/Respuesta.html'">Calcular</button> 
-            <img src="https://s3-alpha-sig.figma.com/img/e2ec/4845/747fbb99d3f10b00b96959c2887e2c73?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=a9mqJVn-3bNzq1Lbi8xN6Ikd57mNfWOMzmpvCVxwXlkFFzipctRTWmNGvPzB0XkjRZlPYU8SUHD2CgDm~pJuCjlOi0qQXmQNx7tHRdaKdOLS7MlmKHZq0lTmjbAkJKax2PZel29beeTkwOo9enD4Kv59ySU2ER5FyIdzFPeZQNrcu1fGjb5OUy6Tnf2qHRrUzZx7fcILk~8hI0qWFM1v91FeQ3nFwUmVebaGNxC2uLxOhGa8U0EjoJz5vUVx87uZ1ffwEwrcwOnVzg58vqGY4I7oDxJyoB407En7lQjq3yyi1l~t7gmVM-mO85tAzV~Y-z5oiV7J72CpjySlQ3C9AA__" alt="">   
-        </div>
+            <button onclick="window.location.href='/Respuesta.html'">Calcular</button></div>
         </div>
     <script src="preguntas.js"></script>
 </body>

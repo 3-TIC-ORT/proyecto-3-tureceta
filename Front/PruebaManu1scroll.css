@@ -6,88 +6,139 @@
 body{
 
     text-align: center;
+    height: 290vh; 
+    margin: 0; 
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(244, 240, 240, 1);
     
 }
-h1{
-    display: flex;
-    justify-content: center;
-    height: 60px;
-    top: 229px;
-    left: 610px;
-    margin-top: 120px;
-    width: 100vw;
-    color: bisque;
+.grandote{
+    height: 40%;
+    width: 100%;
+    background-image: url('C:\Users\49193660\Downloads\image 19.png');
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat;
+}
 
-}
-h2{
-    color: bisque;
-}
 .arriba{
-position: relative;
 width: 100vw;
-height: 15vh;
-background-color: rgb(204, 199, 199);
-display: flex;
-filter: opacity(90%);
-}
-
-#nombre{
-    justify-content: flex-end;
-    display: flex;   
-    margin: 50px;
-    margin-top: -50px;
-    font-size: 25px;
-    position: relative
+height: 100px;
+background-color:rgba(255, 255, 255, 0.9);
 }
 .nutriplan{
+    position: relative;
     display: flex;
     justify-content: left;
-    margin: 45px;
-    margin-top: -75px;
-    font-weight: bold;
-    font-size: 30px;
-    font-family: "Merienda", cursive;
-    font-optical-sizing: auto;
+    font-size: 35px;
+    font-family: Merienda;
+}
+
+.arriba .logo{
     position: absolute;
+display: flex;
+justify-content: flex-start;
+margin-top: -100px;
+left: 20px;
 
-}
-.img{
-    display: flex;
-    width: 40px;
-    height: 40px;
-    margin-top: -358px;
-    margin-left: 178px;
-
-}
-.segundafila{
-margin-top: 10px;
-color: bisque;
-}
-.tercerfila{
-    margin-top: 20px;
-    color: bisque;
-}
-.macros{
-    margin-top: 65px;
-    color: bisque;
 }
 
 
-.menu{
-    position: absolute;
-    display: flex;
-    border: 0;
-    margin-top: 20px;
+
+
+.inicio{
+ display: flex;   
+ justify-content: flex-end;
+ margin: 50px;
+ margin-top: -50px;
+ font-size: 22px;
+ color: bisque;
 }
 
-/* Esto es por si metes un video de fondo*/
-.video-background {
-    position: fixed; /* Fija el video en la pantalla */
-    top: 0;          /* Alinea el video al borde superior */
-    left: 0;         /* Alinea el video al borde izquierdo */
-    width: 100%;     /* Extiende el video a todo el ancho */
-    height: 100%;    /* Extiende el video a toda la altura */
-    object-fit: cover; /* Escala el video para cubrir todo sin distorsión */
-    z-index: -1;     /* Envía el video al fondo */
+
+.bienvenida {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    width: 80vw;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: brown;
 }
 
+h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-family: Merienda;
+}
+
+    .container {
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            padding: 20px;
+            text-align: center;
+            width: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            left: 25%;
+            top: 80%;
+            z-index: 1;
+            border-radius: 6px;
+         
+
+
+            
+
+        }
+.container h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2.5em;
+    margin: 0;
+        }
+.container h2 {
+            font-family: 'Merienda', cursive;
+            font-size: 3em;
+            margin: 10px 0;
+        }
+        .container p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .container p strong {
+            font-weight: 700;
+        }
+        .icon {
+            display: inline-block;
+            margin: 10px;
+        }
+
+
+
+.parteDabajo{
+    margin-top: 20%;
+    text-align: center;  
+
+    
+}
+.parteDabajo h1{
+    
+    font-family: 'Indie Flower', cursive;
+    font-size: 2.5em;
+    margin: 0;    
+}
+.botones{
+    text-align: center;  
+}
+.botones button{
+    width: 20%; 
+    padding: 20px;
+    margin: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
