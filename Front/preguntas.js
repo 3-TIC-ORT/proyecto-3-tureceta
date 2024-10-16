@@ -6,6 +6,7 @@ function calculodatos (){
     let peso = document.getElementById("peso").value;
     let altura = document.getElementById("altura").value;
     let actividad = document.getElementById("actividad").value;
+    let objetivo = document.getElementById("objetivo").value;
 
 
 let datos = {
@@ -13,7 +14,8 @@ let datos = {
     edad: edad,
     peso: peso,
     altura: altura,
-    actividad: actividad,
+    actividad: actividad, 
+    objetivo: objetivo,
 
 }
 postData("datos",datos, null, 2)
