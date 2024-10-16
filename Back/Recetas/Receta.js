@@ -1,4 +1,4 @@
-import { onEvent, startServer } from "soquetic";
+import { onEvent,startServer } from "soquetic";
 
 function calcularCalorias(sexo, peso, altura, edad, actividad, objetivo) {
     let tmb;
@@ -28,8 +28,11 @@ function calcularCalorias(sexo, peso, altura, edad, actividad, objetivo) {
         tmb -= 500,
         (objetivo = "mantener peso")
         tmb = tmb 
-    }
-    return tmb
+    return (tmb)
+    };
+  
+
+  
     // Ajuste según objetivo
     //switch (objetivo) {
       //case "perder":
@@ -46,17 +49,7 @@ function calcularCalorias(sexo, peso, altura, edad, actividad, objetivo) {
   
     //return Math.round(calorias);
     /////////////////////////////////////////////////////////////////////
-    function calcularMacronutrientes(calorias) {
       // Reparto estándar: 25% proteínas, 50% carbohidratos, 25% grasas
-      const proteinasKcal = calorias * 0.25;
-      const carbohidratosKcal = calorias * 0.50;
-      const grasasKcal = calorias * 0.25;
-    
-      return {
-        proteinas: Math.round(proteinasKcal / 4), // 1g proteína = 4 kcal
-        carbohidratos: Math.round(carbohidratosKcal / 4), // 1g carbohidrato = 4 kcal
-        grasas: Math.round(grasasKcal / 9) // 1g grasa = 9 kcal
-      };
     }
     
     // Ejemplo de uso
@@ -67,12 +60,9 @@ function calcularCalorias(sexo, peso, altura, edad, actividad, objetivo) {
     //console.log(`Proteínas: ${macros.proteinas} g`);
     //console.log(`Carbohidratos: ${macros.carbohidratos} g`);
     //console.log(`Grasas: ${macros.grasas} g`);
+  calcularCalorias()
   
-  }
-  
-  
-onEvent("datos", datos, calcularCalorias)
-
+onEvent("calcular",calcularCalorias)
 
 
 
