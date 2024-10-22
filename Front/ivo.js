@@ -70,9 +70,12 @@ let comidas = [
 
     const nombre = document.createElement('h3');
     nombre.innerHTML = `${comida.nombre} (${comida.categoria})`;
+    nombre.classList.add(`categoria`)
+  
 
     const provincia = document.createElement('p');
     provincia.innerHTML = `Provincia: ${comida.provincia}`;
+    
 
     const ingredientesList = document.createElement('ul');
     comida.ingredientes.forEach(ingrediente => {
