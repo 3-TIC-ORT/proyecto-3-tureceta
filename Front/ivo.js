@@ -46,7 +46,7 @@ let comidas = [
       "ingredientes": ["Queso provolone", "Orégano", "Aceite de oliva"]
     },
     {
-      "nombre": "Milanesas a la napolitana",
+        "nombre": "Milanesas a la napolitana",
       "categoria": "Frito",
       "provincia": "Santa Fe",
       "ingredientes": ["Carne", "Tomate", "Queso", "Jamón", "Orégano"]
@@ -64,14 +64,28 @@ let comidas = [
       "ingredientes": ["Harina", "Agua", "Sal", "Grasa"]
     }
   ];
+  comidas.forEach(comida => {
+    const tarj = document.createElement('div');
+    tarj.classList.add('tarjeta');
 
-  comidas.forEach(comida =>{
-      let tarj = document.createElement('div');
-      tarj.classList.add('tarjeta');
+    const nombre = document.createElement('h3');
+    nombre.innerHTML = `${comida.nombre} (${comida.categoria})`;
 
-      let nombre = document.createElement('h3')
-      nombre.innerHTML = '$(comida.nombre) ($(comida.categoria))';
+    const provincia = document.createElement('p');
+    provincia.innerHTML = `Provincia: ${comida.provincia}`;
 
-      let provincia = document.createElement('h')
+    const ingredientesList = document.createElement('ul');
+    comida.ingredientes.forEach(ingrediente => {
+      const li = document.createElement('li');
+      li.textContent = ingrediente;
+      ingredientesList.appendChild(li);
+    });
+    
+    tarj.appendChild(nombre);
+    tarj.appendChild(provincia);
+    tarj.appendChild(ingredientesList);
+    
+    contenedor.appendChild(tarj);
 
-  })
+  });
+
