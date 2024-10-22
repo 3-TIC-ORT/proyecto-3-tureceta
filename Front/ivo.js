@@ -72,6 +72,6 @@ let comidas = [
       let nombre = document.createElement('h3')
       nombre.innerHTML = '$(comida.nombre) ($(comida.categoria))';
 
-      let provincia
+      let provincia = document.createElement('h')
 
   })
