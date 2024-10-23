@@ -8,7 +8,6 @@ function calcularCalorias(sexo, peso, altura, edad, actividad, objetivo) {
     } else if (sexo === "mujer") {
       tmb = 447.593 + (9.247 * peso) + (3.098 * altura) - (4.330 * edad);
     } else {
-      throw new Error("Género no válido. Debe ser 'hombre' o 'mujer'.");
     }
   
     // Factor de actividad
@@ -28,6 +27,7 @@ function calcularCalorias(sexo, peso, altura, edad, actividad, objetivo) {
         tmb -= 500,
         (objetivo = "mantener peso")
         tmb = tmb 
+    sessionStorage.setItem("caloriasTotales",tmb)
     return (tmb)
     };
   
@@ -63,6 +63,8 @@ function calcularCalorias(sexo, peso, altura, edad, actividad, objetivo) {
   calcularCalorias()
   
 onEvent("calcular",calcularCalorias)
+
+startServer ()
 
 
 
