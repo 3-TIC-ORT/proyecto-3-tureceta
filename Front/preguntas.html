@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="preguntas.css">
 </head>
 <body>
+    
     <div>
         <h1>Comenzemo con algunas preguntas</h1>
     </div>
@@ -17,25 +18,27 @@
             <!-- Opción Hombre -->
             <input type="radio" name="sexo" id="masculino">
             <label for="hombre">
+                <img class="personita" src="hombre.png" alt="" srcset="">
                 Hombre
             </label>
             
             <!-- Opción Mujer -->
             <input type="radio" name="sexo" id="femenino">
             <label for="mujer">
+                <img class="personita" src="mujer.png" alt="" srcset="">
                 Mujer
             </label>
         </div>
         <H2>Altura</H2>
 
-       <div> <input id= "altura" type="number" placeholder="Escribe tu altura en CM" min="1"></div>
+       <div> <input class="barrita" id= "altura" type="number" placeholder="Escribe tu altura en CM" min="1"></div>
        
        <h2>Edad</h2>
 
-       <div> <input id= "edad" type="number" placeholder="Escribe tu edad" min="1"></div>
+       <div> <input class="barrita" id= "edad" type="number" placeholder="Escribe tu edad" min="1"></div>
 
         <h2>Peso</h2>
-        <div>  <input id="peso" type="number" placeholder="Escribe tu peso en KG" min="1"></div>
+        <div>  <input class="barrita" id="peso" type="number" placeholder="Escribe tu peso en KG" min="1"></div>
            
     <h2>Nivel de actividad</h2>
 
@@ -86,6 +89,9 @@
         <div>
             <div>
             <button  id="resultado" onclick="redirect()">Calcular</button></div>
+        </div>.
+        <div class="opacidad">
+            
         </div>
         <script src="preguntas.js"></script>
 </body>
