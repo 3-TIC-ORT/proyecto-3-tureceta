@@ -37,24 +37,51 @@ let activityButtons = document.querySelectorAll('.actividad-button');
 let botoncalcular = document.getElementById("resultado")
 
 function calculodatos (){
-    let sexo = document.getElementById("sexo").value;
+    let masculino = document.getElementById("masculino").checked;
+    let femenino = document.getElementById("femenino").checked;
+    let sexo;
+    if (masculino){
+        sexo = "hombre"
+    }else if(femenino){
+        sexo = "mujer"
+    }
     let edad = document.getElementById("edad").value;
     let peso = document.getElementById("peso").value;
     let altura = document.getElementById("altura").value;
-    let actividad = document.getElementById("actividad").value;
-    let objetivo = document.getElementById("objetivo").value;
+    let actividadLista = [document.getElementById("sedentario"),document.getElementById("ligeramente-activa"),document.getElementById("activo"),document.getElementById("muy-activo"),document.getElementById("extremadamente-activo")];
+    let actividad;
+    let objetivoLista = [document.getElementById("Bajar"),document.getElementById("Mantenerse"),document.getElementById("subir")];
+    let objetivo;
+    for (let i of actividadLista){
+        if(i.classList.contains("active")){
+            actividad = i.id;
+        }
+    }
+    for (let i of objetivoLista){
+        if(i.classList.contains("active")){
+            objetivo = i.id;
+        }
+    }
 
+    console.log(sexo, edad, peso, altura, actividad, objetivo)
+    if(sexo === undefined || edad === "" || peso === "" || altura === "" || actividad === undefined || objetivo === undefined){
+        alert("Debes completar todos los campos");
+    }else{
+        let datos = {
+            sexo: sexo,
+            edad: edad,
+            peso: peso,
+            altura: altura,
+            actividad: actividad, 
+            objetivo: objetivo,
+    
+        }    
+        postData("datos",datos,(calorias)=>{
+            localStorage.setItem("calorias",`${calorias}`)
+            redirect()
+        })
 
-let datos = {
-    sexo: sexo,
-    edad: edad,
-    peso: peso,
-    altura: altura,
-    actividad: actividad, 
-    objetivo: objetivo,
-
-}    
-postData("datos",datos, null, 2)
+    }
 }
 
 
@@ -67,5 +94,5 @@ function redirect() {
     window.location.href = "http://127.0.0.1:5500/Front/Respuesta.html";
 }
 botoncalcular.addEventListener("click", () => {
-    fetchData("calcular", postear);
+    calculodatos()
 });
