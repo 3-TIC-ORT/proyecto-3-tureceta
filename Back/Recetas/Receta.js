@@ -27,7 +27,7 @@ function calcularCalorias(sexo, peso, altura, edad, actividad, objetivo) {
         tmb -= 500,
         (objetivo = "mantener peso")
         tmb = tmb 
-    return (tmb)
+    return (calorias)
     };
   
 
@@ -66,8 +66,8 @@ onEvent("calcular",calcularCalorias)
 startServer ()
 
 
-function(comdiasDesayuno){
-}
+//function(comdiasDesayuno){
+//}
 
 
 
