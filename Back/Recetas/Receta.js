@@ -27,7 +27,6 @@ function calcularCalorias(sexo, peso, altura, edad, actividad, objetivo) {
         tmb -= 500,
         (objetivo = "mantener peso")
         tmb = tmb 
-    sessionStorage.setItem("caloriasTotales",tmb)
     return (tmb)
     };
   
