@@ -1,47 +1,76 @@
-body{
-display: flex;
-align-items: center;
-flex-direction: column;
-background-image: url(https://s3-alpha-sig.figma.com/img/f3cc/ab5f/c91faaf1b2aea12071775821d991aecc?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nrItUNQoQBbx~Hqtpd3JuX6YUp74ZOts4vS76UqWu79E~PHuDhaRaKAjUZhdLMLE3LqOid9TmJeL9AVpNd40kRzXB8yX-vnPsgTmaz7P9LzJgZLxTy~b7SoKUKv1zAVIKi1J25SStPb~FBUljQIBUPOo9Jw6KBqDiQmojezdPl3fcCeiNjgK6Fd1-eE9UwvaHmCktchBTO-4MbNsoGkp4d5pLzghwbPZcgw780XHIZq15x0R7l5jIMDXBuo5K-RBEJZt2Uk6Wd9XKm~OkgOKfymH0-9LCuvHFDcnbWrTtuVk3gkNS4c5L0oyeuJhQp0VC~~IiUC5Xh8~bxlNod0shQ__);
-background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
-background-position: center; /* Centra la imagen en la pantalla */
-background-repeat: no-repeat;
+/* Elimina completamente cualquier overflow de la página */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Asegura que el contenedor ocupe toda la pantalla */
+    margin: 0;
+    background-image: url("verde.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Evita desplazamiento del fondo */
+    overflow: hidden; /* Elimina cualquier scrollbar */
 }
-.arriba{
-    width: 100px;
-    height: 13vh;
-    background-color: rgb(204, 199, 199);
-    margin-top: -10px;
-    }
-    .totalmacros{
-        background-color: rgb(166, 166, 175);
-        width: 610px;
-        height: 300px;
-        border-radius: 20px;
-        
-        
-    }
-    .Total{
-        font-size: 28px;
-        text-align: center;
-    }
-    .datos{
-        display: flex;
-        justify-content: space-around;
-        margin-top: -20px;
-        color: rgb(66, 49, 49);
-        font-size: 18px;
-    }
-    
-    .valores{
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: -20px;
-        color: rgb(66, 49, 49);
-        gap: 100px;
-        
-    }
-    
-    .calo, .prote, .carbo{
-        font-weight: 900;
-    }
+
+.totalmacros {
+    background-color: rgba(255, 255, 255, 0.8); /* Baja la opacidad del contenedor */
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titulo p {
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.calor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.proteycarbo {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.prote, .carb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+}
+
+.crear {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.opacidad {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4); /* Baja más la opacidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
