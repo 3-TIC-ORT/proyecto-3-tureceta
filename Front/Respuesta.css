@@ -8,7 +8,7 @@ background-position: center; /* Centra la imagen en la pantalla */
 background-repeat: no-repeat;
 }
 .arriba{
-    width: 100vw;
+    width: 100px;
     height: 13vh;
     background-color: rgb(204, 199, 199);
     margin-top: -10px;
@@ -16,8 +16,10 @@ background-repeat: no-repeat;
     .totalmacros{
         background-color: rgb(166, 166, 175);
         width: 610px;
-        height: 130px;
+        height: 300px;
         border-radius: 20px;
+        
+        
     }
     .Total{
         font-size: 28px;
