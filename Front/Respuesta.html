@@ -17,12 +17,14 @@
         </div>
         <div class="valores">
             <p class="Ncalo" id="calos">NUMERO</p>
-            <p class="Nprote">NUMERO</p>
-            <p class="Ncarbo">NUMERO</p>
+            <p class="Nprote" id="protes">NUMERO</p>
+            <p class="Ncarbo" id="carbo">NUMERO</p>
         </div>
    </div>    
 </body>
 <script>
-    document.getElementById("calos").textContent = Math.trunc(Number(localStorage.getItem("calorias")))
+    document.getElementById("calos").textContent =  JSON.parse(localStorage.getItem("info")).calorias;
+    document.getElementById("protes").textContent =  JSON.parse(localStorage.getItem("info")).proteinas;
+    document.getElementById("carbo").textContent =  JSON.parse(localStorage.getItem("info")).carbohidratos;
 </script>
 </html>

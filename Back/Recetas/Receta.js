@@ -29,9 +29,16 @@ function calcularCalorias({sexo, peso, altura, edad, actividad, objetivo}) {
         tmb = tmb
     }
     let calorias = tmb * factorActividad;
-  
-    return calorias
-}
+   // Cálculos adicionales de proteínas y carbohidratos
+   const proteinas = Number(peso) * 1.6; // Ajustable según el peso y nivel de actividad
+   const carbohidratos = (Number(calorias) * 0.5) / 4; // Aproximadamente el 50% de las calorías, 1g carbohidrato = 4 cal
+
+   return {
+      calorias: calorias,
+      proteinas: proteinas.toFixed(1),
+      carbohidratos: carbohidratos.toFixed(1)
+    }
+};
 
 
 onEvent("datos",calcularCalorias)

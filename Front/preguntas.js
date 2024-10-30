@@ -76,8 +76,8 @@ function calculodatos (){
             objetivo: objetivo,
     
         }    
-        postData("datos",datos,(calorias)=>{
-            localStorage.setItem("calorias",`${calorias}`)
+        postData("datos",datos,(info)=>{
+            localStorage.setItem("info",JSON.stringify(info))
             redirect()
         })
 
