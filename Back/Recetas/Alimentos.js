@@ -4,9 +4,9 @@ import {onEvent, startServer} from "soquetic";
 let listarda = JSON.parse(fs.readFileSync("./Recetas.json", "utf-8"));
 
 function crearLista() {
-    let comidas = [
+    let dietas = [
         {
-            nombre: "Arroz",
+            nombre: "Arroz con pollo",
             cal_g: "130 kcal",
             proteinas: "2.7 g",
             carbohidratos: "28 g"
