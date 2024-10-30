@@ -1,26 +1,49 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Respuesta</title>
+    <title>Macros Sugeridos</title>
     <link rel="stylesheet" href="Respuesta.css">
 </head>
 <body>
-    <div  class="totalmacros">
-        <p class="Total">Total de Macronutreientes</p>
-        <div class="datos">
-            <p class="calo">Calorias</p>
-            <p class="prote">Proteinas</p>
-            <p class="carbo">Carbohidratos</p>
+    <div class="opacidad">
+        <div class="totalmacros">
+            <div class="titulo">
+                <p>Macros Sugeridos</p>
+            </div>
+            <div class="calor">
+                <p class="calo">Calorías</p>
+                <p id="numCA" class="numerito">0</p>
+            </div>
+            <div class="proteycarbo">
+                <div class="prote">
+                    <p>Proteína</p>
+                    <p id="numP" class="numerito">0</p>
+                </div>
+                <div class="carb">
+                    <p>Carbohidratos</p>
+                    <p id="numC" class="numerito">0</p>
+                </div>
+                
+            </div>
+            <div class="boton">
+                <button class="crear" onclick="window.location.href='Dietas.html';">Crear Dieta</button>
+            </div>
         </div>
+<<<<<<< HEAD
         <div class="valores">
             <p class="Ncalo" id="calos">NUMERO</p>
             <p class="Nprote" id="protes">NUMERO</p>
             <p class="Ncarbo" id="carbo">NUMERO</p>
         </div>
    </div>    
+=======
+        <div>
+
+    </div>
+        
+>>>>>>> 8d491454bbdba17ebf37b57ddc9b61a8b1b1dc5f
 </body>
 <script>
     document.getElementById("calos").textContent =  JSON.parse(localStorage.getItem("info")).calorias;
