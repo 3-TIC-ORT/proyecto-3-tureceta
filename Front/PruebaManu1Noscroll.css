@@ -10,39 +10,34 @@ body{
     margin: 0; 
     display: flex;
     flex-direction: column;
-    background-color: rgba(244, 240, 240, 1);
+    background-color: rgb(201, 148, 148);
     
 }
 .grandote{
     height: 40%;
     width: 100%;
-    background-image: url("image\ 19\ \(2\).png");
+    background-image: url("ensalada.png");
     background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
     background-position: center; /* Centra la imagen en la pantalla */
     background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 .arriba{
 width: 100vw;
-height: 170px;
+height: 150px;
 background-color:rgba(255, 255, 255, 0.9);
+display: flex;
+align-items: center;
+justify-content: flex-start;
 }
 .logo{
-    position: relative;
-    display: flex;
-    justify-content: left;
     font-size: 35px;
     font-family: Merienda;
-    margin-top: -60px;
 }
 .nutriplan{
-    position: relative;
-    display: flex;
-    justify-content: left;
     font-size: 35px;
-    margin-left: 140px;
     font-family: Merienda;
-    margin-top: -30px;
 }
 
 
@@ -127,22 +122,21 @@ h1 {
     margin: 0;    
 }
 .botones{
-    text-align: center;  
+    text-align: center; 
 }
 .botones button{
     width: 20%;
-    
     padding: 20px;
-    
     margin: 20px; /* Space between buttons */
-    background-color: #4CAF50;
-    color: white;
+    background-color: #f5f8f5;
+    color: rgb(3, 3, 3);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     text-align: center;
     align-items: center;
+    border: 1px solid #000000;
 }
 
 
