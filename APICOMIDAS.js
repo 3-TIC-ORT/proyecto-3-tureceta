@@ -1,5 +1,6 @@
 // For Node.js: uncomment the line below if you need to import fetch
 // const fetch = require('node-fetch');
+import fs from "fs";
 
 
 
@@ -16,7 +17,7 @@ fetch(url)
   })
   .then(data => {
     // Access and display recipe data
-    data.results.forEach(recipe => {
+ data.results.forEach(recipe => {
       console.log("Recipe name:", recipe.title);
       console.log("Calories:", recipe.nutrition.nutrients[0].amount, "kcal");
       console.log("Protein:", recipe.nutrition.nutrients[1].amount, "g");
@@ -24,4 +25,4 @@ fetch(url)
     });
   })
   .catch(error => console.error("Error fetching data:", error));
-  let data = JSON.parse(fs.readFileSync("./Recetas.json", "utf-8"));
+  fs.writeFileSync("./Recetas.json", JSON.stringify(data, null, 2));
