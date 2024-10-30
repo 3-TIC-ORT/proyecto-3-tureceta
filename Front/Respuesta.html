@@ -36,8 +36,8 @@
     </div>   
 </body>
 <script>
-    document.getElementById("calos").textContent =  JSON.parse(localStorage.getItem("info")).calorias;
-    document.getElementById("protes").textContent =  JSON.parse(localStorage.getItem("info")).proteinas;
-    document.getElementById("carbo").textContent =  JSON.parse(localStorage.getItem("info")).carbohidratos;
+    document.getElementById("numCA").textContent =  Math.trunc(JSON.parse(localStorage.getItem("info")).calorias);
+    document.getElementById("numP").textContent =  Math.trunc(JSON.parse(localStorage.getItem("info")).proteinas);
+    document.getElementById("numC").textContent =  Math.trunc(JSON.parse(localStorage.getItem("info")).carbohidratos);
 </script>
 </html>
