@@ -12,6 +12,8 @@ body {
     overflow: hidden; /* Elimina cualquier scrollbar */
 }
 
+
+
 .totalmacros {
     background-color: rgba(255, 255, 255, 0.8); /* Baja la opacidad del contenedor */
     width: 350px;
