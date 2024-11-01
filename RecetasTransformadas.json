@@ -1,0 +1,215 @@
+[
+  {
+      "nombre": "Ensalada de pollo",
+      "calorias": 350,
+      "proteinas": 30,
+      "carbohidratos": 15,
+      "ingredientes": [
+          {
+              "nombre": "Pechuga de pollo",
+              "cantidad": 200,
+              "unidad": "gramos",
+              "calorias": 220,
+              "proteinas": 40,
+              "carbohidratos": 0
+          },
+          {
+              "nombre": "Lechuga",
+              "cantidad": 100,
+              "unidad": "gramos",
+              "calorias": 15,
+              "proteinas": 1,
+              "carbohidratos": 3
+          },
+          {
+              "nombre": "Tomate",
+              "cantidad": 50,
+              "unidad": "gramos",
+              "calorias": 10,
+              "proteinas": 0,
+              "carbohidratos": 2
+          },
+          {
+              "nombre": "Aceite de oliva",
+              "cantidad": 10,
+              "unidad": "ml",
+              "calorias": 90,
+              "proteinas": 0,
+              "carbohidratos": 0
+          },
+          {
+              "nombre": "Vinagre",
+              "cantidad": 5,
+              "unidad": "ml",
+              "calorias": 0,
+              "proteinas": 0,
+              "carbohidratos": 0
+          }
+      ],
+      "preparacion": "Cocina la pechuga de pollo a la parrilla. Mezcla la lechuga, el tomate y el pollo en un bol. Agrega aceite de oliva y vinagre al gusto."
+  },
+  {
+      "nombre": "Tortilla de patatas",
+      "calorias": 450,
+      "proteinas": 15,
+      "carbohidratos": 35,
+      "ingredientes": [
+          {
+              "nombre": "Huevos",
+              "cantidad": 4,
+              "unidad": "unidades",
+              "calorias": 280,
+              "proteinas": 24,
+              "carbohidratos": 0
+          },
+          {
+              "nombre": "Patatas",
+              "cantidad": 300,
+              "unidad": "gramos",
+              "calorias": 230,
+              "proteinas": 6,
+              "carbohidratos": 54
+          },
+          {
+              "nombre": "Cebolla",
+              "cantidad": 100,
+              "unidad": "gramos",
+              "calorias": 40,
+              "proteinas": 1,
+              "carbohidratos": 9
+          },
+          {
+              "nombre": "Aceite de oliva",
+              "cantidad": 30,
+              "unidad": "ml",
+              "calorias": 270,
+              "proteinas": 0,
+              "carbohidratos": 0
+          }
+      ],
+      "preparacion": "Fríe las patatas y la cebolla en aceite de oliva hasta que estén doradas. Bate los huevos y mezcla con las patatas. Cocina en una sartén a fuego medio."
+  },
+  {
+      "nombre": "Batido de plátano",
+      "calorias": 200,
+      "proteinas": 2,
+      "carbohidratos": 50,
+      "ingredientes": [
+          {
+              "nombre": "Plátano",
+              "cantidad": 100,
+              "unidad": "gramos",
+              "calorias": 90,
+              "proteinas": 1,
+              "carbohidratos": 23
+          },
+          {
+              "nombre": "Leche",
+              "cantidad": 200,
+              "unidad": "ml",
+              "calorias": 100,
+              "proteinas": 7,
+              "carbohidratos": 10
+          },
+          {
+              "nombre": "Miel",
+              "cantidad": 10,
+              "unidad": "gramos",
+              "calorias": 30,
+              "proteinas": 0,
+              "carbohidratos": 8
+          },
+          {
+              "nombre": "Yogur",
+              "cantidad": 100,
+              "unidad": "gramos",
+              "calorias": 60,
+              "proteinas": 5,
+              "carbohidratos": 10
+          }
+      ],
+      "preparacion": "Mezcla todos los ingredientes en una licuadora hasta obtener una mezcla homogénea."
+  },
+  {
+      "nombre": "Sopa de verduras",
+      "calorias": 150,
+      "proteinas": 3,
+      "carbohidratos": 35,
+      "ingredientes": [
+          {
+              "nombre": "Zanahoria",
+              "cantidad": 100,
+              "unidad": "gramos",
+              "calorias": 41,
+              "proteinas": 1,
+              "carbohidratos": 10
+          },
+          {
+              "nombre": "Apio",
+              "cantidad": 50,
+              "unidad": "gramos",
+              "calorias": 10,
+              "proteinas": 0,
+              "carbohidratos": 2
+          },
+          {
+              "nombre": "Cebolla",
+              "cantidad": 50,
+              "unidad": "gramos",
+              "calorias": 20,
+              "proteinas": 0,
+              "carbohidratos": 5
+          },
+          {
+              "nombre": "Calabacín",
+              "cantidad": 100,
+              "unidad": "gramos",
+              "calorias": 16,
+              "proteinas": 1,
+              "carbohidratos": 3
+          },
+          {
+              "nombre": "Caldo de verduras",
+              "cantidad": 500,
+              "unidad": "ml",
+              "calorias": 0,
+              "proteinas": 0,
+              "carbohidratos": 0
+          }
+      ],
+      "preparacion": "Hierve las verduras en el caldo hasta que estén tiernas. Tritura y sirve caliente."
+  },
+  {
+      "nombre": "Pasta al pesto",
+      "calorias": 600,
+      "proteinas": 15,
+      "carbohidratos": 80,
+      "ingredientes": [
+          {
+              "nombre": "Pasta",
+              "cantidad": 200,
+              "unidad": "gramos",
+              "calorias": 300,
+              "proteinas": 10,
+              "carbohidratos": 60
+          },
+          {
+              "nombre": "Salsa pesto",
+              "cantidad": 50,
+              "unidad": "gramos",
+              "calorias": 250,
+              "proteinas": 3,
+              "carbohidratos": 20
+          },
+          {
+              "nombre": "Parmesano",
+              "cantidad": 30,
+              "unidad": "gramos",
+              "calorias": 120,
+              "proteinas": 12,
+              "carbohidratos": 0
+          }
+      ],
+      "preparacion": "Cocina la pasta y mezcla con la salsa pesto. Sirve con queso parmesano rallado."
+  }
+]
