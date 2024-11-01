@@ -2,30 +2,36 @@ import fs from 'fs';
 
 function transformarDatos() {
   try {
+    // Leer los datos directamente desde el archivo
     const rawData = JSON.parse(fs.readFileSync('Recetas.json', 'utf-8'));
 
-    // Transformar los datos al formato deseado, con validación para evitar errores
-    const recetasTransformadas = rawData.results.map(recipe => ({
+    // Verificamos que los datos sean un array
+    if (!Array.isArray(rawData)) {
+      console.error("Error: Los datos no están en el formato de array esperado.");
+      return;
+    }
+
+    // Transformar los datos al formato solicitado
+    const recetasTransformadas = rawData.map(recipe => ({
       nombre: recipe.title || "Nombre no disponible",
-      calorias: recipe.nutrition?.nutrients?.[0]?.amount ? `${recipe.nutrition.nutrients[0].amount} kcal` : "Información no disponible",
-      proteinas: recipe.nutrition?.nutrients?.[1]?.amount ? `${recipe.nutrition.nutrients[1].amount} g` : "Información no disponible",
-      carbohidratos: recipe.nutrition?.nutrients?.[2]?.amount ? `${recipe.nutrition.nutrients[2].amount} g` : "Información no disponible",
+      calorias: recipe.nutrition?.nutrients?.find(n => n.name === "Calories")?.amount || 0,
+      proteinas: recipe.nutrition?.nutrients?.find(n => n.name === "Protein")?.amount || 0,
+      carbohidratos: recipe.nutrition?.nutrients?.find(n => n.name === "Carbohydrates")?.amount || 0,
       ingredientes: recipe.nutrition?.ingredients?.map(ing => ({
         nombre: ing.name || "Ingrediente no disponible",
-        calorias: ing.nutrients?.[0]?.amount ? `${ing.amount * ing.nutrients[0].amount} kcal` : "Información no disponible",
-        proteinas: ing.nutrients?.[1]?.amount ? `${ing.amount * ing.nutrients[1].amount} g` : "Información no disponible",
-        carbohidratos: ing.nutrients?.[2]?.amount ? `${ing.amount * ing.nutrients[2].amount} g` : "Información no disponible",
-      })) || [],
-      receta: recipe.analyzedInstructions?.[0]?.steps?.map(step => step.step) || ["Instrucciones no disponibles"]
+        cantidad: ing.amount || 0,
+        calorias: ing.nutrients?.find(n => n.name === "Calories")?.amount || 0,
+        proteinas: ing.nutrients?.find(n => n.name === "Protein")?.amount || 0,
+        carbohidratos: ing.nutrients?.find(n => n.name === "Carbohydrates")?.amount || 0
+      })) || []
     }));
 
     // Guardar los datos transformados en RecetasTransformadas.json
     fs.writeFileSync('RecetasTransformadas.json', JSON.stringify(recetasTransformadas, null, 2), 'utf-8');
-    console.log("Datos transformados guardados en RecetasTransformadas.json");
+    console.log("Recetas transformadas guardadas en RecetasTransformadas.json");
   } catch (error) {
     console.error("Error al transformar los datos:", error.message);
   }
 }
 
 transformarDatos();
-

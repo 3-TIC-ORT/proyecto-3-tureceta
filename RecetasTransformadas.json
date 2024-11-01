@@ -1,215 +1,352 @@
 [
-  {
-      "nombre": "Ensalada de pollo",
-      "calorias": 350,
-      "proteinas": 30,
-      "carbohidratos": 15,
-      "ingredientes": [
-          {
-              "nombre": "Pechuga de pollo",
-              "cantidad": 200,
-              "unidad": "gramos",
-              "calorias": 220,
-              "proteinas": 40,
-              "carbohidratos": 0
+    {
+        "nombre": "Ensalada César",
+        "calorias": 300,
+        "proteinas": 15,
+        "carbohidratos": 10,
+        "tipo": "almuerzo",
+        "ingredientes": [
+            {
+                "nombre": "lechuga romana",
+                "cantidad": "150g",
+                "calorias": 25,
+                "proteinas": 2,
+                "carbohidratos": 5
+            },
+            {
+                "nombre": "pollo a la parrilla",
+                "cantidad": "100g",
+                "calorias": 165,
+                "proteinas": 31,
+                "carbohidratos": 0
+            },
+            {
+                "nombre": "aderezo César",
+                "cantidad": "30ml",
+                "calorias": 110,
+                "proteinas": 1,
+                "carbohidratos": 2
+            },
+            {
+                "nombre": "crutones",
+                "cantidad": "30g",
+                "calorias": 50,
+                "proteinas": 2,
+                "carbohidratos": 10
+            }
+        ],
+        "preparacion": "Mezclar la lechuga con el pollo y el aderezo. Añadir los crutones antes de servir."
+    },
+    {
+        "nombre": "Pasta Alfredo",
+        "calorias": 600,
+        "proteinas": 20,
+        "carbohidratos": 80,
+        "tipo": "almuerzo",
+        "ingredientes": [
+            {
+                "nombre": "pasta",
+                "cantidad": "200g",
+                "calorias": 300,
+                "proteinas": 10,
+                "carbohidratos": 60
+            },
+            {
+                "nombre": "crema de leche",
+                "cantidad": "100ml",
+                "calorias": 400,
+                "proteinas": 3,
+                "carbohidratos": 4
+            },
+            {
+                "nombre": "queso parmesano",
+                "cantidad": "50g",
+                "calorias": 200,
+                "proteinas": 18,
+                "carbohidratos": 2
+            },
+            {
+                "nombre": "ajo",
+                "cantidad": "2 dientes",
+                "calorias": 10,
+                "proteinas": 0,
+                "carbohidratos": 2
+            }
+        ],
+        "preparacion": "Cocinar la pasta y mezclar con la crema y el queso. Añadir ajo al gusto."
+    },
+    {
+        "nombre": "Tacos de Pollo",
+        "calorias": 500,
+        "proteinas": 30,
+        "carbohidratos": 50,
+        "tipo": "almuerzo",
+        "ingredientes": [
+            {
+                "nombre": "tortillas de maíz",
+                "cantidad": "3 unidades",
+                "calorias": 150,
+                "proteinas": 3,
+                "carbohidratos": 30
+            },
+            {
+                "nombre": "pollo desmenuzado",
+                "cantidad": "150g",
+                "calorias": 250,
+                "proteinas":30,
+                 "carbohidratos":0
+            },
+            {
+                 "nombre":"aguacate",
+                 "cantidad":"50g",
+                 "calorias":80, 
+                 "proteinas":1, 
+                 "carbohidratos":4
+            },
+            {
+                 "nombre":"salsa",
+                 "cantidad":"30ml",
+                 "calorias":20, 
+                 "proteinas":0, 
+                 "carbohidratos":2
+             }
+         ],
+         "preparacion":"Calentar las tortillas y rellenar con pollo, aguacate y salsa."
+     },
+     {
+         "nombre":"Pizza Margherita" ,
+         "calorias":700 ,
+         "proteinas":25 , 
+         "carbohidratos":80 , 
+         "tipo":"cena" ,
+         "ingredientes":[
+             { 
+                 "nombre":"masa de pizza", 
+                 "cantidad":"200g", 
+                 "calorias":500, 
+                 "proteinas":15, 
+                 "carbohidratos":70 
+             }, 
+             { 
+                 "nombre":"salsa de tomate", 
+                 "cantidad":"100ml", 
+                 "calorias":50, 
+                 "proteinas":2, 
+                 "carbohidratos":10 
+             }, 
+             { 
+                 "nombre":"queso mozzarella", 
+                 "cantidad":"100g", 
+                 "calorias":300, 
+                 "proteinas":25, 
+                 "carbohidratos":2 
+             }, 
+             { 
+                 "nombre":"albahaca fresca", 
+                 "cantidad":"5g", 
+                 "calorias":2, 
+                 "proteinas":0, 
+                 "carbohidratos":0 
+             } 
+         ], 
+         "preparacion":"Extender la masa, añadir salsa y queso. Hornear a220°C durante15 minutos."   
+     },
+     {
+         "nombre":"Sopa de Lentejas" ,  
+         "calorias":350 ,  
+         "proteinas":20 ,  
+         "carbohidratos":60 ,  
+         "tipo":"cena" ,
+         "ingredientes":[  
+             {  
+                 "nombre":"lentejas" ,  
+                 "cantidad":"150g" ,  
+                 "calorias":150 ,  
+                 "proteinas":10 ,  
+                 "carbohidratos":30  
+             },  
+             {  
+                  "nombre":"zanahoria" ,  
+                  "cantidad":"100g" ,  
+                  "calorias":40 ,  
+                  "proteinas":1 ,  
+                  "carbohidratos":10  
+              },  
+              {  
+                  "nombre":"cebolleta" ,  
+                  "cantidad":"50g" ,  
+                  "calorias":15 ,  
+                  "proteinas":0 ,  
+                  "carbohidratos":3  
+              },  
+              {  
+                  "nombre":"caldo de verduras" ,  
+                  "cantidad":"500ml" ,  
+                  "calorias":30 ,  
+                  "proteinas":1 ,  
+                  "carbohidratos":5  
+              }   
+          ],   
+          "preparacion":"Cocinar las lentejas y verduras en el caldo hasta que estén tiernas."   
+      },
+      {
+        {
+            "nombre": "Huevos Revueltos",
+            "calorias": 200,
+            "proteinas": 14,
+            "carbohidratos": 2,
+            "tipo": "desayuno",
+            "ingredientes": [
+                {
+                    "nombre": "huevos",
+                    "cantidad": "3 unidades",
+                    "calorias": 210,
+                    "proteinas": 18,
+                    "carbohidratos": 0
+                },
+                {
+                    "nombre": "mantequilla",
+                    "cantidad": "10g",
+                    "calorias": 70,
+                    "proteinas": 0.1,
+                    "carbohidratos": 0
+                }
+            ],
+            "preparacion": "Batir los huevos y cocinarlos en mantequilla a fuego medio, revolviendo hasta que estén cocidos."
+        },
+        {
+            "nombre": "Avena Cocida",
+            "calorias": 150,
+            "proteinas": 5,
+            "carbohidratos": 27,
+            "tipo": "desayuno",
+            "ingredientes": [
+                {
+                    "nombre": "avena",
+                    "cantidad": "50g",
+                    "calorias": 190,
+                    "proteinas": 7,
+                    "carbohidratos": 33
+                },
+                {
+                    "nombre": "agua",
+                    "cantidad": "200ml",
+                    "calorias": 0,
+                    "proteinas": 0,
+                    "carbohidratos": 0
+                },
+                {
+                    "nombre": "miel",
+                    "cantidad": "10g",
+                    "calorias": 30,
+                    "proteinas": 0.1,
+                    "carbohidratos": 8
+                }
+            ],
+            "preparacion": "Cocinar la avena en agua hasta que esté suave. Endulzar con miel al gusto."
+        },
+        {
+            "nombre": "Batido de Plátano",
+            "calorias": 250,
+            "proteinas": 5,
+            "carbohidratos": 40,
+            "tipo": "desayuno",
+            "ingredientes": [
+                {
+                    "nombre": "plátano",
+                    "cantidad": "1 unidad",
+                    "calorias": 105,
+                    "proteinas": 1.3,
+                    "carbohidratos": 27
+                },
+                {
+                    "nombre": "leche",
+                    "cantidad": "200ml",
+                    "calorias": 100,
+                    "proteinas": 6.5,
+                    "carbohidratos": 12
+                },
+                {
+                    "nombre": "miel",
+                    "cantidad": "10g",
+                    "calorias": 30,
+                    “proteinas”:0.1, 
+                     “carbohidratos”:8
+                }
+            ],
+            “preparacion”:“Mezclar todos los ingredientes en una licuadora hasta obtener una mezcla homogénea.”
+        },
+        {
+            “nombre”:“Tostadas Francesas” ,
+             “calorias”:400 ,
+             “proteinas”:12 , 
+             “carbohidratos”:50 , 
+             “tipo”:“desayuno” ,
+             “ingredientes”:[
+                 { 
+                     “nombre”:“pan” , 
+                     “cantidad”:“2 rebanadas” , 
+                     “calorias”:200 , 
+                     “proteinas”:8 , 
+                     “carbohidratos”:40 
+                 }, 
+                 { 
+                     “nombre”:“huevo” , 
+                     “cantidad”:“1 unidad” , 
+                     “calorias”:70 , 
+                     “proteinas”:6 , 
+                     “carbohidratos”:1 
+                 }, 
+                 { 
+                     “nombre”:“leche” , 
+                     “cantidad”:“50ml” , 
+                     “calorias”:30 , 
+                     “proteinas”:2 , 
+                     “carbohidratos”:3 
+                 }, 
+                 { 
+                     “nombre”:“mantequilla” , 
+                     “cantidad”:“10g” , 
+                     “calorias”:70 , 
+                     “proteinas”:0.1 , 
+                     “carbohidratos”:0 
+                 } 
+             ], 
+             ”preparacion":"Batir el huevo con la leche y sumergir el pan. Cocinar en mantequilla hasta dorar."   
+         },
+         {
+             ”nombre":"Yogur con Frutas" ,  
+             ”calorias:250 ,  
+             ”proteinas:10 ,  
+             ”carbohidratos:30 ,  
+             ”tipo":"merienda" ,
+             ”ingredientes":[  
+                 {  
+                     ”nombre":"yogur natural" ,  
+                     ”cantidad":"150g" ,  
+                     ”calorias:100 ,  
+                     ”proteinas:5 ,  
+                     ”carbohidratos:15  
+                 },  
+                 {  
+                      ”nombre":"frutas variadas" ,  
+                      ”cantidad":"100g" ,  
+                      ”calorias:50 ,  
+                      ”proteinas:1 ,  
+                      ”carbohidratos:12  
+                  },  
+                  {  
+                      ”nombre":"miel" ,  
+                      ”cantidad":"10g" ,  
+                      ”calorias:30 ,  
+                      ”proteinas:0.1 ,  
+                      ”carbohidratos:8  
+                  }   
+              ],   
+              ”preparacion":"Mezclar el yogur con las frutas y endulzar con miel."   
           },
           {
-              "nombre": "Lechuga",
-              "cantidad": 100,
-              "unidad": "gramos",
-              "calorias": 15,
-              "proteinas": 1,
-              "carbohidratos": 3
-          },
-          {
-              "nombre": "Tomate",
-              "cantidad": 50,
-              "unidad": "gramos",
-              "calorias": 10,
-              "proteinas": 0,
-              "carbohidratos": 2
-          },
-          {
-              "nombre": "Aceite de oliva",
-              "cantidad": 10,
-              "unidad": "ml",
-              "calorias": 90,
-              "proteinas": 0,
-              "carbohidratos": 0
-          },
-          {
-              "nombre": "Vinagre",
-              "cantidad": 5,
-              "unidad": "ml",
-              "calorias": 0,
-              "proteinas": 0,
-              "carbohidratos": 0
+              ...
           }
-      ],
-      "preparacion": "Cocina la pechuga de pollo a la parrilla. Mezcla la lechuga, el tomate y el pollo en un bol. Agrega aceite de oliva y vinagre al gusto."
-  },
-  {
-      "nombre": "Tortilla de patatas",
-      "calorias": 450,
-      "proteinas": 15,
-      "carbohidratos": 35,
-      "ingredientes": [
-          {
-              "nombre": "Huevos",
-              "cantidad": 4,
-              "unidad": "unidades",
-              "calorias": 280,
-              "proteinas": 24,
-              "carbohidratos": 0
-          },
-          {
-              "nombre": "Patatas",
-              "cantidad": 300,
-              "unidad": "gramos",
-              "calorias": 230,
-              "proteinas": 6,
-              "carbohidratos": 54
-          },
-          {
-              "nombre": "Cebolla",
-              "cantidad": 100,
-              "unidad": "gramos",
-              "calorias": 40,
-              "proteinas": 1,
-              "carbohidratos": 9
-          },
-          {
-              "nombre": "Aceite de oliva",
-              "cantidad": 30,
-              "unidad": "ml",
-              "calorias": 270,
-              "proteinas": 0,
-              "carbohidratos": 0
-          }
-      ],
-      "preparacion": "Fríe las patatas y la cebolla en aceite de oliva hasta que estén doradas. Bate los huevos y mezcla con las patatas. Cocina en una sartén a fuego medio."
-  },
-  {
-      "nombre": "Batido de plátano",
-      "calorias": 200,
-      "proteinas": 2,
-      "carbohidratos": 50,
-      "ingredientes": [
-          {
-              "nombre": "Plátano",
-              "cantidad": 100,
-              "unidad": "gramos",
-              "calorias": 90,
-              "proteinas": 1,
-              "carbohidratos": 23
-          },
-          {
-              "nombre": "Leche",
-              "cantidad": 200,
-              "unidad": "ml",
-              "calorias": 100,
-              "proteinas": 7,
-              "carbohidratos": 10
-          },
-          {
-              "nombre": "Miel",
-              "cantidad": 10,
-              "unidad": "gramos",
-              "calorias": 30,
-              "proteinas": 0,
-              "carbohidratos": 8
-          },
-          {
-              "nombre": "Yogur",
-              "cantidad": 100,
-              "unidad": "gramos",
-              "calorias": 60,
-              "proteinas": 5,
-              "carbohidratos": 10
-          }
-      ],
-      "preparacion": "Mezcla todos los ingredientes en una licuadora hasta obtener una mezcla homogénea."
-  },
-  {
-      "nombre": "Sopa de verduras",
-      "calorias": 150,
-      "proteinas": 3,
-      "carbohidratos": 35,
-      "ingredientes": [
-          {
-              "nombre": "Zanahoria",
-              "cantidad": 100,
-              "unidad": "gramos",
-              "calorias": 41,
-              "proteinas": 1,
-              "carbohidratos": 10
-          },
-          {
-              "nombre": "Apio",
-              "cantidad": 50,
-              "unidad": "gramos",
-              "calorias": 10,
-              "proteinas": 0,
-              "carbohidratos": 2
-          },
-          {
-              "nombre": "Cebolla",
-              "cantidad": 50,
-              "unidad": "gramos",
-              "calorias": 20,
-              "proteinas": 0,
-              "carbohidratos": 5
-          },
-          {
-              "nombre": "Calabacín",
-              "cantidad": 100,
-              "unidad": "gramos",
-              "calorias": 16,
-              "proteinas": 1,
-              "carbohidratos": 3
-          },
-          {
-              "nombre": "Caldo de verduras",
-              "cantidad": 500,
-              "unidad": "ml",
-              "calorias": 0,
-              "proteinas": 0,
-              "carbohidratos": 0
-          }
-      ],
-      "preparacion": "Hierve las verduras en el caldo hasta que estén tiernas. Tritura y sirve caliente."
-  },
-  {
-      "nombre": "Pasta al pesto",
-      "calorias": 600,
-      "proteinas": 15,
-      "carbohidratos": 80,
-      "ingredientes": [
-          {
-              "nombre": "Pasta",
-              "cantidad": 200,
-              "unidad": "gramos",
-              "calorias": 300,
-              "proteinas": 10,
-              "carbohidratos": 60
-          },
-          {
-              "nombre": "Salsa pesto",
-              "cantidad": 50,
-              "unidad": "gramos",
-              "calorias": 250,
-              "proteinas": 3,
-              "carbohidratos": 20
-          },
-          {
-              "nombre": "Parmesano",
-              "cantidad": 30,
-              "unidad": "gramos",
-              "calorias": 120,
-              "proteinas": 12,
-              "carbohidratos": 0
-          }
-      ],
-      "preparacion": "Cocina la pasta y mezcla con la salsa pesto. Sirve con queso parmesano rallado."
-  }
+      }
 ]
