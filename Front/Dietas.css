@@ -26,17 +26,134 @@ body {
     flex-direction: column;
 }
 
-header{
-    height: 100%;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    background-color: white;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
 }
-.contenedorHeader{
-    height: 7%;
-    width: 100%;
 
+.logo {
+    width: 40px;
+    height: auto;
 }
-.contenedorEnorme{
-    height: 93%;
-    width: 100%;
+
+.usuario {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cajadeldia {
+    width: 90%;
+    max-width: 500px;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cajadeldia h2 {
+    font-size: 24px;
+}
+
+.cajagrandota {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.macros {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #555;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.macros p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.cajacomida {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.cajacomida h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.infocomida, .comida {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comida {
+    padding: 10px;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+.imagencomida {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.recetaboton {
+    background-color: #777;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.recetadesplegable {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    color: #fff;
+    z-index: 1000;
+    width: 80%;
+    max-width: 400px;
+}
+
+.recetadesplegable h4 {
+    margin-bottom: 10px;
+}
+
+.ingredientes-list {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.close-modal {
+    background-color: #777;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }
