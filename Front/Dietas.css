@@ -30,7 +30,7 @@ body {
 
 .titulo-dieta {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 20px;
     color: #333;
 }
 .titulo-dia {
@@ -80,7 +80,6 @@ body {
 .macros {
     display: flex;
     justify-content: space-around;
-    width: 33%;
     align-items: center;
     font-size: 1.2em;
     padding: 10px;
@@ -89,6 +88,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 2px solid #333; 
     margin-bottom: 20px;
+    width: 33%;
 }
 
 .macros p {
@@ -201,7 +201,3 @@ body {
     align-items: center;
 }
 
-.cajaMacros{
-    display: flex;
-    justify-self: center;
-}

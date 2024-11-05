@@ -40,8 +40,7 @@ function generarDieta() {
         const encabezadoDia = document.createElement('div');
         encabezadoDia.classList.add('cajadeldia');
         encabezadoDia.innerHTML = `
-            <h2 class="titulo-dia">Día ${dia.dia}</h2>
-            <div class="icono-dieta">🥕</div>
+            <h2 class="titulo-dia">Día${dia.dia}   🥕</h2>
         `;
         contenedor.appendChild(encabezadoDia);
     
@@ -50,7 +49,7 @@ function generarDieta() {
         macros.classList.add('macros');
         macros.innerHTML = `
             <div class="cajaMacros">
-            <h2>Total</h2>
+            
                 <p>Calorías</p>
                 <p>${dia.calorias}</p>
             </div>
