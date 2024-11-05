@@ -22,6 +22,26 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     color: rgb(10, 10, 10);
 }
+.cajadeldia {
+    text-align: center;
+    margin: 20px;
+
+}
+
+.titulo-dieta {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+.titulo-dia {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+.icono-dieta {
+    font-size: 1.5em;
+    color: #555;
+}
 
 .logo {
     width: 40px;
@@ -32,6 +52,8 @@ body {
     font-size: 16px;
     cursor: pointer;
 }
+
+
 
 .cajagrandota {
     width: 90%;
@@ -45,29 +67,39 @@ body {
 }
 
 .cajadeldia {
-    font-size: 2em;
+    font-size: 2.5em;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #333; /* Borde para asemejar el diseño */
 }
 
 .macros {
-    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    width: 33%;
+    align-items: center;
+    font-size: 1.2em;
     padding: 10px;
     background-color: #f4f4f4;
     border-radius: 10px;
-    text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #333; 
+    margin-bottom: 20px;
 }
 
 .macros p {
-    font-size: 1.2em;
-    color: #555;
-    margin: 5px 0;
+    font-weight: bold;
+    color: #333;
 }
+
+.macros div{
+    margin: 5px ;
+}
+
 
 .cajacomida {
     background-color: #ffffff;
@@ -104,14 +136,15 @@ body {
     margin-right: 10px;
 }
 
-.recipe-button {
-    background-color: #999;
-    color: #fff;
+.boton-receta {
+    background-color: #7c7c7c; 
+    color: #fff; 
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
 }
+
 
 .recetadesplegable {
     position: fixed;
@@ -141,9 +174,9 @@ body {
     color: #555;
 }
 
-.close-modal {
-    background-color: #999;
-    color: #fff;
+.cerrar-modal {
+    background-color: #bebebe; /* Rojo */
+    color: #fff; /* Blanco */
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -152,4 +185,23 @@ body {
 
 .hidden {
     display: none;
+}
+
+.boton-receta:hover {
+    background-color: #0056b3; 
+}
+
+.cerrar-modal:hover {
+    background-color: #201f1f; 
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cajaMacros{
+    display: flex;
+    justify-self: center;
 }

@@ -1,5 +1,5 @@
 function generarDieta() {
-    const container = document.getElementById("container");
+    const contenedor = document.getElementById("container");
 
     const dias = [
         {
@@ -36,75 +36,91 @@ function generarDieta() {
     ];
 
     dias.forEach(dia => {
-        const daySection = document.createElement('section');
-        daySection.classList.add('cajagrandota');
-
-        const dayHeader = document.createElement('div');
-        dayHeader.classList.add('cajadeldia');
-        dayHeader.innerHTML = `<h2>Día ${dia.dia}</h2>`;
-        daySection.appendChild(dayHeader);
-
+        // Contenedor del día (independiente)
+        const encabezadoDia = document.createElement('div');
+        encabezadoDia.classList.add('cajadeldia');
+        encabezadoDia.innerHTML = `
+            <h2 class="titulo-dia">Día ${dia.dia}</h2>
+            <div class="icono-dieta">🥕</div>
+        `;
+        contenedor.appendChild(encabezadoDia);
+    
+        
         const macros = document.createElement('div');
         macros.classList.add('macros');
         macros.innerHTML = `
-            <p>Calorías: ${dia.calorias}</p>
-            <p>Proteína: ${dia.proteina}</p>
-            <p>Carbohidratos: ${dia.carbohidratos}</p>
+            <div class="cajaMacros">
+            <h2>Total</h2>
+                <p>Calorías</p>
+                <p>${dia.calorias}</p>
+            </div>
+            <div>
+                <p>Proteína</p>
+                <p>${dia.proteina}</p>
+            </div>
+            <div>
+                <p>Carbohidratos</p>
+                <p>${dia.carbohidratos}</p>
+            </div>
         `;
-        daySection.appendChild(macros);
+        contenedor.appendChild(macros);
+    
+        
+        const seccionDia = document.createElement('section');
+        seccionDia.classList.add('cajagrandota');
 
         dia.comidas.forEach(comida => {
-            const mealContainer = document.createElement('div');
-            mealContainer.classList.add('cajacomida');
-
-            const mealTitle = document.createElement('h3');
-            mealTitle.textContent = comida.nombre;
-            mealContainer.appendChild(mealTitle);
-
-            const mealInfo = document.createElement('div');
-            mealInfo.classList.add('infocomida');
-            mealInfo.innerHTML = `
+            const contenedorComida = document.createElement('div');
+            contenedorComida.classList.add('cajacomida');
+    
+            const tituloComida = document.createElement('h3');
+            tituloComida.textContent = comida.nombre;
+            contenedorComida.appendChild(tituloComida);
+    
+            const infoComida = document.createElement('div');
+            infoComida.classList.add('infocomida');
+            infoComida.innerHTML = `
                 <p>Calorías: ${comida.calorias}</p>
                 <p>Proteína: ${comida.proteina}</p>
                 <p>Carbohidratos: ${comida.carbohidratos}</p>
             `;
-            mealContainer.appendChild(mealInfo);
-
+            contenedorComida.appendChild(infoComida);
+    
             comida.alimentos.forEach(alimento => {
-                const foodItem = document.createElement('div');
-                foodItem.classList.add('comida');
-                foodItem.innerHTML = `
+                const itemAlimento = document.createElement('div');
+                itemAlimento.classList.add('comida');
+                itemAlimento.innerHTML = `
                     <img src="${alimento.imagen}" alt="${alimento.nombre}" class="imagencomida">
                     <p>Calorías: ${alimento.calorias}</p>
                     <p>Proteína: ${alimento.proteina}</p>
                     <p>Carbohidratos: ${alimento.carbohidratos}</p>
-                    <button class="recipe-button">Receta ▼</button>
+                    <button class="boton-receta">Receta ▼</button>
                 `;
-
-                const recipeButton = foodItem.querySelector(".recipe-button");
-                recipeButton.addEventListener("click", () => {
+    
+                const botonReceta = itemAlimento.querySelector(".boton-receta");
+                botonReceta.addEventListener("click", () => {
                     mostrarReceta(alimento.receta);
                 });
-
-                mealContainer.appendChild(foodItem);
+    
+                contenedorComida.appendChild(itemAlimento);
             });
-
-            daySection.appendChild(mealContainer);
+    
+            seccionDia.appendChild(contenedorComida);
         });
-
-        container.appendChild(daySection);
+    
+        contenedor.appendChild(seccionDia);
     });
-}
+} 
 
 function mostrarReceta(receta) {
-    const recetaModal = document.createElement("div");
-    recetaModal.classList.add("recetadesplegable");
+    const modalReceta = document.createElement("div");
+    modalReceta.classList.add("recetadesplegable");
 
     let ingredientesHtml = receta.ingredientes.map(ing => {
         if (typeof ing === "object" && ing.opciones) {
             return `
                 <li>
-                    <select class="ingredient-select">
+                    <select class="selector-ingrediente">
                         ${ing.opciones.map(op => `<option value="${op}">${op}</option>`).join('')}
                     </select>
                 </li>`;
@@ -113,24 +129,25 @@ function mostrarReceta(receta) {
         }
     }).join('');
 
-    recetaModal.innerHTML = `
+    modalReceta.innerHTML = `
         <h4>Ingredientes</h4>
-        <ul class="ingredient-list">
+        <ul class="lista-ingredientes">
             ${ingredientesHtml}
         </ul>
         <h4>Receta</h4>
         <p>${receta.descripcion}</p>
-        <button class="close-modal">Cerrar</button>
+        <button class="cerrar-modal">Cerrar</button>
     `;
 
-    document.body.appendChild(recetaModal);
+    document.body.appendChild(modalReceta);
 
-    const closeModal = recetaModal.querySelector(".close-modal");
-    closeModal.addEventListener("click", () => {
-        recetaModal.remove();
+    const botonCerrarModal = modalReceta.querySelector(".cerrar-modal");
+    botonCerrarModal.addEventListener("click", () => {
+        modalReceta.remove();
     });
 }
 
 // Ejecuta la función para generar la dieta
 generarDieta();
+
 
