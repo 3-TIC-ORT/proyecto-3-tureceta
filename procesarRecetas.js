@@ -1,37 +1,33 @@
 import fs from 'fs';
 
+// Función para transformar los datos al formato específico
 function transformarDatos() {
   try {
-    // Leer los datos directamente desde el archivo
+    // Leer los datos originales desde Recetas.json
     const rawData = JSON.parse(fs.readFileSync('Recetas.json', 'utf-8'));
 
-    // Verificamos que los datos sean un array
-    if (!Array.isArray(rawData)) {
-      console.error("Error: Los datos no están en el formato de array esperado.");
-      return;
-    }
-
-    // Transformar los datos al formato solicitado
-    const recetasTransformadas = rawData.map(recipe => ({
-      nombre: recipe.title || "Nombre no disponible",
-      calorias: recipe.nutrition?.nutrients?.find(n => n.name === "Calories")?.amount || 0,
-      proteinas: recipe.nutrition?.nutrients?.find(n => n.name === "Protein")?.amount || 0,
-      carbohidratos: recipe.nutrition?.nutrients?.find(n => n.name === "Carbohydrates")?.amount || 0,
-      ingredientes: recipe.nutrition?.ingredients?.map(ing => ({
-        nombre: ing.name || "Ingrediente no disponible",
-        cantidad: ing.amount || 0,
-        calorias: ing.nutrients?.find(n => n.name === "Calories")?.amount || 0,
-        proteinas: ing.nutrients?.find(n => n.name === "Protein")?.amount || 0,
-        carbohidratos: ing.nutrients?.find(n => n.name === "Carbohydrates")?.amount || 0
-      })) || []
+    // Transformar los datos al formato deseado
+    const recetasTransformadas = rawData.results.map(recipe => ({
+      nombre: recipe.title,
+      calorias: `${recipe.nutrition.nutrients[0].amount} kcal`,
+      proteinas: `${recipe.nutrition.nutrients[1].amount} g`,
+      carbohidratos: `${recipe.nutrition.nutrients[2].amount} g`,
+      ingredientes: recipe.nutrition.ingredients.map(ing => ({
+        nombre: ing.name,
+        calorias: `${ing.amount * ing.nutrients[0].amount} kcal`,
+        proteinas: `${ing.amount * ing.nutrients[1].amount} g`,
+        carbohidratos: `${ing.amount * ing.nutrients[2].amount} g`,
+      })),
+      receta: recipe.analyzedInstructions[0]?.steps.map(step => step.step) || []
     }));
 
     // Guardar los datos transformados en RecetasTransformadas.json
-    fs.writeFileSync('RecetasTransformadas.json', JSON.stringify(recetasTransformadas, null, 2), 'utf-8');
-    console.log("Recetas transformadas guardadas en RecetasTransformadas.json");
+    fs.writeFileSync('API.json', JSON.stringify(recetasTransformadas, null, 2), 'utf-8');
+    console.log("Datos transformados guardados en RecetasTransformadas.json");
   } catch (error) {
     console.error("Error al transformar los datos:", error.message);
   }
 }
 
 transformarDatos();
+

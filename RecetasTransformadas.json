@@ -190,7 +190,6 @@
           "preparacion":"Cocinar las lentejas y verduras en el caldo hasta que estén tiernas."   
       },
       {
-        {
             "nombre": "Huevos Revueltos",
             "calorias": 200,
             "proteinas": 14,
@@ -270,83 +269,496 @@
                     "nombre": "miel",
                     "cantidad": "10g",
                     "calorias": 30,
-                    “proteinas”:0.1, 
-                     “carbohidratos”:8
+                    "proteinas":0.1, 
+                     "carbohidratos":8
                 }
             ],
-            “preparacion”:“Mezclar todos los ingredientes en una licuadora hasta obtener una mezcla homogénea.”
+            "preparacion":"Mezclar todos los ingredientes en una licuadora hasta obtener una mezcla homogénea."
         },
         {
-            “nombre”:“Tostadas Francesas” ,
-             “calorias”:400 ,
-             “proteinas”:12 , 
-             “carbohidratos”:50 , 
-             “tipo”:“desayuno” ,
-             “ingredientes”:[
+            "nombre":"Tostadas Francesas" ,
+             "calorias":400 ,
+             "proteinas":12 , 
+             "carbohidratos":50 , 
+             "tipo":"desayuno" ,
+             "ingredientes":[
                  { 
-                     “nombre”:“pan” , 
-                     “cantidad”:“2 rebanadas” , 
-                     “calorias”:200 , 
-                     “proteinas”:8 , 
-                     “carbohidratos”:40 
+                     "nombre":"pan" , 
+                     "cantidad":"2 rebanadas" , 
+                     "calorias":200 , 
+                     "proteinas":8 , 
+                     "carbohidratos":40 
                  }, 
                  { 
-                     “nombre”:“huevo” , 
-                     “cantidad”:“1 unidad” , 
-                     “calorias”:70 , 
-                     “proteinas”:6 , 
-                     “carbohidratos”:1 
+                     "nombre":"huevo" , 
+                     "cantidad":"1 unidad" , 
+                     "calorias":70 , 
+                     "proteinas":6 , 
+                     "carbohidratos":1 
                  }, 
                  { 
-                     “nombre”:“leche” , 
-                     “cantidad”:“50ml” , 
-                     “calorias”:30 , 
-                     “proteinas”:2 , 
-                     “carbohidratos”:3 
+                     "nombre":"leche" , 
+                     "cantidad":"50ml" , 
+                     "calorias":30 , 
+                     "proteinas":2 , 
+                     "carbohidratos":3 
                  }, 
                  { 
-                     “nombre”:“mantequilla” , 
-                     “cantidad”:“10g” , 
-                     “calorias”:70 , 
-                     “proteinas”:0.1 , 
-                     “carbohidratos”:0 
+                     "nombre":"mantequilla" , 
+                     "cantidad":"10g" , 
+                     "calorias":70 , 
+                     "proteinas":0.1 , 
+                     "carbohidratos":0 
                  } 
              ], 
-             ”preparacion":"Batir el huevo con la leche y sumergir el pan. Cocinar en mantequilla hasta dorar."   
+             "preparacion":"Batir el huevo con la leche y sumergir el pan. Cocinar en mantequilla hasta dorar."   
          },
          {
-             ”nombre":"Yogur con Frutas" ,  
-             ”calorias:250 ,  
-             ”proteinas:10 ,  
-             ”carbohidratos:30 ,  
-             ”tipo":"merienda" ,
-             ”ingredientes":[  
+             "nombre":"Yogur con Frutas" ,  
+             "calorias":250 ,  
+             "proteinas":10 ,  
+             "carbohidratos":30 ,  
+             "tipo":"merienda" ,
+             "ingredientes":[  
                  {  
-                     ”nombre":"yogur natural" ,  
-                     ”cantidad":"150g" ,  
-                     ”calorias:100 ,  
-                     ”proteinas:5 ,  
-                     ”carbohidratos:15  
+                     "nombre":"yogur natural" ,  
+                     "cantidad":"150g" ,  
+                     "calorias":100 ,  
+                     "proteinas":5 ,  
+                     "carbohidratos":15  
                  },  
                  {  
-                      ”nombre":"frutas variadas" ,  
-                      ”cantidad":"100g" ,  
-                      ”calorias:50 ,  
-                      ”proteinas:1 ,  
-                      ”carbohidratos:12  
+                      "nombre":"frutas variadas" ,  
+                      "cantidad":"100g" ,  
+                      "calorias":50 ,  
+                      "proteinas":1 ,  
+                      "carbohidratos":12  
                   },  
                   {  
-                      ”nombre":"miel" ,  
-                      ”cantidad":"10g" ,  
-                      ”calorias:30 ,  
-                      ”proteinas:0.1 ,  
-                      ”carbohidratos:8  
+                      "nombre":"miel" ,  
+                      "cantidad":"10g" ,  
+                      "calorias":30 ,  
+                      "proteinas":0.1 ,  
+                      "carbohidratos":8  
                   }   
               ],   
-              ”preparacion":"Mezclar el yogur con las frutas y endulzar con miel."   
+              "preparacion":"Mezclar el yogur con las frutas y endulzar con miel."   
           },
           {
-              ...
-          }
-      }
+                "nombre": "Galletas de Avena",
+                "calorias": 150,
+                "proteinas": 4,
+                "carbohidratos": 20,
+                "tipo": "merienda",
+                "ingredientes": [
+                    {
+                        "nombre": "avena",
+                        "cantidad": "100g",
+                        "calorias": 389,
+                        "proteinas": 16.9,
+                        "carbohidratos": 66.3
+                    },
+                    {
+                        "nombre": "miel",
+                        "cantidad": "30g",
+                        "calorias": 90,
+                        "proteinas": 0.1,
+                        "carbohidratos": 24.7
+                    },
+                    {
+                        "nombre": "banana",
+                        "cantidad": "1 unidad",
+                        "calorias": 105,
+                        "proteinas": 1.3,
+                        "carbohidratos": 27
+                    }
+                ],
+                "preparacion": "Mezclar todos los ingredientes y formar bolitas. Hornear a 180°C durante 15 minutos."
+            },
+            {
+                "nombre": "Waffles Sin Azúcar",
+                "calorias": 200,
+                "proteinas": 6,
+                "carbohidratos": 30,
+                "tipo": "merienda",
+                "ingredientes": [
+                    {
+                        "nombre": "harina integral",
+                        "cantidad": "100g",
+                        "calorias": 340,
+                        "proteinas": 13,
+                        "carbohidratos": 72
+                    },
+                    {
+                        "nombre": "huevo",
+                        "cantidad": "1 unidad",
+                        "calorias": 70,
+                        "proteinas": 6,
+                        "carbohidratos": 1
+                    },
+                    {
+                        "nombre": "leche",
+                        "cantidad": "150ml",
+                        "calorias": 60,
+                        "proteinas": 3.5,
+                        "carbohidratos": 5
+                    }
+                ],
+                "preparacion": "Mezclar todos los ingredientes y cocinar en una wafflera hasta dorar."
+            },
+            {
+                "nombre": "Bizcochuelo de Limón",
+                "calorias": 250,
+                "proteinas": 4,
+                "carbohidratos": 40,
+                "tipo": "merienda",
+                "ingredientes": [
+                    {
+                        "nombre": "harina de trigo",
+                        "cantidad": "200g",
+                        "calorias": 680,
+                        "proteinas":20, 
+                         "carbohidratos":140
+                    },
+                    {
+                         "nombre":"huevo" ,
+                         "cantidad":"3 unidades" ,
+                         "calorias":210 ,
+                         "proteinas":18 , 
+                         "carbohidratos":0 
+                     }, 
+                     { 
+                         "nombre":"azúcar" ,
+                         "cantidad":"150g" ,
+                         "calorias":600 , 
+                         "proteinas":0 , 
+                         "carbohidratos":150 
+                     }
+                 ],
+                 "preparacion":"Batir los huevos y el azúcar, añadir la harina y mezclar. Hornear a180°C durante30 minutos."
+             },
+             {
+                 "nombre":"Panqueques con Dulce de Leche" ,  
+                 "calorias":300 ,  
+                 "proteinas":8 ,  
+                 "carbohidratos":50 ,  
+                 "tipo":"merienda" ,
+                 "ingredientes":[  
+                     {  
+                         "nombre":"harina" ,  
+                         "cantidad":"200g" ,  
+                         "calorias":700 ,  
+                         "proteinas":20 ,  
+                         "carbohidratos":120  
+                     },  
+                     {  
+                          "nombre":"huevo" ,  
+                          "cantidad":"2 unidades" ,  
+                          "calorias":140 ,  
+                          "proteinas":12 ,  
+                          "carbohidratos":0  
+                      },  
+                      {  
+                          "nombre":"leche" ,  
+                          "cantidad":"300ml" ,  
+                          "calorias":150 ,  
+                          "proteinas":8 ,  
+                          "carbohidratos":12  
+                      }   
+                  ],   
+                  "preparacion":"Mezclar todos los ingredientes y cocinar en una sartén. Rellenar con dulce de leche."   
+              },
+              {
+                    "nombre": "Crema de Zanahoria",
+                    "calorias": 150,
+                    "proteinas": 3,
+                    "carbohidratos": 25,
+                    "tipo": "almuerzo",
+                    "ingredientes": [
+                        {
+                            "nombre": "zanahorias",
+                            "cantidad": "500g",
+                            "calorias": 200,
+                            "proteinas": 4,
+                            "carbohidratos": 46
+                        },
+                        {
+                            "nombre": "cebolla",
+                            "cantidad": "1 unidad",
+                            "calorias": 40,
+                            "proteinas": 1,
+                            "carbohidratos": 9
+                        },
+                        {
+                            "nombre": "caldo de pollo",
+                            "cantidad": "500ml",
+                            "calorias": 20,
+                            "proteinas": 2,
+                            "carbohidratos": 0
+                        },
+                        {
+                            "nombre": "nata líquida",
+                            "cantidad": "100ml",
+                            "calorias": 300,
+                            "proteinas": 2,
+                            "carbohidratos": 2
+                        }
+                    ],
+                    "preparacion": "Rehogar la cebolla y las zanahorias, añadir el caldo y cocinar hasta que estén tiernas. Triturar y añadir la nata."
+                },
+                {
+                    "nombre": "Cuscús con Verduras",
+                    "calorias": 250,
+                    "proteinas": 6,
+                    "carbohidratos": 45,
+                    "tipo": "almuerzo",
+                    "ingredientes": [
+                        {
+                            "nombre": "cuscús",
+                            "cantidad": "200g",
+                            "calorias": 720,
+                            "proteinas": 24,
+                            "carbohidratos": 150
+                        },
+                        {
+                            "nombre": "pimiento rojo",
+                            "cantidad": "1 unidad",
+                            "calorias": 30,
+                            "proteinas": 1,
+                            "carbohidratos": 7
+                        },
+                        {
+                            "nombre": "calabacín",
+                            "cantidad": "100g",
+                            "calorias": 20,
+                            "proteinas": 1,
+                            "carbohidratos": 4
+                        },
+                        {
+                            "nombre": "aceitunas",
+                            "cantidad": "50g",
+                            "calorias": 80,
+                            "proteinas": 1,
+                            "carbohidratos": 4
+                        }
+                    ],
+                    "preparacion": "Cocinar el cuscús según las instrucciones. Saltear las verduras y mezclar con el cuscús."
+                },
+                {
+                    "nombre": "Patatas Rellenas",
+                    "calorias": 400,
+                    "proteinas": 10,
+                    "carbohidratos": 60,
+                    "tipo": "cena",
+                    "ingredientes": [
+                        {
+                            "nombre": "patatas",
+                            "cantidad": "4 unidades",
+                            "calorias": 400,
+                            "proteinas": 8,
+                            "carbohidratos": 90
+                        },
+                        {
+                            "nombre": "carne picada",
+                            "cantidad": "300g",
+                            "calorias": 600,
+                            "proteinas":30, 
+                             "carbohidratos":0
+                        },
+                        {
+                             "nombre":"queso rallado" ,
+                             "cantidad":"100g" ,
+                             "calorias":400 , 
+                             "proteínas":25 , 
+                             "carbohidratos":2
+                         }
+                     ],
+                     "preparacion":"Hervir las patatas, vaciarlas y mezclar la pulpa con carne y queso. Rellenar las patatas y gratinar."
+                 },
+                 {
+                     "nombre":"Fabada Fácil" ,  
+                     "calorias":500 ,  
+                     "proteinas":25 ,  
+                     "carbohidratos":60 ,  
+                     "tipo":"cena" ,
+                     "ingredientes":[  
+                         {  
+                             "nombre":"fabes" ,  
+                             "cantidad":"450g" ,  
+                             "calorias":600 ,  
+                             "proteinas":30 ,  
+                             "carbohidratos":90  
+                         },  
+                         {  
+                              "nombre":"compango" ,  
+                              "cantidad":"1 paquete" ,  
+                              "calorias":400 ,  
+                              "proteinas":20 ,  
+                              "carbohidratos":0  
+                          },  
+                          {  
+                              "nombre":"agua" ,  
+                              "cantidad":"suficiente" ,  
+                              "calorias":0 ,  
+                              "proteinas":0 ,  
+                              "carbohidratos":0  
+                          }   
+                      ],   
+                      "preparacion":"Poner en remojo las fabes, cocer con el compango y agua durante varias horas."   
+                  },
+                  {
+                        "nombre": "Patatas Rellenas",
+                        "calorias": 400,
+                        "proteinas": 10,
+                        "carbohidratos": 60,
+                        "tipo": "cena",
+                        "ingredientes": [
+                            {
+                                "nombre": "patatas",
+                                "cantidad": "4 unidades",
+                                "calorias": 400,
+                                "proteinas": 8,
+                                "carbohidratos": 90
+                            },
+                            {
+                                "nombre": "carne picada",
+                                "cantidad": "300g",
+                                "calorias": 600,
+                                "proteinas": 30,
+                                "carbohidratos": 0
+                            },
+                            {
+                                "nombre": "queso rallado",
+                                "cantidad": "100g",
+                                "calorias": 400,
+                                "proteinas": 25,
+                                "carbohidratos": 2
+                            }
+                        ],
+                        "preparacion": "Hervir las patatas, vaciarlas y mezclar la pulpa con carne y queso. Rellenar las patatas y gratinar."
+                    },
+                    {
+                        "nombre": "Fabada Fácil",
+                        "calorias": 500,
+                        "proteinas": 25,
+                        "carbohidratos": 60,
+                        "tipo": "cena",
+                        "ingredientes": [
+                            {
+                                "nombre": "fabes",
+                                "cantidad": "450g",
+                                "calorias": 600,
+                                "proteinas": 30,
+                                "carbohidratos": 90
+                            },
+                            {
+                                "nombre": "compango",
+                                "cantidad": "1 paquete",
+                                "calorias": 400,
+                                "proteinas": 20,
+                                "carbohidratos": 0
+                            },
+                            {
+                                "nombre": "agua",
+                                "cantidad": "suficiente",
+                                "calorias": 0,
+                                "proteinas": 0,
+                                "carbohidratos": 0
+                            }
+                        ],
+                        "preparacion": "Poner en remojo las fabes, cocer con el compango y agua durante varias horas."
+                    },
+                    {
+                        "nombre": "Pollo al Horno con Limón",
+                        "calorias": 350,
+                        "proteinas": 30,
+                        "carbohidratos": 5,
+                        "tipo": "cena",
+                        "ingredientes": [
+                            {
+                                "nombre": "pollo entero",
+                                "cantidad": "1 kg",
+                                "calorias": 2400,
+                                "proteinas": 200,
+                                "carbohidratos": 0
+                            },
+                            {
+                                "nombre": "limón",
+                                "cantidad": "2 unidades",
+                                "calorias": 40,
+                                "proteinas":1, 
+                                 "carbohidratos":10
+                            },
+                            {
+                                 "nombre":"ajo" ,
+                                 "cantidad":"4 dientes" ,
+                                 "calorias":20 , 
+                                 "proteínas":1 , 
+                                 "carbohidratos":5
+                             }
+                         ],
+                         "preparacion":"Marinar el pollo con limón y ajo. Hornear a180°C durante90 minutos."
+                     },
+                     {
+                         "nombre":"Ensalada de Quinoa" ,
+                         "calorias":250 ,
+                         "proteinas":8 , 
+                         "carbohidratos":45 , 
+                         "tipo":"almuerzo" ,
+                         "ingredientes":[
+                             { 
+                                 "nombre":"quinoa" , 
+                                 "cantidad":"100g" , 
+                                 "calorias":368 , 
+                                 "proteinas":14 , 
+                                 "carbohidratos":64 
+                             }, 
+                             { 
+                                 "nombre":"pepino" , 
+                                 "cantidad":"100g" , 
+                                 "calorias":16 , 
+                                 "proteinas":1 , 
+                                 "carbohidratos":4 
+                             }, 
+                             { 
+                                 "nombre":"tomate" , 
+                                 "cantidad":"100g" , 
+                                 "calorias":18 , 
+                                 "proteinas":1 , 
+                                 "carbohidratos":4 
+                             } 
+                         ], 
+                         "preparacion":"Cocinar la quinoa, mezclar con pepino y tomate picados. Aliñar al gusto."   
+                     },
+                     {
+                         "nombre":"Salmón a la Parrilla" ,  
+                         "calorias":400 ,  
+                         "proteinas":40 ,  
+                         "carbohidratos":0 ,  
+                         "tipo":"cena" ,
+                         "ingredientes":[  
+                             {  
+                                 "nombre":"salmón" ,  
+                                 "cantidad":"200g" ,  
+                                 "calorias":400 ,  
+                                 "proteinas":40 ,  
+                                 "carbohidratos":0  
+                             },  
+                             {  
+                                  "nombre":"limón" ,  
+                                  "cantidad":"1 unidad" ,  
+                                  "calorias":20 ,  
+                                  "proteínas":1 ,  
+                                  "carbohidratos":5  
+                              }   
+                          ],   
+                          "preparacion":"Marinar el salmón con limón y asar en la parrilla durante10-15 minutos."   
+                      },
+                      {
+                          
+                      }
+                  
+              
+          
+      
 ]
