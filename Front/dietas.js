@@ -48,8 +48,8 @@ function generarDieta() {
         const macros = document.createElement('div');
         macros.classList.add('macros');
         macros.innerHTML = `
+        
             <div class="cajaMacros">
-            
                 <p>Calorías</p>
                 <p>${dia.calorias}</p>
             </div>
