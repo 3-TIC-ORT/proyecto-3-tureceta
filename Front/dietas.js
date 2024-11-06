@@ -2,68 +2,7 @@ function generarDieta() {
     const contenedor = document.getElementById("container");
 
     const dias = [
-        {
-            dia: 1,
-            calorias: 2000,
-            proteina: "100g",
-            carbohidratos: "250g",
-            comidas: [
-                {
-                    nombre: "Desayuno",
-                    calorias: 500,
-                    proteina: "20g",
-                    carbohidratos: "60g",
-                    alimentos: [
-                        {
-                            nombre: "Avena",
-                            calorias: 200,
-                            proteina: "5g",
-                            carbohidratos: "30g",
-                            imagen: "imagen_avena.png",
-                            receta: {
-                                ingredientes: [
-                                    "Avena",
-                                    "1 taza de leche",
-                                    "1 cucharada de miel"
-                                ],
-                                descripcion: "Mezcla todos los ingredientes y cocina a fuego lento hasta obtener la consistencia deseada."
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            dia: 2,
-            calorias: 2000,
-            proteina: "100g",
-            carbohidratos: "250g",
-            comidas: [
-                {
-                    nombre: "Desayuno",
-                    calorias: 500,
-                    proteina: "20g",
-                    carbohidratos: "60g",
-                    alimentos: [
-                        {
-                            nombre: "Avena",
-                            calorias: 200,
-                            proteina: "5g",
-                            carbohidratos: "30g",
-                            imagen: "imagen_avena.png",
-                            receta: {
-                                ingredientes: [
-                                    "Avena",
-                                    "1 taza de leche",
-                                    "1 cucharada de miel"
-                                ],
-                                descripcion: "Mezcla todos los ingredientes y cocina a fuego lento hasta obtener la consistencia deseada."
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
+      
     ];
 
     dias.forEach(dia => {

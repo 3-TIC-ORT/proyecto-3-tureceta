@@ -1,7 +1,7 @@
 import fs from 'fs';
 import fetch from 'node-fetch';
 
-const API_KEY = 'e28af2120f4847e286548598e3b253ad'; // Reemplaza con tu clave API válida
+const API_KEY = 'b07aa8718c1c4acebe11f8c897c3b5fe'; // Reemplaza con tu clave API válida
 const numRecipes = 100; // Puedes ajustar el número de recetas aquí
 const recipes = JSON.parse(fs.readFileSync("Recetas.json"));
 
