@@ -2,11 +2,14 @@
     width: 400px;
     padding: 30px;
     background-color: #f9f9f9;
-    border: 2px solid #060707; /* Color del borde azul */
+    border: 2px solid #060707; 
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     text-align: center;
+    
 }
+
+
 
 body, html {
     height: 100%;
@@ -15,7 +18,11 @@ body, html {
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Fondo de la página */
+    background-image: url(verde.png);
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat;
+    
 }
 
 
