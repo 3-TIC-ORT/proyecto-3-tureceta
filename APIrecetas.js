@@ -1,7 +1,7 @@
 import fs from 'fs';
 import fetch from 'node-fetch';
 
-const API_KEY = 'ff2f97b85a0e4bbeb2142f2cf04ff7c7'; // Reemplaza con tu clave API válida
+const API_KEY = 'e28af2120f4847e286548598e3b253ad'; // Reemplaza con tu clave API válida
 const numRecipes = 100; // Puedes ajustar el número de recetas aquí
 const recipes = JSON.parse(fs.readFileSync("Recetas.json"));
 
@@ -29,7 +29,7 @@ async function fetchRecipes() {
                 calorias: nutrients.find(n => n.name === 'Calories')?.amount || 0,
                 proteinas: nutrients.find(n => n.name === 'Protein')?.amount || 0,
                 carbohidratos: nutrients.find(n => n.name === 'Carbohydrates')?.amount || 0,
-                tipo: recipe.dishTypes.includes('breakfast') ? 'desayuno' : recipe.dishTypes.includes('snack') ? 'merienda' : recipe.dishTypes.includes('main course') ? 'almuerzo' : 'cena',
+                tipo: recipe.dishTypes.includes('breakfast') ? ['desayuno'] : recipe.dishTypes.includes('snack') ? ['merienda'] : recipe.dishTypes.includes('main course') ? ['almuerzo',"cena"] : "no",
                 ingredientes: recipe.extendedIngredients.map(ing => ({
                     nombre: ing.name,
                     cantidad: ing.amount,
@@ -38,7 +38,10 @@ async function fetchRecipes() {
                 preparación: recipe.instructions || 'No hay instrucciones disponibles.'
             };
 
-            recipes.push(formattedRecipe);
+            if (formattedRecipe.tipo != "no"){
+                recipes.push(formattedRecipe);
+            }
+            
         });
 
         // Guarda las recetas en un archivo JSON
