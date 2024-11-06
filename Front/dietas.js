@@ -22,7 +22,38 @@ function generarDieta() {
                             imagen: "imagen_avena.png",
                             receta: {
                                 ingredientes: [
-                                    { nombre: "Avena", opciones: ["Avena", "Quinoa", "Cereal Integral"] },
+                                    "Avena",
+                                    "1 taza de leche",
+                                    "1 cucharada de miel"
+                                ],
+                                descripcion: "Mezcla todos los ingredientes y cocina a fuego lento hasta obtener la consistencia deseada."
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            dia: 2,
+            calorias: 2000,
+            proteina: "100g",
+            carbohidratos: "250g",
+            comidas: [
+                {
+                    nombre: "Desayuno",
+                    calorias: 500,
+                    proteina: "20g",
+                    carbohidratos: "60g",
+                    alimentos: [
+                        {
+                            nombre: "Avena",
+                            calorias: 200,
+                            proteina: "5g",
+                            carbohidratos: "30g",
+                            imagen: "imagen_avena.png",
+                            receta: {
+                                ingredientes: [
+                                    "Avena",
                                     "1 taza de leche",
                                     "1 cucharada de miel"
                                 ],
@@ -36,35 +67,34 @@ function generarDieta() {
     ];
 
     dias.forEach(dia => {
-        // Contenedor del día (independiente)
         const encabezadoDia = document.createElement('div');
         encabezadoDia.classList.add('cajadeldia');
         encabezadoDia.innerHTML = `
-            <h2 class="titulo-dia">Día${dia.dia}   🥕</h2>
+            <h2 class="titulo-dia">Día ${dia.dia} 🥕</h2>
         `;
         contenedor.appendChild(encabezadoDia);
     
-        
         const macros = document.createElement('div');
         macros.classList.add('macros');
         macros.innerHTML = `
-        
-            <div class="cajaMacros">
-                <p>Calorías</p>
-                <p>${dia.calorias}</p>
-            </div>
-            <div>
-                <p>Proteína</p>
-                <p>${dia.proteina}</p>
-            </div>
-            <div>
-                <p>Carbohidratos</p>
-                <p>${dia.carbohidratos}</p>
+            <div class="MT"><h2>Macronutrientes Totales</h2></div>
+            <div class="contenedorTotal">
+                <div class="cajaMacros">
+                    <p>Calorías</p>
+                    <p>${dia.calorias}</p>
+                </div>
+                <div>
+                    <p>Proteína</p>
+                    <p>${dia.proteina}</p>
+                </div>
+                <div>
+                    <p>Carbohidratos</p>
+                    <p>${dia.carbohidratos}</p>
+                </div>
             </div>
         `;
         contenedor.appendChild(macros);
     
-        
         const seccionDia = document.createElement('section');
         seccionDia.classList.add('cajagrandota');
 
@@ -84,6 +114,10 @@ function generarDieta() {
                 <p>Carbohidratos: ${comida.carbohidratos}</p>
             `;
             contenedorComida.appendChild(infoComida);
+
+            const botonNueva = document.createElement("button");
+            botonNueva.classList.add("nueva");
+            
     
             comida.alimentos.forEach(alimento => {
                 const itemAlimento = document.createElement('div');
@@ -98,7 +132,7 @@ function generarDieta() {
     
                 const botonReceta = itemAlimento.querySelector(".boton-receta");
                 botonReceta.addEventListener("click", () => {
-                    mostrarReceta(alimento.receta);
+                    mostrarReceta(alimento);
                 });
     
                 contenedorComida.appendChild(itemAlimento);
@@ -111,30 +145,21 @@ function generarDieta() {
     });
 } 
 
-function mostrarReceta(receta) {
+
+function mostrarReceta(alimento) {
     const modalReceta = document.createElement("div");
     modalReceta.classList.add("recetadesplegable");
 
-    let ingredientesHtml = receta.ingredientes.map(ing => {
-        if (typeof ing === "object" && ing.opciones) {
-            return `
-                <li>
-                    <select class="selector-ingrediente">
-                        ${ing.opciones.map(op => `<option value="${op}">${op}</option>`).join('')}
-                    </select>
-                </li>`;
-        } else {
-            return `<li>${ing}</li>`;
-        }
-    }).join('');
+    const ingredientesHtml = alimento.receta.ingredientes.map(ing => `<li>${ing}</li>`).join('');
 
     modalReceta.innerHTML = `
-        <h4>Ingredientes</h4>
+        <h4>Receta de ${alimento.nombre}</h4>
+        <p><strong>Ingredientes:</strong></p>
         <ul class="lista-ingredientes">
             ${ingredientesHtml}
         </ul>
-        <h4>Receta</h4>
-        <p>${receta.descripcion}</p>
+        <h4>Instrucciones</h4>
+        <p>${alimento.receta.descripcion}</p>
         <button class="cerrar-modal">Cerrar</button>
     `;
 
@@ -145,8 +170,7 @@ function mostrarReceta(receta) {
         modalReceta.remove();
     });
 }
-
-// Ejecuta la función para generar la dieta
 generarDieta();
+
 
 
