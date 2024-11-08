@@ -1,7 +1,6 @@
 connect2Server()
 
 postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
-
     let caloriasTotalesAlDia = JSON.parse(localStorage.getItem("info"));
     caloriasTotalesAlDia.calorias = Math.trunc(caloriasTotalesAlDia.calorias)
     caloriasTotalesAlDia.proteinas = Math.trunc(caloriasTotalesAlDia.proteinas)
@@ -60,30 +59,26 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
 
             const botonNueva = document.createElement("button");
             botonNueva.classList.add("nueva");
-            
-    
-            comida.alimentos.forEach(alimento => {
-                const itemAlimento = document.createElement('div');
-                itemAlimento.classList.add('comida');
-                itemAlimento.innerHTML = `
-                    <img src="${alimento.imagen}" alt="${alimento.nombre}" class="imagencomida">
-                    <p>Calorías: ${alimento.calorias}</p>
-                    <p>Proteína: ${alimento.proteina}</p>
-                    <p>Carbohidratos: ${alimento.carbohidratos}</p>
-                    <button class="boton-receta">Receta ▼</button>
-                `;
-    
-                const botonReceta = itemAlimento.querySelector(".boton-receta");
-                botonReceta.addEventListener("click", () => {
-                    mostrarReceta(alimento);
-                });
-    
-                contenedorComida.appendChild(itemAlimento);
+            const itemAlimento = document.createElement('div');
+            itemAlimento.classList.add('comida');
+            itemAlimento.innerHTML = `
+                <img src="${"alimento.imagen"}" alt="${dias[dia][comida].nombre}" class="imagencomida">
+                <p>Calorías: ${dias[dia][comida].calorias}</p>
+                <p>Proteína: ${dias[dia][comida].proteinas}</p>
+                <p>Carbohidratos: ${dias[dia][comida].carbohidratos}</p>
+                <button class="boton-receta">Receta ▼</button>
+            `;
+
+            const botonReceta = itemAlimento.querySelector(".boton-receta");
+            botonReceta.addEventListener("click", () => {
+                mostrarReceta(dias[dia][comida]);
             });
-    
+
+            contenedorComida.appendChild(itemAlimento);
+
             seccionDia.appendChild(contenedorComida);
         };
-    
+
         contenedor.appendChild(seccionDia);
     };
 })
@@ -94,16 +89,11 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
 
 
 
-function generarDieta() {
-    
-} 
-
-
 function mostrarReceta(alimento) {
     const modalReceta = document.createElement("div");
     modalReceta.classList.add("recetadesplegable");
 
-    const ingredientesHtml = alimento.receta.ingredientes.map(ing => `<li>${ing}</li>`).join('');
+    const ingredientesHtml = alimento.ingredientes.map(ing => `<li>${ing}</li>`).join('');
 
     modalReceta.innerHTML = `
         <h4>Receta de ${alimento.nombre}</h4>
@@ -112,7 +102,7 @@ function mostrarReceta(alimento) {
             ${ingredientesHtml}
         </ul>
         <h4>Instrucciones</h4>
-        <p>${alimento.receta.descripcion}</p>
+        <p>${alimento.receta}</p>
         <button class="cerrar-modal">Cerrar</button>
     `;
 
