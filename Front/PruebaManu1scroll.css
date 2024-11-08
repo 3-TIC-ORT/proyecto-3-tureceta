@@ -13,6 +13,13 @@ body{
     background-color: rgba(244, 240, 240, 1);
     
 }
+
+.usuario{
+    font-size: 35px;
+    font-family: Merienda;
+    
+}
+
 .grandote{
     height: 40%;
     width: 100%;
