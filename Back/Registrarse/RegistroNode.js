@@ -32,7 +32,7 @@ function registrarseBack(info){
             contraseña: contraseña,
             correo: correo,
         };
-        sessionStorage.setItem(nombre, JSON.stringify(usuario));
+        sessionStorage.setItem(nombre, JSON.stringify(usuario.nombre));
         
 
         usuarios.push(usuario);
