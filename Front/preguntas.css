@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-image:url('verduras.png'); 
+    background-image:url('descarga.png'); 
     background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
     background-position: center; /* Centra la imagen en la pantalla */
     height: 100vh; /* Asegura que el fondo cubra toda la altura visible */
@@ -8,6 +8,7 @@ body {
     position: relative;
     background-color: transparent 50% ;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     
 }
 .container {
