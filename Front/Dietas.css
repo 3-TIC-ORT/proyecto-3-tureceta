@@ -318,3 +318,12 @@ align-items: center;
     align-items: center;
 }
 
+.cambiarReceta{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.cambiarRecetaFoto{
+    width: 40px;
+}
