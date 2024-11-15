@@ -5,27 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nivel de actividad</title>
     <link rel="stylesheet" href="preguntas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <header class="arriba">
+        <h1 class="nutriplan">NutriPlan</h1>
+        <img src="logo.png" alt="" class="logo">
+    </header>
     
     <div class="fondo">
 
-    </div>
-    <div>
-        <h1>Comenzemo con algunas preguntas</h1>
     </div>
     <div class="container">
         <div class="genero">
             <div><h2>¿Cuál es tu género?</h2></div>
             
-            <!-- Opción Hombre -->
+           
             <input type="radio" name="sexo" id="masculino">
             <label for="hombre">
                 <img class="personita" src="hombre.png" alt="" srcset="">
                 Hombre
             </label>
             
-            <!-- Opción Mujer -->
+            
             <input type="radio" name="sexo" id="femenino">
             <label for="mujer">
                 <img class="personita" src="mujer.png" alt="" srcset="">
@@ -72,7 +77,7 @@
             <br>
             Hago ejercicio dos veces por dia
         </div>
-        <H2>Tu Objetivo</H2>
+        <H2>Objetivo</H2>
         <div id="objetivo">
             <div class="objetivo-button" id="Bajar">
                 Bajar de peso
@@ -86,8 +91,10 @@
     </div>
         <div>
             <div>
-            <button  id="resultado" >Calcular</button></div>
+            <button   class= "resul" id="resultado">Calcular</button></div>
         </div>
+
+        
         
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
