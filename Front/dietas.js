@@ -1,5 +1,7 @@
 connect2Server()
 
+let todasLasDietas;
+
 postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
     let dietas = {};
     for(let i in dias){
@@ -9,6 +11,7 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
         dietas[i].Merienda = dias[i].merienda;
         dietas[i].Cena = dias[i].cena;
     }
+    todasLasDietas = dietas;
     let caloriasTotalesAlDia = JSON.parse(localStorage.getItem("info"));
     caloriasTotalesAlDia.calorias = Math.trunc(caloriasTotalesAlDia.calorias)
     caloriasTotalesAlDia.proteinas = Math.trunc(caloriasTotalesAlDia.proteinas)
@@ -16,6 +19,7 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
     todo = document.querySelector("#todo");
     todo.innerHTML = "";
     for (let i in dietas){
+        console.dir(dietas[i]);
         todo.innerHTML += `
         <div id="container">
             <div class="cajadeldia"><h2 class="titulo-dia" >Día ${i} 🥕</h2></div>
@@ -24,15 +28,15 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
                 <div class="contenedorTotal">
                     <div class="cajaMacros">
                         <p>Calorías</p>
-                        <p>2250</p>
+                        <p>${Math.trunc(dietas[i].Desayuno.calorias + dietas[i].Almuerzo.calorias + dietas[i].Merienda.calorias + dietas[i].Cena.calorias)}</p>
                     </div>
                     <div>
                         <p>Proteína</p>
-                        <p>99</p>
+                        <p>${Math.trunc(dietas[i].Desayuno.proteinas + dietas[i].Almuerzo.proteinas + dietas[i].Merienda.proteinas + dietas[i].Cena.proteinas)}</p>
                     </div>
                     <div>
                         <p>Carbohidratos</p>
-                        <p>30</p>
+                        <p>${Math.trunc(dietas[i].Desayuno.carbohidratos + dietas[i].Almuerzo.carbohidratos + dietas[i].Merienda.carbohidratos + dietas[i].Cena.carbohidratos)}</p>
                     </div>
                 </div>
             </div>
@@ -50,15 +54,15 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
             <section class="infoNutricional">
                 <div class="calorias">
                     <p class="titulo">Calorías</p>
-                    <p class="info" id="calorias">${dietas[i][f].calorias}</p>
+                    <p class="info" id="calorias">${Math.trunc(dietas[i][f].calorias)}</p>
                 </div>
                 <div class="calorias">
                     <p class="titulo">Proteínas</p>
-                    <p class="info" id="proteínas">${dietas[i][f].proteinas}</p>
+                    <p class="info" id="proteínas">${Math.trunc(dietas[i][f].proteinas)}</p>
                 </div>
                 <div class="calorias">
                     <p class="titulo">Carbohidratos</p>
-                    <p class="info" id="carbohidratos">${dietas[i][f].carbohidratos}</p>
+                    <p class="info" id="carbohidratos">${Math.trunc(dietas[i][f].carbohidratos)}</p>
                 </div>
             </section>
             <h3 class="nombreComida" id="nombreComida">${dietas[i][f].nombre}</h3>
@@ -76,7 +80,7 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
                 <p class="receta">-${dietas[i][f].preparación}-</p>
                 <div class="cambiarReceta">
                     <p class="cambiarP1">No te gusto la receta?</p>
-                    <img class="cambiarRecetaFoto" src="./cambiarReceta.png" alt="">
+                    <img class="cambiarRecetaFoto" id=".${f}-${i}" src="./cambiarReceta.png" alt="">
                     <p class="cambiarP2">Genera una nueva comida en segundos.</p>
                 </div>
             </div>
@@ -96,13 +100,23 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
             document.getElementById(nuevoId).classList.toggle("infoExtra");
             document.getElementById(nuevoId+"--").classList.toggle("flechaAlreves");
         })
-}
+    }
 
 
+    let cambiarReceta = document.querySelectorAll(".cambiarRecetaFoto");
+    for(let bot of cambiarReceta){
+        bot.addEventListener("click",()=>{
+            let nuevoId = ""
+            for (let i in bot.id){
+                if (i != 0){
+                    nuevoId+= bot.id[i];
+                }
+            }
+            document.getElementById(nuevoId).classList.toggle("infoExtra");
+            document.getElementById(nuevoId+"--").classList.toggle("flechaAlreves");
+        })
+    }
 })
-
-
-
 
 
 
