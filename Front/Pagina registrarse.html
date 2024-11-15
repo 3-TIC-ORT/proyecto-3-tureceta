@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Sesión</title>
     <link rel="stylesheet" href="Paginaregistrarse.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Registrarse</h1>
-    <img class="Logo" src="https://www.figma.com/design/1acneNoXPuLBlOvpm4vt7c/Proyecto--TuReceta?node-id=132-3&t=LvHw77ojhurrnUNM-4_" alt="">
+
+    <div class="grandote">
+        <div class="arriba">
+            <h1 class="nutriplan">NutriPlan</h1>
+            <img src="logo.png" alt="" class="logoo">
+        </div>
+        </div>
+    
     <div class="container">
-        <h2>Nutriplan</h2>
-        <p>Crea una cuenta</p>
+        <img class="Logo" src="logo.png" alt="">
+        <h2>Crea una cuenta</h2>
         <div>
             <input type="text" id="nombre" placeholder="Tu nombre" required>
         </div>
@@ -23,10 +32,14 @@
             <input type="password" id="contraseña" placeholder="Crea una contraseña" required>
         </div>
         <div class="actions">
-            <a href="Pagina iniciar sesion.html">Iniciar sesión</a>
-            <button id="BotonRegistro"><a class="regis" href="Paginascroll1.html">Registrarse</a></button>
+            
+            <button id="BotonRegistro">Registrarse</a></button>
+            <button id="BotonLogin" onclick="window.location.href='Pagina iniciar sesion.html' ">Iniciar Sesion</button>
         </div>
     </div>
-    <script src="Codigo Registrarse.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
+    <script src="../../socket.js"></script>
+    <script src="FrontPruebaRegistro.js"></script>
+
 </body>
 </html>
