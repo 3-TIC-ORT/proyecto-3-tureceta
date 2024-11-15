@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-image:url('tomates.png'); 
+    background-image:url('pexels.png'); 
     background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
     background-position: center; /* Centra la imagen en la pantalla */
     height: 100vh; /* Asegura que el fondo cubra toda la altura visible */
@@ -9,6 +9,8 @@ body {
     background-color: transparent 50% ;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: Merienda;
+    overflow-x: hidden;
     
 }
 .container {
@@ -28,33 +30,100 @@ body {
     
 }
 
+
+.arriba{
+    width: 100vw;
+    height: 150px;
+    background-color:rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    }
+    .logo{
+        font-size: 35px;
+        font-family: Merienda;
+    }
+    .nutriplan{
+        font-size: 35px;
+        font-family: Merienda;
+    }
+
 h1{
     display: flex;
     justify-content: center;
 }
-#mujer{
+
+
+
+.radioInputGen {
+    opacity: 0;
+    position: absolute;
+}
+
+
+
+
+.opt {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.opciones {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.genero {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    align-items: center;
+    margin-top: 20px; 
+    flex-direction: column;
+}
+
+.genero h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.genero-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    background-color: #727272;
-    color: #ffffff;
-    border: none;
+    width: 120px; 
+    height: 120px; 
+    background-color: #cfcfcf;
+    color: #000;
+    border: 2px solid #555;
     cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
 }
-#hombre{
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    background-color: #727272;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
+
+.genero-button img {
+    width: 40px; 
+    height: auto;
+    margin-bottom: 5px;
 }
-.genero button:hover {
-    background-color: #555;
-    width: 100px;
-    transition-duration:600ms;
+
+.genero-button span {
+    font-size: 16px;
+    font-family: 'Merienda', sans-serif;
+    font-weight: bold;
+    color: #333;
 }
+
+.genero-button:hover {
+    background-color: #b3b3b3;
+    transition: all 0.3s ease;
+}
+
 
 
 .actividad-container {
@@ -70,6 +139,7 @@ h1{
     border: 1px solid #ccc;
     cursor: pointer;
     border: 2px solid black;
+    font-family: Sedentario;
 }
 
 .actividad-button.active {
@@ -83,6 +153,7 @@ h1{
     flex-direction: column;
     gap: 10px;
     border: 2px solid black;
+
 }
 
 .objetivo-button {
@@ -91,19 +162,31 @@ h1{
     border: 1px solid #ccc;
     cursor: pointer;
     border: 2px solid black;
+    margin: 10px;
+    font-family: Sedentario;
 }
 
 .objetivo-button.active {
     background-color: rgb(55, 55, 65);
     color: white;
+    
 }
 
 .barrita{
     width: 300px;
     height: 30px;
-    
+
     
 
+}
+
+
+.resul{
+    width: 300px;
+    height: 60px;
+    
+
+    
 }
 
 .personita{

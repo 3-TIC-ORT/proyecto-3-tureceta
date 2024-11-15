@@ -22,43 +22,20 @@
     <div class="container">
         <div class="genero">
             <div><h2>¿Cuál es tu género?</h2></div>
-            <div class="opciones">
-                <div class="opt">
-                    <label for="masculino" class="genero-button" id="genero-button-hombre">
-                        <img class="personita" src="hombre.png" alt="Hombre">
-                        <input type="radio" name="sexo" id="masculino" value="hombre" class="radioInputGen">
-                    </label>
-                    <span>Hombre</span>
-                </div>
-                <div class="opt">
-                    <label for="femenino" class="genero-button" id="genero-button-mujer">
-                        <img class="personita" src="mujer.png" alt="Mujer">
-                        <input type="radio" name="sexo" id="femenino" value="mujer" class="radioInputGen">
-                    </label>
-                    <span>Mujer</span>
-                </div>
-            </div>       
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    // Obtener todos los inputs de tipo radio
-                    const radios = document.querySelectorAll('.radioInputGen');
-                    
-                    // Función para manejar el cambio de color
-                    radios.forEach(radio => {
-                        radio.addEventListener('change', function() {
-                            // Limpiar el color de fondo de todos los labels
-                            document.querySelectorAll('.genero-button').forEach(label => {
-                                label.style.backgroundColor = ''; // Elimina el color de fondo
-                            });
-                            
-                            // Si el radio está seleccionado, cambiar el color de fondo de su label
-                            if (this.checked) {
-                                this.parentElement.style.backgroundColor = '#5a5757'; // Color de fondo verde
-                            }
-                        });
-                    });
-                });
-            </script>
+            
+           
+            <input type="radio" name="sexo" id="masculino">
+            <label for="hombre">
+                <img class="personita" src="hombre.png" alt="" srcset="">
+                Hombre
+            </label>
+            
+            
+            <input type="radio" name="sexo" id="femenino">
+            <label for="mujer">
+                <img class="personita" src="mujer.png" alt="" srcset="">
+                Mujer
+            </label>
         </div>
 
         <H2>Altura</H2>
