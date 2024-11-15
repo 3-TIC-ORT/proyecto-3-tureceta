@@ -90,6 +90,7 @@ h1{
     border: 1px solid #ccc;
     cursor: pointer;
     border: 2px solid black;
+    font-family: Sedentario;
 }
 
 .actividad-button.active {
@@ -113,11 +114,13 @@ h1{
     cursor: pointer;
     border: 2px solid black;
     margin: 10px;
+    font-family: Sedentario;
 }
 
 .objetivo-button.active {
     background-color: rgb(55, 55, 65);
     color: white;
+    
 }
 
 .barrita{
@@ -132,6 +135,7 @@ h1{
 .resul{
     width: 300px;
     height: 60px;
+    
 
     
 }
