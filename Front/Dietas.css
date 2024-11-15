@@ -336,3 +336,9 @@ ol{
 .cambiarRecetaFoto{
     width: 40px;
 }
+
+#todo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
