@@ -39,7 +39,11 @@ function registrarseFront(){
             console.log("Por favor ingrese un correo válido");
             return false;
         }     
-    postData("registrarse",info, registrado);
+    postData("registrarse",info, (data) => {
+        if (data.ok) {
+            registrado("cahu");
+        }
+    } );
 }
 
 

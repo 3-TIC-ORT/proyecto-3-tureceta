@@ -4,10 +4,10 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
     let dietas = {};
     for(let i in dias){
         dietas[i] = {};
-        dietas[i].desayuno = dias[i].desayuno;
-        dietas[i].almuerzo = dias[i].almuerzo;
-        dietas[i].merienda = dias[i].merienda;
-        dietas[i].cena = dias[i].cena;
+        dietas[i].Desayuno = dias[i].desayuno;
+        dietas[i].Almuerzo = dias[i].almuerzo;
+        dietas[i].Merienda = dias[i].merienda;
+        dietas[i].Cena = dias[i].cena;
     }
     let caloriasTotalesAlDia = JSON.parse(localStorage.getItem("info"));
     caloriasTotalesAlDia.calorias = Math.trunc(caloriasTotalesAlDia.calorias)
@@ -39,40 +39,41 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
         </div>`
 
         for (let f in dietas[i]){
+            listaDeIngredientes="";
+            for(let w of dietas[i][f].ingredientes){
+                listaDeIngredientes+=`<li>${w.cantidad} ${w.unidad} ${w.nombre}</li>`;
+            }
+            console.log(listaDeIngredientes);
             todo.innerHTML += `
             <div class="comida">
-            <h3 class="tituloComida" id="tituloComida">Desayuno</h3>
+            <h3 class="tituloComida">${f}</h3>
             <section class="infoNutricional">
                 <div class="calorias">
                     <p class="titulo">Calorías</p>
-                    <p class="info" id="calorias">521</p>
+                    <p class="info" id="calorias">${dietas[i][f].calorias}</p>
                 </div>
                 <div class="calorias">
                     <p class="titulo">Proteínas</p>
-                    <p class="info" id="proteínas">521</p>
+                    <p class="info" id="proteínas">${dietas[i][f].proteinas}</p>
                 </div>
                 <div class="calorias">
                     <p class="titulo">Carbohidratos</p>
-                    <p class="info" id="carbohidratos">521</p>
+                    <p class="info" id="carbohidratos">${dietas[i][f].carbohidratos}</p>
                 </div>
             </section>
-            <h3 class="nombreComida" id="nombreComida">Camarones salteados con carne</h3>
+            <h3 class="nombreComida" id="nombreComida">${dietas[i][f].nombre}</h3>
             <div class="imgDeLaComida"><img src="pruebasFoto.png" alt="Imagen comida" class="imgComida"></div>
-            <div class="buttonFlecha">
+            <div class="buttonFlecha" id="-${f}-${i}">
                 <p class="boton">Receta</p>
-                <img class="flecha" src="flecha.png" alt="">
+                <img class="flecha" id="${f}-${i}--" src="flecha.png" alt="">
             </div>
-            <div class="infoExtra" id="infoExtra">
+            <div class="infoExtra1" id="${f}-${i}">
                 <h2 class="tituloReceta">Ingredientes</h2>
                 <ul class="listaDeIngredientes">
-                    <li>Camarones</li>
-                    <li>Aviones</li>
-                    <li>Salmon</li>
+                    ${listaDeIngredientes}
                 </ul>
                 <h2 class="tituloReceta">Receta</h2>
-                <p class="receta">
-                    Primero hacer toda la masa, mezclando harina, agua, y sal a gusto, luego meterlo todos los camarones, dejar reposar por media hora, y meter al horno a fuego moderado 2 horas. Una vez sacado del horno, pintar con yema de huevo, y meter a fuego alto 10 minutos nuevamente. Ahora si, a disfrutar.
-                </p>
+                <p class="receta">-${dietas[i][f].preparación}-</p>
                 <div class="cambiarReceta">
                     <p class="cambiarP1">No te gusto la receta?</p>
                     <img class="cambiarRecetaFoto" src="./cambiarReceta.png" alt="">
@@ -83,18 +84,33 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
         }
     }
     
+    let flechas = document.querySelectorAll(".buttonFlecha")
+    for(let flecha of flechas){
+        flecha.addEventListener("click",()=>{
+            let nuevoId = ""
+            for (let i in flecha.id){
+                if (i != 0){
+                    nuevoId+= flecha.id[i];
+                }
+            }
+            document.getElementById(nuevoId).classList.toggle("infoExtra");
+            document.getElementById(nuevoId+"--").classList.toggle("flechaAlreves");
+        })
+}
+
+
 })
 
 
 
 
 
-let flecha = document.querySelector(".buttonFlecha")
 
-flecha.addEventListener("click",()=>{
-    document.querySelector(".cambiarReceta").style.display = 'block !important' 
+
+// flecha.addEventListener("click",()=>{
+//     document.querySelector(".infoExtra1").classList.toggle("infoExtra")
     
-})
+// })
 
 
 

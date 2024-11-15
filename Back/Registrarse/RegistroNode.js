@@ -1,5 +1,6 @@
 import fs from "fs";
 import {onEvent,startServer} from "soquetic"
+const personas = JSON.parse(fs.readFileSync("../Registrarse/usuarios.json"));
 function registrarseBack(info){
     let nombre = info.nombre;
     let correo = info.correo;
@@ -24,6 +25,17 @@ function registrarseBack(info){
         
     }
     //esto detecta si el correo contiene un dominio valido
+    let repeticion = false;
+    personas.forEach(user => {
+        if(info.nombre === user.nombre || info.correo === user.correo){
+            repeticion = true;
+        }
+    });
+    if (repeticion === true) {
+    console.log("Nombre o Correo en uso");
+    return false
+    }
+    
     if (
         (correo.includes("@gmail.com") || correo.includes("@hotmail.com") || correo.includes("@est.ort.edu.ar")) &&correo.indexOf("@") > 0 && correo.endsWith(".com")) {
         // Crear objeto para cada usuario con nombre y contraseña
@@ -32,14 +44,14 @@ function registrarseBack(info){
             contraseña: contraseña,
             correo: correo,
         };
-        sessionStorage.setItem(nombre, JSON.stringify(usuario.nombre));
+        
         
 
         usuarios.push(usuario);
         // Guardar la lista de usuarios en usuario.json
         fs.writeFileSync("usuarios.json",JSON.stringify(usuarios));
-        return true;
-    
+        return {ok : true};
+        
     } else {
         // Mostrar un mensaje de error si el correo no es válido
         console.log("Por favor ingrese un correo válido");

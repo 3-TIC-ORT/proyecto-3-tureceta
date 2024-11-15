@@ -241,7 +241,12 @@ align-items: center;
     transform: rotate(180deg);
 }
 
+.infoExtra1{
+    display: none;
+}
+
 .infoExtra{
+    display: block;
     width: 92%;
     background: rgba(240, 238, 238, 1);
     margin-top: 20px;
@@ -261,6 +266,10 @@ align-items: center;
     text-align: center;
     display: flex;
     justify-content: center;
+    padding: 0 40px;
+    
+}
+ol{
     padding: 0 40px;
 }
 .recetadesplegable {
