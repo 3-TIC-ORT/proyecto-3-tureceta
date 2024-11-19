@@ -35,8 +35,8 @@ function calcularCalorias({sexo, peso, altura, edad, actividad, objetivo}) {
 
    return {
       calorias: calorias,
-      proteinas: proteinas.toFixed(1),
-      carbohidratos: carbohidratos.toFixed(1)
+      proteinas: Number(proteinas.toFixed(1)),
+      carbohidratos: Number(carbohidratos.toFixed(1))
     }
 };
 

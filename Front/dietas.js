@@ -154,7 +154,8 @@ function main(dietas){
         }
         let receta = dietas[dia][comida];
         postData("cambiarComida",receta,(nuevaReceta)=>{
-            console.log(nuevaReceta);
+            dietas[dia][comida] = nuevaReceta;
+            main(dietas);
         })
     }
 }

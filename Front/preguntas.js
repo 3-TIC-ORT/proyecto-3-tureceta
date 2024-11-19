@@ -77,7 +77,7 @@ function calculodatos (){
     
         }    
         postData("datos",datos,(info)=>{
-            localStorage.setItem("info",JSON.stringify(info))
+            localStorage.setItem("info",JSON.stringify(info.data))
             redirect()
         })
 

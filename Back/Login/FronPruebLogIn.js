@@ -1,4 +1,4 @@
-let botonLogin = document.getElementById("botonLogin")
+let botonLogin = document.getElementById("BotonLogin")
  function enviar(){
     let correo = document.getElementById("correo").value
     let contraseña = document.getElementById("contraseña").value
@@ -10,6 +10,7 @@ let botonLogin = document.getElementById("botonLogin")
 
     // Llamar a la función postData y manejar la respuesta del backend
     postData("login", usuario, function(ok) {
+        ok = ok.data;
         if (ok === true) {
             // Redirigir si el login es exitoso
             window.location.href = "http://127.0.0.1:5500/Front/Paginascroll1.html";
@@ -19,4 +20,3 @@ let botonLogin = document.getElementById("botonLogin")
     );
 }
 botonLogin.addEventListener("click", enviar)
-
