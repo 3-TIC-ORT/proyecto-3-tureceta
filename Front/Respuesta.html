@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,32 +8,30 @@
 </head>
 <body>
     <div class="opacidad">
+    </div>   
         <div class="totalmacros">
             <div class="titulo">
                 <p>Macros Sugeridos</p>
+                <p>(Diariamente)</p>
             </div>
             <div class="calor">
-                <p class="calo">Calorías</p>
+                <p class="calo">Calorías Totales</p>
                 <p id="numCA" class="numerito">0</p>
             </div>
             <div class="proteycarbo">
-                <div class="prote">
-                    <p>Proteína</p>
-                    <p id="numP" class="numerito">0</p>
-                </div>
                 <div class="carb">
                     <p>Carbohidratos</p>
                     <p id="numC" class="numerito">0</p>
                 </div>
-                
+                <div class="prote">
+                    <p>Proteínas</p>
+                    <p id="numP" class="numerito">0</p>
+                </div>
             </div>
             <div class="boton">
-                <button class="crear" onclick="window.location.href='Dietas.html';">Crear Dieta</button>
+                <button class="crear" onclick="window.location.href='Dietas.html';">Calcular Macros</button>
             </div>
         </div>
-        <div>
-
-    </div>   
 </body>
 <script>
     document.getElementById("numCA").textContent =  Math.trunc(JSON.parse(localStorage.getItem("info")).calorias);

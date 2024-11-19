@@ -111,6 +111,16 @@ function main(dietas){
         }
         document.getElementById(nuevoId).classList.toggle("infoExtra");
         document.getElementById(nuevoId+"--").classList.toggle("flechaAlreves");
+        flecha.addEventListener("click",()=>{
+            let nuevoId = ""
+            for (let i in flecha.id){
+                if (i != 0){
+                    nuevoId+= flecha.id[i];w
+                }
+            }
+            document.getElementById(nuevoId).classList.toggle("infoExtra");
+            document.getElementById(nuevoId+"--").classList.toggle("flechaAlreves");
+        })
     }
 
     let cambiarReceta = document.querySelectorAll(".cambiarRecetaFoto");
