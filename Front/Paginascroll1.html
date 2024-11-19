@@ -9,15 +9,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Krona+One&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
 </head>
+<script src="menu.js"></script>
 <body>
+
     <header class="grandote">
         <div class="arriba">
             <h1 class="nutriplan">NutriPlan</h1>
             <img src="logo.png" alt="" class="logo">
-            <div class="usuario" id="usuario">usuario</div>
+            
+            <!-- Contenedor del menú desplegable con ícono de usuario -->
+            <div class="menu">
+                <button class="menu-button" onclick="toggleMenu()">
+                    <img src="icono-usuario.png" alt="Usuario" class="icono-usuario"> 
+                    <span class="nombre-texto">Nombre</span>
+                    <img src="icono-desplegable.png" alt="Desplegar" class="icono-desplegable"> 
+                </button>
+                <div class="menu-content" id="menuContent">
+                    <a href="">Mis Recetas</a>
+                    <a href="Paginascroll1.html">Inicio</a>
+                    <a href="preguntas.html">Calcular Macros</a>
+                </div>
+            </div>
         </div>   
     </header>
+    
+    
 
     <div class="container">
         <h1>Bienvenido a</h1>
@@ -48,4 +68,5 @@
     </div>
     
 </body>
+
 </html>

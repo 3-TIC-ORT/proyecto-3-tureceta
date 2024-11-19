@@ -212,3 +212,68 @@ h1{
     width: 60px;
     height: 60px;
 }
+
+/* Contenedor del menú desplegable */
+.menu {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 10px; /* Reduce el margen para hacerlo más compacto */
+    z-index: 5; /* Asegúrate de que tenga un z-index alto */
+}
+
+/* Botón del menú desplegable */
+.menu-button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 14px; /* Reduce el tamaño de la fuente */
+    cursor: pointer;
+    color: black;
+    font-family: 'Merienda', sans-serif;
+    z-index: 6;
+    padding: 5px 8px; /* Reduce el padding para hacerlo más pequeño */
+}
+
+/* Ícono del usuario */
+.icono-usuario {
+    width: 20px; /* Ajusta el tamaño del ícono a algo más pequeño */
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Ícono del desplegable */
+.icono-desplegable {
+    width: 12px; /* Ajusta el tamaño del ícono a algo más pequeño */
+    height: 12px;
+}
+
+/* Contenido del menú desplegable */
+.menu-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.1); /* Reduce la sombra */
+    z-index: 7;
+    border-radius: 3px; /* Reduce el radio del borde */
+    text-align: left;
+    overflow: hidden;
+    min-width: 150px; /* Ajusta el ancho mínimo */
+}
+
+/* Enlaces dentro del menú */
+.menu-content a {
+    color: black;
+    padding: 8px 10px; /* Reduce el padding para compactar */
+    text-decoration: none;
+    display: block;
+    font-family: 'Merienda', sans-serif;
+    font-size: 14px; /* Reduce el tamaño de la fuente */
+}
+
+/* Cambio de color al pasar el cursor */
+.menu-content a:hover {
+    background-color: #f1f1f1;
+}

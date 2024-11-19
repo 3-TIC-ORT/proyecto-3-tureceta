@@ -1,92 +1,157 @@
-
+/* Estilos para la estructura principal */
 body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; 
+    height: 100vh;
     margin: 0;
     background-image: url("verde.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; 
-    overflow: hidden; 
+    background-attachment: fixed;
+    overflow: auto; /* Permite el scroll si es necesario */
+    font-family: 'Merienda', sans-serif;
 }
 
+/* Contenedor principal para los macros */
 .totalmacros {
     background: #F4F0F0;
-    width: 400px; 
-    height: 450px; 
-    border-radius: 15px; 
+    width: 400px;
+    height: 450px;
+    border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 2;
-    text-align: center; 
+    text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio de manera uniforme */
 }
 
+/* Estilos para el título */
 .titulo p {
-    font-size: 28px; 
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
+/* Contenedor de calorías */
 .calor {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5px; 
+    margin-bottom: 10px;
 }
 
+/* Contenedor para proteínas y carbohidratos */
 .proteycarbo {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 30px; 
-    text-align: center;
-    
+    margin-bottom: 20px;
 }
 
+/* Estilos para las secciones de proteínas y carbohidratos */
 .prote, .carb {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5px;
-
 }
 
+/* Contenedor del botón */
 .boton {
     display: flex;
     justify-content: center;
-    
 }
 
+/* Estilo del botón */
 .crear {
     background-color: #C5C5C5;
     color: black;
-    border: 3px solid #000000; 
-    padding: 10px 25px;
+    border: 3px solid #000000;
+    padding: 10px 20px;
     border-radius: 12px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s; 
+    font-size: 14px;
+    transition: background-color 0.3s;
 }
 
 .crear:hover {
     background-color: #45a049;
 }
 
+/* Estilo de opacidad superpuesta */
 .opacidad {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* Baja más la opacidad */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
     z-index: 1;
 }
+
+/* Estilos del menú desplegable */
+.menu {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+/* Botón del menú */
+.menu-button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: black;
+}
+
+/* Iconos del menú */
+.icono-usuario {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.nombre-texto {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.icono-desplegable {
+    width: 16px;
+    height: 16px;
+}
+
+/* Contenido del menú desplegable */
+.menu-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Links dentro del menú */
+.menu-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.menu-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
 
 
 

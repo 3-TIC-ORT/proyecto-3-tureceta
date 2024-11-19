@@ -6,9 +6,30 @@
     <title>Macros Sugeridos</title>
     <link rel="stylesheet" href="Respuesta.css">
 </head>
+<script src="menu.js"></script>
 <body>
-    <div class="opacidad">
-    </div>   
+
+    <header class="grandote">
+        <div class="arriba">
+            <h1 class="nutriplan">NutriPlan</h1>
+            <img src="logo.png" alt="" class="logo">
+            
+            
+            <div class="menu">
+                <button class="menu-button" onclick="toggleMenu()">
+                    <img src="icono-usuario.png" alt="Usuario" class="icono-usuario"> 
+                    <span class="nombre-texto">Nombre</span>
+                    <img src="icono-desplegable.png" alt="Desplegar" class="icono-desplegable"> 
+                </button>
+                <div class="menu-content" id="menuContent">
+                    <a href="">Mis Recetas</a>
+                    <a href="Paginascroll1.html">Inicio</a>
+                    <a href="preguntas.html">Calcular Macros</a>
+                </div>
+            </div>
+        </div>   
+    </header>
+
         <div class="totalmacros">
             <div class="titulo">
                 <p>Macros Sugeridos</p>
@@ -32,6 +53,8 @@
                 <button class="crear" onclick="window.location.href='Dietas.html';">Calcular Macros</button>
             </div>
         </div>
+<div class="opacidad"></div>
+
 </body>
 <script>
     document.getElementById("numCA").textContent =  Math.trunc(JSON.parse(localStorage.getItem("info")).calorias);
