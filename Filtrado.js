@@ -24,11 +24,14 @@ onEvent("pedirDietas", (datos)=>{
         7 : {}
     }
 
-    function crearAlmuerzo(){
+    function crearAlmuerzo(recetasTotales){
         let noCumple = true;
         while(noCumple){
             let receta = recetas[random(recetas.length)];
             if (!receta.tipo.includes("almuerzo")){
+                continue;
+            }
+            if(recetasTotales.includes(receta)){
                 continue;
             }
             if (receta.calorias > caloriasPc*1.1){
@@ -44,7 +47,7 @@ onEvent("pedirDietas", (datos)=>{
         }
     }
 
-    function crearDesayuno(recetasDelDia){
+    function crearDesayuno(recetasDelDia,recetasTotales){
         let probadas = [];
         let noCumple = true;
         while(noCumple){
@@ -56,6 +59,12 @@ onEvent("pedirDietas", (datos)=>{
             if (probadas.includes(receta.nombre)){
                 continue;
             }
+            if(recetasTotales.includes(receta)){
+                continue;
+            }
+            if (recetasDelDia.includes(receta)){
+                continue;
+            }
             if (receta.calorias > caloriasPc*1.1){
                 probadas.push(receta.nombre)
                 continue;
@@ -86,7 +95,7 @@ onEvent("pedirDietas", (datos)=>{
         }
     }
 
-    function crearMerienda(recetasDelDia){
+    function crearMerienda(recetasDelDia,recetasTotales){
         let probadas = [];
         let noCumple = true;
         while(noCumple){
@@ -98,6 +107,12 @@ onEvent("pedirDietas", (datos)=>{
             if (probadas.includes(receta.nombre)){
                 continue;
             }
+            if(recetasTotales.includes(receta)){
+                continue;
+            }
+            if (recetasDelDia.includes(receta)){
+                continue;
+            }
             if (receta.calorias > caloriasPc*1.1){
                 probadas.push(receta.nombre)
                 continue;
@@ -129,7 +144,7 @@ onEvent("pedirDietas", (datos)=>{
     }
 
 
-    function crearCena(recetasDelDia){
+    function crearCena(recetasDelDia,recetasTotales){
         let probadas = [];
         let noCumple = true;
         let intentos = 0;
@@ -140,7 +155,13 @@ onEvent("pedirDietas", (datos)=>{
                 probadas.push(receta);
                 continue;
             }
+            if (recetasDelDia.includes(receta)){
+                continue;
+            }
             if (probadas.includes(receta.nombre)){
+                continue;
+            }
+            if(recetasTotales.includes(receta)){
                 continue;
             }
             if (receta.calorias > caloriasPc*1.1){
@@ -183,66 +204,90 @@ onEvent("pedirDietas", (datos)=>{
         return false;
     }
 
-    function crearDia(){
+    function crearDia(recetasTotales){
         let recetasDelDia = []
-        let rec1 = crearAlmuerzo();
+        let rec1 = crearAlmuerzo(recetasTotales);
         recetasDelDia.push(rec1);
         dia.almuerzo = rec1;
 
-        let rec2 = crearDesayuno(recetasDelDia);
+        let rec2 = crearDesayuno(recetasDelDia,recetasTotales);
         recetasDelDia.push(rec2);
         dia.desayuno = rec2;
 
-        let rec3 = crearMerienda(recetasDelDia);
+        let rec3 = crearMerienda(recetasDelDia,recetasTotales);
         recetasDelDia.push(rec3);
         dia.merienda = rec3;
         
-        let rec4 = crearCena(recetasDelDia);
+        let rec4 = crearCena(recetasDelDia,recetasTotales);
         recetasDelDia.push(rec4);
         dia.cena = rec4;
+        return recetasDelDia
     }
-
+    
+    let recetasTotales = [];
+    let hastaAhora;
     let dia = {cena:false};
     while(dia.cena === false){
-        crearDia()
+        hastaAhora = crearDia(recetasTotales)
     }
+    recetasTotales = recetasTotales.concat(hastaAhora);
     dias[1] = dia;
     dia = {cena:false};
     while(dia.cena === false){
-        crearDia()
+        hastaAhora = crearDia(recetasTotales)
     }
+    recetasTotales = recetasTotales.concat(hastaAhora);
     dias[2] = dia;
     dia = {cena:false};
     while(dia.cena === false){
-        crearDia()
+        hastaAhora = crearDia(recetasTotales)
     }
+    recetasTotales = recetasTotales.concat(hastaAhora);
     dias[3] = dia;
     dia = {cena:false};
     while(dia.cena === false){
-        crearDia()
+        hastaAhora = crearDia(recetasTotales)
     }
+    recetasTotales = hastaAhora; //A PARTIR DE ESTE DÍA SE PUEDEN REPETIR (CAMBIAR A UN DIA MÁS TARDE SI PONEMOS MAS RECETAS)
     dias[4] = dia;
     dia = {cena:false};
     while(dia.cena === false){
-        crearDia()
+        hastaAhora = crearDia(recetasTotales)
     }
+    recetasTotales = recetasTotales.concat(hastaAhora);
     dias[5] = dia;
     dia = {cena:false};
     while(dia.cena === false){
-        crearDia()
+        hastaAhora = crearDia(recetasTotales)
     }
+    recetasTotales = recetasTotales.concat(hastaAhora);
     dias[6] = dia;
     dia = {cena:false};
     while(dia.cena === false){
-        crearDia()
+        hastaAhora = crearDia(recetasTotales)
     }
+    recetasTotales = recetasTotales.concat(hastaAhora);
     dias[7] = dia;
-    console.log(dias);
     return dias;
 })
+
+
 //Cambiar Receta
 
+onEvent("cambiarComida",(receta)=>{
+    console.log("hoal")
+    let recetas = JSON.parse(fs.readFileSync("Recetas.json"))
 
+    function random(max) {
+        return Math.floor(Math.random() * max);
+    }
+    let nuevaReceta = recetas[random(recetas.length)];
+    while ( nuevaReceta.tipo != receta.tipo || nuevaReceta.calorias > receta.calorias*1.5 || nuevaReceta.calorias < receta.calorias*0.5 || nuevaReceta.nombre == receta.nombre){
+        nuevaReceta = recetas[random(recetas.length)];
+        console.log("en bucle")
+    }
+    return nuevaReceta;
+})
 
 
 

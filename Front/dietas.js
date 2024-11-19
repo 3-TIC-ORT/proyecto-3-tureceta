@@ -12,6 +12,14 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
         dietas[i].Cena = dias[i].cena;
     }
     todasLasDietas = dietas;
+    main(dietas);
+})
+
+
+
+
+
+function main(dietas){
     let caloriasTotalesAlDia = JSON.parse(localStorage.getItem("info"));
     caloriasTotalesAlDia.calorias = Math.trunc(caloriasTotalesAlDia.calorias)
     caloriasTotalesAlDia.proteinas = Math.trunc(caloriasTotalesAlDia.proteinas)
@@ -49,7 +57,7 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
             }
             console.log(listaDeIngredientes);
             todo.innerHTML += `
-            <div class="comida">
+            <div class="comida" id="j${f}-${i}">
             <h3 class="tituloComida">${f}</h3>
             <section class="infoNutricional">
                 <div class="calorias">
@@ -80,7 +88,7 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
                 <p class="receta">-${dietas[i][f].preparación}-</p>
                 <div class="cambiarReceta">
                     <p class="cambiarP1">No te gusto la receta?</p>
-                    <img class="cambiarRecetaFoto" id=".${f}-${i}" src="./cambiarReceta.png" alt="">
+                    <img class="cambiarRecetaFoto" id="p${f}-${i}" src="./cambiarReceta.png" alt="">
                     <p class="cambiarP2">Genera una nueva comida en segundos.</p>
                 </div>
             </div>
@@ -90,6 +98,19 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
     
     let flechas = document.querySelectorAll(".buttonFlecha")
     for(let flecha of flechas){
+        flecha.addEventListener("click",()=>
+        {mostrarReceta(flecha)})
+    }
+    
+    function mostrarReceta(flecha){
+        let nuevoId = ""
+        for (let i in flecha.id){
+            if (i != 0){
+                nuevoId+= flecha.id[i];
+            }
+        }
+        document.getElementById(nuevoId).classList.toggle("infoExtra");
+        document.getElementById(nuevoId+"--").classList.toggle("flechaAlreves");
         flecha.addEventListener("click",()=>{
             let nuevoId = ""
             for (let i in flecha.id){
@@ -102,54 +123,38 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
         })
     }
 
-
     let cambiarReceta = document.querySelectorAll(".cambiarRecetaFoto");
     for(let bot of cambiarReceta){
-        bot.addEventListener("click",()=>{
-            let nuevoId = ""
-            for (let i in bot.id){
-                if (i != 0){
-                    nuevoId+= bot.id[i];
-                }
+        bot.addEventListener("click",()=>{cambiar(bot)})
+    }
+    function cambiar(bot){
+        let nuevoId = ""
+        for (let i in bot.id){
+            if (i != 0){
+                nuevoId+= bot.id[i];
             }
-            document.getElementById(nuevoId).classList.toggle("infoExtra");
-            document.getElementById(nuevoId+"--").classList.toggle("flechaAlreves");
+        }
+        let dia = "";
+        let comida = "";
+        let indice;
+        for (let i in nuevoId){
+            if (nuevoId[i] != "-"){
+                comida+=nuevoId[i];
+            }
+            else{
+                indice = i;
+                break;
+            }
+        }
+        for (let i in nuevoId){
+            if (i > indice){
+                dia+=nuevoId[i];
+            }
+            
+        }
+        let receta = dietas[dia][comida];
+        postData("cambiarComida",receta,(nuevaReceta)=>{
+            console.log(nuevaReceta);
         })
     }
-})
-
-
-
-
-// flecha.addEventListener("click",()=>{
-//     document.querySelector(".infoExtra1").classList.toggle("infoExtra")
-    
-// })
-
-
-
-// function mostrarReceta(alimento) {
-//     const modalReceta = document.createElement("div");
-//     modalReceta.classList.add("recetadesplegable");
-
-//     const ingredientesHtml = alimento.ingredientes.map(ing => `<li>${ing}</li>`).join('');
-
-//     modalReceta.innerHTML = `
-//         <h4>Receta de ${alimento.nombre}</h4>
-//         <p><strong>Ingredientes:</strong></p>
-//         <ul class="lista-ingredientes">
-//             ${ingredientesHtml}
-//         </ul>
-//         <h4>Instrucciones</h4>
-//         <p>${alimento.receta}</p>
-//         <button class="cerrar-modal">Cerrar</button>
-//     `;
-
-//     document.body.appendChild(modalReceta);
-
-//     const botonCerrarModal = modalReceta.querySelector(".cerrar-modal");
-//     botonCerrarModal.addEventListener("click", () => {
-//         modalReceta.remove();
-//     });
-// }
-
+}
