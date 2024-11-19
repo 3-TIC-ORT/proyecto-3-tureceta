@@ -6,16 +6,26 @@ body, html {
 
 /* Fondo de pantalla completa */
 body {
-    background: url('frutasinicio.png') no-repeat center center fixed;
+    /* background: url('frutasinicio.png') no-repeat center center fixed; */
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
+    background-color: #ffffff;
+    overflow-y: hidden;
+    overflow-x: hidden;
 
+}
+.fondo{
+    width: 100%;
+    position: absolute;
+    z-index: -10;
+    opacity: 0.4;
+}
 .acheDos{  
     font-family: "EB Garamond", serif;
+    
 }
 
 

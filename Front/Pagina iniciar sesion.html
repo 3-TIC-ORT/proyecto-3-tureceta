@@ -4,27 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Sesión</title>
+    <title>Registro de Sesión</title>
     <link rel="stylesheet" href="iniciarsesion1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>INICIO O REGISTRO</h1>
-    <img class="logo" src="https://s3-alpha-sig.figma.com/img/9044/03fe/c4b47e22ac6328fb8ff63a4249722bf7?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ir8K-d~unx~9ttFHVhx1d0xVllylHu4UEbf8xSB59QDJLV9b5Cv3LhsnQjCLl0Q2bk9vybYcoJg1GQ2Kr5SbjXZakHft9eoD3QAwrmKhk8zz9D0eRsdMAVNdICYfFYF-3ZeeFjYl8SQ9rT7Eab~itOJ7ubX2uu0yRSq9kgz2w4P-sPyzUsuN7MSAHK63zTj7o51R25prLiL2EkVgP1lIegVJiNuqtjvbxQiZzOpG5T~Uf8rkfkgGBn5DeKNEbURFi7R2lehyFQRimvrTm2bu58TqoWp9wYvyCj99YA0E4Z4~vAenh1FclDDHZ8Yth2rKvP46010niF-VjYQDQTH1jA__" alt="">
-    <div class="container">
-        <h2>NutriPlan</h2>
-        <p>Iniciar sesión en tu cuenta</p>
-        <div class="grupo-inputs">
-            <input type="email" id="correo" placeholder="Email" required>
-        </div>
-        <div class="input-group">
-            <input type="password" id="contraseña" placeholder="Contraseña" required> 
-        </div>
-        <div class="actions">
-            <a href="Pagina registrarse.html">Crear cuenta</a>
-            <button id="BotonLogin">Siguiente</button>
+    <img class="fondo" src="frutasinicio.png" alt="">
+    <div class="grandote">
+        <div class="arriba">
+            <h1 class="nutriplan">NutriPlan</h1>
+            <img src="logo.png" alt="" class="logoo">
         </div>
     </div>
-    <p id="MensajeError"></p>
-    <script src="Codigo Iniciar sesion.js"></script>
+    
+    <div class="container">
+        <img class="Logo" src="logo.png" alt="">
+        <h2 class="acheDos">Iniciar Sesion</h2>
+        <div>
+            <input type="email" id="correo" placeholder="Email" required>
+        </div>
+        <div >
+            <input type="password" id="contraseña" placeholder="Crea una contraseña" required>
+        </div>
+        <div class="actions">
+            
+            <button id="BotonLogin">iniciar Sesion</a></button>
+            <button id="BotonRegistro" onclick="window.location.href='Pagina registrarse.html' ">Crear Cuenta</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
+    <script src="../../socket.js"></script>
+    <script src="FrontPruebaRegistro.js"></script>
+
 </body>
 </html>

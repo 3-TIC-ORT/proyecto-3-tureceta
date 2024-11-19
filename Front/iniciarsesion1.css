@@ -1,93 +1,135 @@
 body, html {
     height: 100%;
     margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Fondo de la página */
-}
+    flex-direction: column;
+    background-color: #ffffff;
+    overflow-y: hidden;
+    overflow-x: hidden;
 
-h1 {
+}
+.fondo{
+    width: 100%;
     position: absolute;
-    bottom: 520px;
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #000;
+    z-index: -10;
+    opacity: 0.4;
+}
+.acheDos{  
+    font-family: "EB Garamond", serif;
     
 }
 
-.container {
-    width: 400px;
-    padding: 30px;
-    background-color: #f9f9f9;
-    border: 2px solid #060707; /* Color del borde azul */
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
 
-h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #000;
-}
-
-p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: #666;
-}
-
-.grupo-inputs {
-    margin-bottom: 15px;
-}
-
-input[type="email"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0 10px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-.actions {
+.arriba {
+    width: 100vw;
+    margin-top: -95px;
+    height: 15vh;
+    background-color: rgba(255, 255, 255, 0.9);
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.nutriplan {
+    font-size: 35px;
+    font-family: 'Merienda', cursive;
+    margin-left: 12px;
+    display: flex;
     align-items: center;
 }
 
-.actions a {
-    color: #007BFF;
-    text-decoration: none;
+.logoo {
+    height: 80px;
+    margin-right: 15px;
+}
+
+.container {
+    width: 350px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Krona One', sans-serif;
+}
+
+
+.Logo {
+    width: 80px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
     font-size: 14px;
 }
 
-.actions a:hover {
-    text-decoration: underline;
-}
 
-#BotonLogin {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
+#BotonRegistro {
+    background-color: #ffffff;
+    color: #75972E;
+    padding: 10px;
+    margin-top: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    border: solid 1px #75972E;
 }
 
 #BotonLogin:hover {
-    background-color: #0056b3;
+    background-color: #577320;
 }
-.logo{
-    width: 38px;
-    position: absolute;
+
+#BotonLogin {
+    background-color: #75972E;
+    color: #ffffff;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    border: solid 1px #75972E;
+}
+
+#BotonRegistro:hover {
+    background-color: #f0f0f0;
+}
+
+.actions {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    margin-top: -195px;
-    margin-left: 143px;
-    }
+    flex-direction: column;
+}
