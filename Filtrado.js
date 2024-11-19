@@ -275,17 +275,17 @@ onEvent("pedirDietas", (datos)=>{
 //Cambiar Receta
 
 onEvent("cambiarComida",(receta)=>{
-    console.log("hoal")
     let recetas = JSON.parse(fs.readFileSync("Recetas.json"))
 
     function random(max) {
         return Math.floor(Math.random() * max);
     }
     let nuevaReceta = recetas[random(recetas.length)];
-    while ( nuevaReceta.tipo != receta.tipo || nuevaReceta.calorias > receta.calorias*1.5 || nuevaReceta.calorias < receta.calorias*0.5 || nuevaReceta.nombre == receta.nombre){
+    while ( nuevaReceta.tipo.toString() != receta.tipo.toString() || nuevaReceta.calorias > receta.calorias*1.1 || nuevaReceta.calorias < receta.calorias*0.9 || nuevaReceta.nombre == receta.nombre){
         nuevaReceta = recetas[random(recetas.length)];
-        console.log("en bucle")
+        console.log("en bucle...")
     }
+    console.log(receta.calorias*0.9, nuevaReceta.calorias, receta.calorias*1.1)
     return nuevaReceta;
 })
 

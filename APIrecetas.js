@@ -1,8 +1,8 @@
 import fs from 'fs';
 import fetch from 'node-fetch';
 
-const API_KEY = 'b07aa8718c1c4acebe11f8c897c3b5fe'; // Reemplaza con tu clave API válida
-const numRecipes = 100; // Puedes ajustar el número de recetas aquí
+const API_KEY = 'b07aa8718c1c4acebe11f8c897c3b5fe'; // Reemplazar con la key
+const numRecipes = 100; // Numero de recetas
 const recipes = JSON.parse(fs.readFileSync("Recetas.json"));
 
 async function fetchRecipes() {
@@ -16,10 +16,6 @@ async function fetchRecipes() {
         }
 
         const data = await response.json();
-        
-        // Imprime la respuesta completa para ver si contiene información nutricional
-        
-
         data.recipes.forEach(recipe => {
             // Extrae las calorías, proteínas y carbohidratos
             const nutrients = recipe.nutrition?.nutrients || [];
