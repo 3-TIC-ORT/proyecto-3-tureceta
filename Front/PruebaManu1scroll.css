@@ -24,8 +24,8 @@ body{
     height: 40%;
     width: 100%;
     background-image: url('ensalada.png');
-    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
-    background-position: center; /* Centra la imagen en la pantalla */
+    background-size: cover; 
+    background-position: center; 
     background-repeat: no-repeat;
 }
 
@@ -197,20 +197,48 @@ h1 {
     text-align: center;  
     border-radius: 2px;
 }
-.botones button{
-    
-    width: 20%;
-    padding: 20px;
-    margin: 20px;
-    background-color: #f5f8f5;
-    color: rgb(3, 3, 3);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    text-align: center;
+.botones {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    border: 1px solid #000000;
+    gap: 20px; 
+}
+
+.botones button {
+    width: 200px; 
+    height: 250px; 
+    background-color: #ffffff;
+    color: #333333;
+    border: 2px solid #081a09; 
+    border-radius: 10px; 
+    padding: 15px;
+    cursor: pointer;
+    font-family: "EB Garamond", serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s;
+    margin-top: 40px;
+}
+
+.botones button:hover {
+    transform: scale(1.05); 
+}
+
+.botones button img {
+    width: 150px; 
+    height: auto;
+    margin-bottom: 10px; 
+}
+
+.botones button p {
+    margin: 0;
+    font-size: 18px; 
+    font-weight: bold; 
+
 }
 
 .botonardos{
