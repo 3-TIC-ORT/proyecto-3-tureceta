@@ -48,12 +48,21 @@ justify-content: flex-start;
 
 
 .inicio{
- display: flex;   
- justify-content: flex-end;
- margin: 50px;
- margin-top: -50px;
- font-size: 22px;
- color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto; 
+    font-size: 22px;
+    color: rgb(87, 87, 87); 
+    text-align: center;
+    width: 200px;
+    height: 50px; 
+    border: 2px solid rgb(167, 167, 167);
+    border-radius: 25px; 
+    background-color: white; 
+    cursor: pointer;
+    margin-left: 800px;
+ 
 }
 
 

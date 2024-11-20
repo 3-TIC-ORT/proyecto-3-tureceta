@@ -1,4 +1,11 @@
 
+
+
+:root {
+    margin: 0;
+}
+
+
 body {
     display: flex;
     align-items: center;
@@ -17,8 +24,8 @@ body {
 .totalmacros {
     margin-top: 10%;
     background: #F4F0F0;
-    width: 400px;
-    height: 400px;
+    width: 40%;
+    height: 60%;
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -26,16 +33,21 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 200px;
+
 }
 
 
-.titulo p {
+.titulo1 p {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 10px;
+    height: 5%;
+    font-family: "EB Garamond", serif;
 }
+
+
 
 
 .calor {
@@ -43,14 +55,18 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
+    font-family: "EB Garamond", serif;
+    height: 10%;
 }
 
 
 .proteycarbo {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     flex-direction: column;
+    font-family: "EB Garamond", serif;
+    height: 10%;
 }
 
 
@@ -58,23 +74,27 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    height: 50%;
 }
 
 
 .boton {
     display: flex;
     justify-content: center;
+    margin-top: 20px; 
 }
 
 .crear {
     background-color: #C5C5C5;
     color: black;
-    border: 3px solid #000000;
-    padding: 10px 20px;
-    border-radius: 12px;
+    border: 2px solid #000000;
+    padding: 12px 30px; 
+    border-radius: 25px; 
     cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s;
+    font-size: 18px; 
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .crear:hover {
