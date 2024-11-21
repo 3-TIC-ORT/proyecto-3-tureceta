@@ -22,21 +22,21 @@ body {
 
 
 .totalmacros {
-    margin-top: 10%;
     background: #F4F0F0;
     width: 40%;
-    height: 60%;
-    border-radius: 15px;
-    padding: 30px;
+    height: 70%;
+    border: 2px solid black;
+    padding: 30px 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 2;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between; /* Cambié a 'space-between' */
+    align-items: center; /* Alinea los elementos al centro */
     margin-top: 200px;
-
 }
+
 
 
 .titulo1 p {
@@ -61,12 +61,12 @@ body {
 
 
 .proteycarbo {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 15px;
-    flex-direction: column;
+    /* display: flex;
+    justify-content: space-around; */
+    /* margin-bottom: 15px; */
+    /* flex-direction: column; */
     font-family: "EB Garamond", serif;
-    height: 10%;
+margin: 4%;
 }
 
 
@@ -82,7 +82,9 @@ body {
 .boton {
     display: flex;
     justify-content: center;
-    margin-top: 20px; 
+    align-items: center; /* Alinea verticalmente si es necesario */
+    margin-top: 20px; /* Ajusta el margen superior si es necesario */
+    margin-bottom: 10px; /* Ajusta el margen inferior si es necesario */
 }
 
 .crear {
@@ -90,7 +92,7 @@ body {
     color: black;
     border: 2px solid #000000;
     padding: 12px 30px; 
-    border-radius: 25px; 
+    border-radius: 5px; 
     cursor: pointer;
     font-size: 18px; 
     transition: background-color 0.3s, transform 0.2s;
@@ -120,9 +122,10 @@ body {
 }
 
 .grandote{
-    height: 40%;
+    height: 45%;
     width: 100%;
     position: absolute;
+  
     top: 0;
 }
 
@@ -148,7 +151,7 @@ body {
 
 .menu {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
     margin-left: auto;
     margin-right: 20px;
     
@@ -164,6 +167,7 @@ body {
     cursor: pointer;
     color: black;
     font-family: 'Merienda', sans-serif;
+    display: block;
 }
 
 

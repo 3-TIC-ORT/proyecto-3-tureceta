@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Macros Sugeridos</title>
     <link rel="stylesheet" href="Respuesta.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
@@ -22,11 +23,19 @@
             <img src="logo.png" alt="" class="logo">
             
             <div class="menu">
-                <button class="menu-button" onclick="toggleMenu()">
-                    <img src="icono-usuario.png" alt="Usuario" class="icono-usuario"> 
-                    <span class="nombre-texto">Nombre</span>
-                    <img src="icono-desplegable.png" alt="Desplegar" class="icono-desplegable"> 
-                </button>
+            
+                    <button class="menu-button" onclick="toggleMenu()">
+                        <div> 
+                             <img src="icono-usuario.png" alt="Usuario" class="icono-usuario">
+                             </div>
+                       <div>
+                        <span class="nombre-texto">Nombre</span>
+                        <img src="icono-desplegable.png" alt="Desplegar" class="icono-desplegable"> 
+                       </div>
+                     
+                    </button>
+           
+               
                 <div class="menu-content" id="menuContent">
                     <a href="">Mis Recetas</a>
                     <a href="Paginascroll1.html">Inicio</a>
@@ -36,9 +45,9 @@
         </div>   
     </header>
 
-        <div class="totalmacros">
+        <main class="totalmacros">
             <div class="titulo">
-                <p>Macros Sugeridos</p>
+                <h3><b> Sugeridos</b></h3>
                 <p>(Diariamente)</p>
             </div>
             <div class="calor">
@@ -49,16 +58,16 @@
                 <div class="carb">
                     <p>Carbohidratos</p>
                     <p id="numC" class="numerito">0</p>
-                </div>
-                <div class="prote">
-                    <p>Proteínas</p>
-                    <p id="numP" class="numerito">0</p>
+                    <div class="prote">
+                        <p>Proteínas</p>
+                        <p id="numP" class="numerito">0</p>
+                    </div>
                 </div>
             </div>
             <div class="boton">
                 <button class="crear" onclick="window.location.href='Dietas.html';">Calcular Macros</button>
             </div>
-        </div>
+        </main>
 
 
 </body>
