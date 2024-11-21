@@ -17,14 +17,14 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden;
-    font-family: 'Merienda', sans-serif;
+    font-family: "EB Garamond", serif;
 }
 
 
 .totalmacros {
     background: #F4F0F0;
     width: 40%;
-    height: 70%;
+    height: 74%;
     border: 2px solid black;
     padding: 30px 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -34,7 +34,7 @@ body {
     flex-direction: column;
     justify-content: space-between; /* Cambié a 'space-between' */
     align-items: center; /* Alinea los elementos al centro */
-    margin-top: 200px;
+    margin-top: 250px;
 }
 
 
@@ -82,9 +82,9 @@ margin: 4%;
 .boton {
     display: flex;
     justify-content: center;
-    align-items: center; /* Alinea verticalmente si es necesario */
-    margin-top: 20px; /* Ajusta el margen superior si es necesario */
-    margin-bottom: 10px; /* Ajusta el margen inferior si es necesario */
+    align-items: center; 
+    margin-top: 20px; 
+    margin-bottom: 10px; 
 }
 
 .crear {
@@ -109,7 +109,7 @@ margin: 4%;
     top: 0;
     left: 0;
     width: 1000vh;
-    height: 105vh;
+    height: 128vh;
     background-color: rgba(255, 255, 255, 0.5);
     z-index: 0;
 }
