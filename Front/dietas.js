@@ -25,7 +25,7 @@ function main(dietas){
     caloriasTotalesAlDia.proteinas = Math.trunc(caloriasTotalesAlDia.proteinas)
     caloriasTotalesAlDia.carbohidratos = Math.trunc(caloriasTotalesAlDia.carbohidratos)
     todo = document.querySelector("#todo");
-    todo.innerHTML = "";
+    todo.innerHTML = '<div id="guardar">Guardar recetas</div>';
     for (let i in dietas){
         console.dir(dietas[i]);
         todo.innerHTML += `
@@ -158,4 +158,12 @@ function main(dietas){
             main(dietas);
         })
     }
+    let btnGuardar = document.getElementById("guardar");
+    btnGuardar.addEventListener("click",()=>{
+        let infoAGuardar = {};
+        infoAGuardar.dietas = dietas;
+        infoAGuardar.user = "";
+        postData("guardar",infoAGuardar);
+    })
+
 }
