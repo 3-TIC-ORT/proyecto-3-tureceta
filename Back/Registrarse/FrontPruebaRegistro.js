@@ -34,6 +34,8 @@ function registrarseFront(){
     if (
         (info.correo.includes("@gmail.com") || info.correo.includes("@hotmail.com") || info.correo.includes("@est.ort.edu.ar")) &&info.correo.indexOf("@") > 0 && info.correo.endsWith(".com")) {
         window.location.href = "http://127.0.0.1:5500/Front/Paginascroll1.html";
+        localStorage.setItem("user",JSON.stringify(info.nombre))
+        localStorage.setItem("info",JSON.stringify(null));
         } else {
             // Mostrar un mensaje de error si el correo no es válido
             console.log("Por favor ingrese un correo válido");

@@ -13,6 +13,7 @@ let botonLogin = document.getElementById("BotonLogin")
         ok = ok.data;
         if (ok.ok === true) {
             localStorage.setItem("user",JSON.stringify(ok.user));
+            localStorage.setItem("info",JSON.stringify(null));
             window.location.href = "http://127.0.0.1:5500/Front/Paginascroll1.html";
         } else 
             console.log("Login fallido");

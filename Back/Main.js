@@ -87,7 +87,7 @@ function registrarseBack(info){
 
 onEvent("registrarse",registrarseBack);
 ///////////////////////////CALCULAR MACROS///////////////////////
-function calcularCalorias({sexo, peso, altura, edad, actividad, objetivo}) {
+function calcularCalorias({sexo, peso, altura, edad, actividad, objetivo, usuario}) {
     let tmb;
 
     if (sexo === "hombre") {
@@ -117,11 +117,20 @@ function calcularCalorias({sexo, peso, altura, edad, actividad, objetivo}) {
         tmb = tmb
     }
     let calorias = tmb * factorActividad;
-   // Cálculos adicionales de proteínas y carbohidratos
-   const proteinas = Number(peso) * 1.6; // Ajustable según el peso y nivel de actividad
-   const carbohidratos = (Number(calorias) * 0.5) / 4; // Aproximadamente el 50% de las calorías, 1g carbohidrato = 4 cal
-
-   return {
+    // Cálculos adicionales de proteínas y carbohidratos
+    const proteinas = Number(peso) * 1.6; // Ajustable según el peso y nivel de actividad
+    const carbohidratos = (Number(calorias) * 0.5) / 4; // Aproximadamente el 50% de las calorías, 1g carbohidrato = 4 cal
+    let usuarios = JSON.parse(fs.readFileSync("Login/usuarios.json"));
+    for (let i in usuarios){
+        console.log(usuarios[i].nombre,usuario,usuarios[i].nombre === usuario)
+        if (usuarios[i].nombre === usuario){
+            if (usuarios[i].dietas != undefined){
+                delete usuarios[i].dietas;
+                fs.writeFileSync("Login/usuarios.json",JSON.stringify(usuarios));
+            }
+        }
+    }
+    return {
       calorias: calorias,
       proteinas: Number(proteinas.toFixed(1)),
       carbohidratos: Number(carbohidratos.toFixed(1))
