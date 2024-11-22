@@ -2,7 +2,8 @@ connect2Server()
 
 let todasLasDietas;
 
-postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
+
+function pedirDietas(dias){
     let dietas = {};
     for(let i in dias){
         dietas[i] = {};
@@ -13,7 +14,19 @@ postData("pedirDietas",JSON.parse(localStorage.getItem("info")),(dias)=>{
     }
     todasLasDietas = dietas;
     main(dietas);
+}
+
+postData("buscarRecetas",JSON.parse(localStorage.getItem("user")),(info)=>{
+    if (info.ok === true){
+        main(info.dietas);
+    }else{
+        postData("pedirDietas",JSON.parse(localStorage.getItem("info")),pedirDietas);
+    }
 })
+
+
+
+
 
 
 

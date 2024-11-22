@@ -20,6 +20,19 @@ body{
     
 }
 
+.lechuga{
+    position: absolute;
+    left: 35vw;
+    width: 15vw;
+    aspect-ratio: 1 / 1;
+}
+
+.tomate{
+    position: absolute;
+    right: 36vw;
+    top: 6vh;
+}
+
 .grandote{
     height: 40%;
     width: 100%;
@@ -193,15 +206,14 @@ h1 {
     font-size: 2.5em;
     margin: 0;    
 }
-.botones{
-    text-align: center;  
-    border-radius: 2px;
-}
+
 .botones {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px; 
+    text-align: center;  
+    border-radius: 2px;
 }
 
 .botones button {

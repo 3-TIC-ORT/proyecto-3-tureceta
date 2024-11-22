@@ -1,3 +1,4 @@
+import { info } from "console"
 import fs from "fs"
 import {onEvent,startServer} from "soquetic"
 
@@ -292,7 +293,6 @@ onEvent("cambiarComida",(receta)=>{
 onEvent("guardar",(info)=>{
     let users = JSON.parse(fs.readFileSync("Back/Login/usuarios.json"));
     for (let i in users){
-        console.log(users[i].nombre, info.user, users[i].nombre === info.user)
         if (users[i].nombre === info.user){
             users[i].dietas = info.dietas;
             fs.writeFileSync("Back/Login/usuarios.json",JSON.stringify(users));
@@ -302,6 +302,20 @@ onEvent("guardar",(info)=>{
     
 })
 
+onEvent("buscarRecetas",(user)=>{
+    let users = JSON.parse(fs.readFileSync("Back/Login/usuarios.json"));
+    let info = {ok:false};
+    for (let i in users){
+        if (users[i].nombre === user){
+            if (users[i].dietas != undefined){
+                info.ok = true;
+                info.dietas = users[i].dietas;
+                return info;
+            }
+        }
+    }
+    return info;
+})
 
 
 startServer()
