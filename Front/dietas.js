@@ -162,7 +162,7 @@ function main(dietas){
     btnGuardar.addEventListener("click",()=>{
         let infoAGuardar = {};
         infoAGuardar.dietas = dietas;
-        infoAGuardar.user = "";
+        infoAGuardar.user = JSON.parse(localStorage.getItem("user"));
         postData("guardar",infoAGuardar);
     })
 

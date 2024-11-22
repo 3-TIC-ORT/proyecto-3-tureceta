@@ -5,18 +5,19 @@ let usuarios = fs.readFileSync("usuarios.json","utf-8");
 usuarios = JSON.parse(usuarios);
 
 export function loginBack(data){
-    let ok = false;
+    let info = {ok:false};
 
     for (let i = 0; i<usuarios.length; i++){
         if (usuarios[i].correo === data.correo && usuarios[i].contraseña === data.contraseña){
             console.log("Bienvenido, " + usuarios[i].nombre);
-            ok = true; // Credenciales correctas
-            return ok;
+            info.ok = true; // Credenciales correctas
+            info.user = usuarios[i].nombre;
+            return info;
         }
 
         
 }
-console.log("Correo o contraseña incorrectos");
+return info
 }
 
 

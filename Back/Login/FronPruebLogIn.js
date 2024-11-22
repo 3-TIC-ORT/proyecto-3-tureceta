@@ -11,8 +11,8 @@ let botonLogin = document.getElementById("BotonLogin")
     // Llamar a la función postData y manejar la respuesta del backend
     postData("login", usuario, function(ok) {
         ok = ok.data;
-        if (ok === true) {
-            // Redirigir si el login es exitoso
+        if (ok.ok === true) {
+            localStorage.setItem("user",JSON.stringify(ok.user));
             window.location.href = "http://127.0.0.1:5500/Front/Paginascroll1.html";
         } else 
             console.log("Login fallido");

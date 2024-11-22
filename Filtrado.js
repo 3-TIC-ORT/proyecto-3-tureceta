@@ -289,7 +289,18 @@ onEvent("cambiarComida",(receta)=>{
     return nuevaReceta;
 })
 
-
+onEvent("guardar",(info)=>{
+    let users = JSON.parse(fs.readFileSync("Back/Login/usuarios.json"));
+    for (let i in users){
+        console.log(users[i].nombre, info.user, users[i].nombre === info.user)
+        if (users[i].nombre === info.user){
+            users[i].dietas = info.dietas;
+            fs.writeFileSync("Back/Login/usuarios.json",JSON.stringify(users));
+            return "mañu";
+        }
+    }
+    
+})
 
 
 
