@@ -2,7 +2,7 @@
 import fs from "fs"
 import {onEvent,startServer, } from "soquetic";
 // Leer la lista de usuarios del archivo JSON    
-let usuarios = fs.readFileSync("usuarios.json","utf-8");
+let usuarios = fs.readFileSync("Login/usuarios.json","utf-8");
 usuarios = JSON.parse(usuarios);
 
 export function loginBack(data){
@@ -24,28 +24,28 @@ return info
 
 onEvent("login",loginBack);
 //////////////////////////REGISTRO//////////////////////////
-const personas = JSON.parse(fs.readFileSync("../Back/Login/usuarios.json"));
+const personas = JSON.parse(fs.readFileSync("Login/usuarios.json"));
 function registrarseBack(info){
     let nombre = info.nombre;
     let correo = info.correo;
     let contraseña = info.contraseña;
-
-    let usuarios = fs.readFileSync("../Back/Login/usuarios.json","utf-8");
+    let data = {ok:false};
+    let usuarios = fs.readFileSync("Login/usuarios.json","utf-8");
     usuarios = JSON.parse(usuarios);
     if (nombre.length < 1){
         console.log ("El Nombre debe tener mas de un caracter")
-        return false 
+        return data 
         
     }
     if (contraseña.length < 1){
         console.log ("La contraseña debe tener mas de un caracter")
-        return false
+        return data
         
     }
     
     if (correo.length < 1){
         console.log ("El correo debe tener mas de un caracter")
-        return false
+        return data
         
     }
     //esto detecta si el correo contiene un dominio valido
@@ -57,7 +57,7 @@ function registrarseBack(info){
     });
     if (repeticion === true) {
     console.log("Nombre o Correo en uso");
-    return false
+    return data
     }
     
     if (
@@ -73,13 +73,15 @@ function registrarseBack(info){
 
         usuarios.push(usuario);
         // Guardar la lista de usuarios en usuario.json
-        fs.writeFileSync("usuarios.json",JSON.stringify(usuarios));
-        return {ok : true};
+        fs.writeFileSync("Login/usuarios.json",JSON.stringify(usuarios));
+        data.user = nombre;
+        data.ok = true;
+        return JSON.stringify(data);
         
     } else {
         // Mostrar un mensaje de error si el correo no es válido
         console.log("Por favor ingrese un correo válido");
-        return false;
+        return data;
 }}
 
 
@@ -421,11 +423,11 @@ onEvent("cambiarComida",(receta)=>{
 })
 
 onEvent("guardar",(info)=>{
-    let users = JSON.parse(fs.readFileSync("../Back/Login/usuarios.json"));
+    let users = JSON.parse(fs.readFileSync("Login/usuarios.json"));
     for (let i in users){
         if (users[i].nombre === info.user){
             users[i].dietas = info.dietas;
-            fs.writeFileSync("Back/Login/usuarios.json",JSON.stringify(users));
+            fs.writeFileSync("Login/usuarios.json",JSON.stringify(users));
             return "mañu";
         }
     }
@@ -433,7 +435,7 @@ onEvent("guardar",(info)=>{
 })
 
 onEvent("buscarRecetas",(user)=>{
-    let users = JSON.parse(fs.readFileSync("Back/Login/usuarios.json"));
+    let users = JSON.parse(fs.readFileSync("Login/usuarios.json"));
     let info = {ok:false};
     for (let i in users){
         if (users[i].nombre === user){
