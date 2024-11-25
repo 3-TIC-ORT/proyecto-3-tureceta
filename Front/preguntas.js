@@ -2,6 +2,7 @@
 
 let activityButtons = document.querySelectorAll('.actividad-button');
         let activeButton = null;
+        document.getElementById("nombre").textContent = JSON.parse(localStorage.getItem("user"));
 
         activityButtons.forEach(button => {
             button.addEventListener('click', () => {
@@ -81,7 +82,7 @@ function calculodatos (){
             altura: altura,
             actividad: actividad, 
             objetivo: objetivo,
-    
+            usuario: JSON.parse(localStorage.getItem("user"))
         }    
         postData("datos",datos,(info)=>{
             localStorage.setItem("info",JSON.stringify(info.data))

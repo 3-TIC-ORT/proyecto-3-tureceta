@@ -1,6 +1,7 @@
 
 let activityButtons = document.querySelectorAll('.actividad-button');
         let activeButton = null;
+        document.getElementById("nombre").textContent = JSON.parse(localStorage.getItem("user"));
 
         activityButtons.forEach(button => {
             button.addEventListener('click', () => {

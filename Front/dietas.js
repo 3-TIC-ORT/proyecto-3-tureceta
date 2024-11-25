@@ -2,6 +2,7 @@ connect2Server()
 
 let todasLasDietas;
 
+document.getElementById("nombre").textContent = JSON.parse(localStorage.getItem("user"));
 
 function pedirDietas(dias){
     let dietas = {};
@@ -17,10 +18,14 @@ function pedirDietas(dias){
 }
 
 postData("buscarRecetas",JSON.parse(localStorage.getItem("user")),(info)=>{
-    if (info.ok === true){
+    if (info.ok === true && localStorage.getItem("info")){
         main(info.dietas);
     }else{
-        postData("pedirDietas",JSON.parse(localStorage.getItem("info")),pedirDietas);
+        if (localStorage.getItem("info") === "null"){
+            document.querySelector(".titulo-dia").textContent = "No tienes recetas aún. ¡calcula tus macros primero!"
+        }else{
+            postData("pedirDietas",JSON.parse(localStorage.getItem("info")),pedirDietas);
+        }
     }
 })
 
@@ -33,10 +38,6 @@ postData("buscarRecetas",JSON.parse(localStorage.getItem("user")),(info)=>{
 
 
 function main(dietas){
-    let caloriasTotalesAlDia = JSON.parse(localStorage.getItem("info"));
-    caloriasTotalesAlDia.calorias = Math.trunc(caloriasTotalesAlDia.calorias)
-    caloriasTotalesAlDia.proteinas = Math.trunc(caloriasTotalesAlDia.proteinas)
-    caloriasTotalesAlDia.carbohidratos = Math.trunc(caloriasTotalesAlDia.carbohidratos)
     todo = document.querySelector("#todo");
     todo.innerHTML = '<div id="guardar">Guardar recetas</div>';
     for (let i in dietas){
