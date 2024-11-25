@@ -1,3 +1,4 @@
+document.getElementById("nombre").textContent = JSON.parse(localStorage.getItem("user"));
 function toggleMenu() {
     const menuContent = document.getElementById("menuContent");
     menuContent.style.display = menuContent.style.display === "block" ? "none" : "block";
