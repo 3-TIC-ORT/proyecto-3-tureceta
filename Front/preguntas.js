@@ -65,7 +65,14 @@ function calculodatos (){
 
     console.log(sexo, edad, peso, altura, actividad, objetivo)
     if(sexo === undefined || edad === "" || peso === "" || altura === "" || actividad === undefined || objetivo === undefined){
-        alert("Debes completar todos los campos");
+        Swal.fire({
+            title: 'Error',
+            text: 'Debes completar todos los campos',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            background: '#fefae0', // Color de fondo personalizado
+            color: '#333'          // Color del texto personalizado
+        });
     }else{
         let datos = {
             sexo: sexo,
