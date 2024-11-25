@@ -4,7 +4,6 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-/* Fondo de pantalla completa */
 body {
     /* background: url('frutasinicio.png') no-repeat center center fixed; */
     background-size: cover;
@@ -54,7 +53,7 @@ body {
     margin-right: 15px;
 }
 
-/* Contenedor central */
+
 .container {
     width: 350px;
     padding: 30px;
@@ -73,7 +72,7 @@ h2 {
     font-family: 'Krona One', sans-serif;
 }
 
-/* Imagen del logo centrada en el contenedor */
+
 .Logo {
     width: 80px;
     margin-bottom: 20px;
@@ -82,7 +81,13 @@ h2 {
     margin-right: auto;
 }
 
-/* Estilos para los campos de entrada */
+#errorMessage {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+    
+}
+
 input[type="email"], 
 input[type="password"], 
 input[type="text"] {
@@ -95,7 +100,7 @@ input[type="text"] {
     font-size: 14px;
 }
 
-/* Botones de acción */
+
 #BotonRegistro {
     background-color: #ffffff;
     color: #75972E;
@@ -130,7 +135,7 @@ input[type="text"] {
     background-color: #f0f0f0;
 }
 
-/* Alinear las acciones en columna */
+
 .actions {
     margin-top: 20px;
     display: flex;

@@ -15,9 +15,12 @@ let botonLogin = document.getElementById("BotonLogin")
             localStorage.setItem("user",JSON.stringify(ok.user));
             localStorage.setItem("info",JSON.stringify(null));
             window.location.href = "http://127.0.0.1:5500/Front/Paginascroll1.html";
-        } else 
-            console.log("Login fallido");
+        }  else {
+           
+            let errorMessage = document.getElementById('errorMessage');
+            errorMessage.textContent = "Login incorrecto, Email o Contraseña incorrecta.";
+            errorMessage.style.display = "block";
         }
-    );
+    });
 }
 botonLogin.addEventListener("click", enviar)

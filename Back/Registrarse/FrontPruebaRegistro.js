@@ -37,10 +37,12 @@ function registrarseFront(){
         localStorage.setItem("user",JSON.stringify(info.nombre))
         localStorage.setItem("info",JSON.stringify(null));
         } else {
-            // Mostrar un mensaje de error si el correo no es válido
-            console.log("Por favor ingrese un correo válido");
+            // Mostrar mensaje de error si el correo no es válido
+            errorCorreo.textContent = "Por favor ingrese un correo válido.";
+            errorCorreo.style.display = "block";
             return false;
-        }     
+        }
+    
     postData("registrarse",info, (data) => {
         if (data.ok) {
             registrado("cahu");

@@ -64,6 +64,13 @@ body {
     margin-top: 20px;
 }
 
+#errorMessage {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+    
+}
+
 h2 {
     font-size: 22px;
     margin-bottom: 20px;
