@@ -30,7 +30,7 @@ function registrarseFront(){
         console.log ("El correo debe tener mas de un caracter")
         return false
     }
-    //esto detecta si el correo contiene un dominio valido
+
     if (
         (info.correo.includes("@gmail.com") || info.correo.includes("@hotmail.com") || info.correo.includes("@est.ort.edu.ar")) &&info.correo.indexOf("@") > 0 && info.correo.endsWith(".com")) {
         window.location.href = "http://127.0.0.1:5500/Front/Paginascroll1.html";

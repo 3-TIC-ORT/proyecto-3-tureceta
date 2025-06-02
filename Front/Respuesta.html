@@ -30,7 +30,7 @@
                     <img src="icono-desplegable.png" alt="Desplegar" class="icono-desplegable"> 
                 </button>
                 <div class="menu-content" id="menuContent">
-                    <a href="Dietas.html">Mis Recetas</a>
+                    <a href="Dietas.html">Mis Dietas</a>
                     <a href="Paginascroll1.html">Inicio</a>
                     <a href="preguntas.html">Calcular Macros</a>
                     <a href="PruebaManu1noscroll.html">Cerrar sesion</a>
@@ -69,5 +69,6 @@
     document.getElementById("numCA").textContent =  Math.trunc(JSON.parse(localStorage.getItem("info")).calorias);
     document.getElementById("numP").textContent =  Math.trunc(JSON.parse(localStorage.getItem("info")).proteinas);
     document.getElementById("numC").textContent =  Math.trunc(JSON.parse(localStorage.getItem("info")).carbohidratos);
+    document.getElementById("nombre").textContent = JSON.parse(localStorage.getItem("user"));
 </script>
 </html>
